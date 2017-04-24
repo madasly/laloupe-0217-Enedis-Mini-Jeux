@@ -42,13 +42,26 @@ angular.module('app')
                 },
             })
             .state('anon.games.charabia', {
-              url: '/charabia',
-              views: {
-                'game': {
-                  templateUrl: 'anon/games/charabia.html',
-                  controller: 'CharabiaController'
+                url: '/charabia',
+                views: {
+                    'game': {
+                        templateUrl: 'anon/games/charabia.html',
+                        controller: 'CharabiaController'
+                    }
                 }
-              }
+            })
+            .state('anon.games.attentionTrou', {
+                abstract: true,
+                views: {
+                    'game': {
+                        templateUrl: 'anon/games/attention_au_trou.html',
+                        controller: 'AttentionTrouController',
+                    }
+                }
+            })
+            .state('anon.games.attentionTrou.trou', {
+                url: '/attentionTrou',
+                templateUrl: 'anon/games/trou.svg.html'
             })
             .state('anon.games.boucheTrou', {
                 url: '/bouche-trou',
@@ -87,15 +100,15 @@ angular.module('app')
                     },
                   })
             .state('anon.games.vraiOuFaux', {
-              url: '/vrai_ou_faux',
-              views: {
-                  'game': {
-                      templateUrl: 'anon/games/vrai_ou_faux.html',
-                      controller: 'VraiOuFauxController'
-                  }
-              }
+                url: '/vrai_ou_faux',
+                views: {
+                    'game': {
+                        templateUrl: 'anon/games/vrai_ou_faux.html',
+                        controller: 'VraiOuFauxController'
+                    }
+                }
 
-          });
+            });
 
         $stateProvider
             .state('user', {
