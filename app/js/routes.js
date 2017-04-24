@@ -114,6 +114,15 @@ angular.module('app')
                     }
                 },
             })
+            .state('anon.games.uneSurTrois', {
+                url: '/une-chance-sur-trois',
+                views: {
+                    'game': {
+                        templateUrl: 'anon/games/une_sur_trois.html',
+                        controller: 'uneSurTroisController'
+                    }
+                },
+            })
             .state('anon.games.vraiOuFaux', {
                 url: '/vrai_ou_faux',
                 views: {
