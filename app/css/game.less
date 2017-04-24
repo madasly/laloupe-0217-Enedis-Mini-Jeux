@@ -1,5 +1,5 @@
-@import "main.less";
-// Dimensions
+@import "main.less"; // Dimensions
+
 @lea-height: 398px;
 @lea-width: 158px;
 @greg-height: 273px;
@@ -15,25 +15,40 @@
         .bulle {
             color: @white;
             position: absolute;
-            display:table;
             text-align: center;
-            padding: 5px 5px 5px 5px;
             max-width: @bulle-min-width * 3;
 
             .content {
+                display: block;
+                clip-path: url(#bulle-shape);
+                padding-left: 10%;
+                padding-right: 10%;
+                padding-top: 10%;
+                padding-bottom: 20%;
+                // min-width: @bulle-min-width * 2;
+                // min-height: @bulle-min-height;
+                width: 100%;
+                margin: 0 auto;
+                display: block;
                 position: relative;
             }
 
             &.lea {
                 right: @lea-width + 5px;
                 top: @bulle-min-width / 3;
-                background-color: @red-lea;
+
+                .content {
+                    background-color: @red-lea;
+                }
             }
 
             &.greg {
                 left: @greg-width + 5px;
                 top: @lea-height - @greg-height;
-                background-color: @green-greg;
+
+                .content {
+                    background-color: @green-greg;
+                }
             }
         }
     }
@@ -58,7 +73,12 @@
     }
 }
 
-.gradient {
-    background-size: 100% 200%;
-    background-image: linear-gradient(to bottom, transparent 50%, @red 50%);
+
+.left-gradient {
+    background-image: url('/img/bulle1left.svg');
+    background-repeat: no-repeat;
+}
+.right-gradient {
+    background-image: url('/img/bulle1right.svg');
+    background-repeat: no-repeat;
 }
