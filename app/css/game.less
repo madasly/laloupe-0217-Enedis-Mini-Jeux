@@ -1,3 +1,4 @@
+@import "main.less";
 // Dimensions
 @lea-height: 398px;
 @lea-width: 158px;
@@ -14,44 +15,25 @@
         .bulle {
             color: @white;
             position: absolute;
-            min-height: @bulle-min-height;
-            min-width: @bulle-min-width;
-            z-index: 100;
+            display:table;
+            text-align: center;
+            padding: 5px 5px 5px 5px;
+            max-width: @bulle-min-width * 3;
 
             .content {
-                position: absolute;
-                top: 10%;
-                left: 13%;
-                height: 60%;
-                width: 75%;
-                margin: 0 auto;
-                display: flex;
-                align-items: center;
-
-                div {
-                    text-align: center;
-                    width: 100%;
-                }
+                position: relative;
             }
 
             &.lea {
-                top: 0;
-                right: @lea-width - @bulle-offset;
+                right: @lea-width + 5px;
+                top: @bulle-min-width / 3;
+                background-color: @red-lea;
             }
 
             &.greg {
+                left: @greg-width + 5px;
                 top: @lea-height - @greg-height;
-                left: @greg-width - @bulle-offset;
-            }
-        }
-
-        polygon {
-            &.lea {
-                fill: #ed1157;
-            }
-
-            &.greg {
-                fill: #00B4AE;
+                background-color: @green-greg;
             }
         }
     }
@@ -74,4 +56,9 @@
             }
         }
     }
+}
+
+.gradient {
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, transparent 50%, @red 50%);
 }
