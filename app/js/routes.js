@@ -21,7 +21,6 @@ angular.module('app')
                         controller: 'MainController'
                     }
                 }
-
             })
             .state('anon.login', {
                 url: '/login',
@@ -50,7 +49,6 @@ angular.module('app')
                   controller: 'CharabiaController'
                 }
               }
-
             })
             .state('anon.games.boucheTrou', {
                 url: '/bouche-trou',
@@ -70,6 +68,15 @@ angular.module('app')
                       }
                   },
                 })
+                .state('anon.games.coupable', {
+                    url: '/coupable',
+                    views: {
+                        'game': {
+                            templateUrl: 'anon/games/coupable.html',
+                            controller: 'coupableController'
+                        }
+                    },
+                  })
                 .state('anon.games.miniQuiz', {
                     url: '/miniQuiz',
                     views: {
