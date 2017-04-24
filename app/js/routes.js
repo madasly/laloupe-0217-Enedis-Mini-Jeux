@@ -73,14 +73,18 @@ angular.module('app')
                 },
               })
               .state('anon.games.panneau', {
-                  url: '/panneau',
+                  abstract: true,
                   views: {
                       'game': {
                           templateUrl: 'anon/games/panneau.html',
-                          controller: 'miroirController'
+                          controller: 'panneauController',
                       }
-                  },
-                })
+                  }
+              })
+              .state('anon.games.panneau.panneau', {
+                  url: '/panneau',
+                  templateUrl: 'anon/games/panneau.svg.html'
+              })
               .state('anon.games.miroir', {
                   url: '/miroir',
                   views: {
