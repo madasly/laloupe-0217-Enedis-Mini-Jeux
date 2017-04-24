@@ -9,6 +9,7 @@ angular.module('app')
       };
       $scope.faux = function faux(){
         console.log("Mauvaise réponse");
+        
       };
 
     });
