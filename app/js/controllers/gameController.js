@@ -10,6 +10,8 @@ angular.module('app')
             character: '',
             content: ''
         };
+        $scope.nomDuJeu = "";
+        $scope.theme = "";
 
         /*
          * Affiche les bulles
