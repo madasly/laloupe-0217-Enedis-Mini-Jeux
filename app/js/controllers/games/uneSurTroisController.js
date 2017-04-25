@@ -1,4 +1,13 @@
 angular.module('app')
     .controller('uneSurTroisController', function($scope) {
-      console.log("coucou");
+
+      $scope.vrai = function vrai(){
+        console.log("Bonne réponse");
+      };
+
+      $scope.faux = function faux(){
+        console.log("Mauvaise Réponse");
+      };
+
+
     });
