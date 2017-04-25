@@ -1,11 +1,10 @@
 @import "main.less"; // Dimensions
-
 @lea-height: 398px;
 @lea-width: 158px;
 @greg-height: 273px;
 @greg-width: 160px;
-@bulle-min-height: 100px;
-@bulle-min-width: @bulle-min-height;
+@bulle-min-height: 75px;
+@bulle-min-width: 2 * @bulle-min-height;
 @bulle-offset: 50px;
 
 .game {
@@ -19,23 +18,22 @@
             max-width: @bulle-min-width * 3;
 
             .content {
-                display: block;
-                clip-path: url(#bulle-shape);
-                padding-left: 10%;
-                padding-right: 10%;
-                padding-top: 10%;
-                padding-bottom: 20%;
-                // min-width: @bulle-min-width * 2;
-                // min-height: @bulle-min-height;
-                width: 100%;
-                margin: 0 auto;
-                display: block;
+                clip-path: url("#bulle-shape");
                 position: relative;
+                padding: 10% 30% 10% 10%;
+                width: 100%;
+                min-width: @bulle-min-width;
+                min-height: @bulle-min-height;
+                margin: 0 auto;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
 
             &.lea {
                 right: @lea-width + 5px;
-                top: @bulle-min-width / 3;
+                top: @bulle-min-width;
 
                 .content {
                     background-color: @red-lea;
@@ -44,7 +42,7 @@
 
             &.greg {
                 left: @greg-width + 5px;
-                top: @lea-height - @greg-height;
+                top: @lea-height - (0.66 * @greg-height);
 
                 .content {
                     background-color: @green-greg;
@@ -71,14 +69,4 @@
             }
         }
     }
-}
-
-
-.left-gradient {
-    background-image: url('/img/bulle1left.svg');
-    background-repeat: no-repeat;
-}
-.right-gradient {
-    background-image: url('/img/bulle1right.svg');
-    background-repeat: no-repeat;
 }
