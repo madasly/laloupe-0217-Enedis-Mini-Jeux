@@ -34,7 +34,7 @@ angular.module('app')
                 content: 'Bien joué !',
                 show: true
             };
-            $scope.$emit('bulle', bulle);
+            $scope.showBulle(bulle);
         }
 
         /*
@@ -50,7 +50,7 @@ angular.module('app')
                     show: true,
                     content: "Essaye encore !"
                 };
-                $scope.$emit('bulle', bulle);
+                $scope.showBulle(bulle);
             }
         }
 
