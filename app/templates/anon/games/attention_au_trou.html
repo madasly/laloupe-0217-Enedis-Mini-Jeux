@@ -1,18 +1,30 @@
 <div class="container ">
-    <div class="row">
-        <div class="col-xs-8">
-            <p>Attention, avant de percer un mur, il faut vérifier qu' aucun fil électrique n' est caché derrière...</br>
-                Car, si la perceuse en touche un, ça peut être dangereux!
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <h2>ATTENTION AU TROU !</h2>
-        <div class="col-xs-5">
-            <p>Léa et son papa veulent poser des étagères... ils doivent donc faire attention à l' endroit où ils percent le mur... Aide-les à trouver le bon en cliquant dessus!</p>
-        </div>
-    </div>
-    <div ui-view>
+    <div class="row risk">
+        <div class="col-xs-8 col-sm-8 col-md-8 alert" >
 
+          <p ubuntu-light>Attention, avant de percer un mur, il faut vérifier qu' aucun fil électrique n' est caché derrière...</br>
+            Car, si la perceuse en touche un, ça peut être dangereux!
+          </p>
+        </div>
+
+        </div>
+        </div>
     </div>
+    <div class="row">
+        <h2 ubuntu-bold>ATTENTION AU TROU !</h2>
+        <div class="col-xs-5 col-sm-5 col-md-5">
+            <p>Léa et son papa veulent poser des étagères... ils doivent donc faire attention à l'endroit où ils percent le mur... Aide-les à trouver le bon en cliquant dessus!</p>
+        </div>
+    </div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12">
+  <img rwdimgmap id="perceuse" src="/img/games/attentiontrou/jeuperceuse.svg" width="575" height="523" usemap="#holeclick" alt="">
+  <map id="holeclick" name="holeclick">
+    <area shape="circle" coords="215,135,43" ng-click="badRep()"  alt="">
+    <area shape="circle" coords="395,149,44" ng-click="goodRep()"  alt="">
+    <area shape="circle" coords="239,260,42" ng-click="badRep()"  alt="">
+    <area shape="circle" coords="205,376,42" ng-click="badRep()"  alt="">
+  </map>
 </div>
+</div>
+    </div>
