@@ -51,7 +51,7 @@ angular.module('app')
                 }
             })
             .state('anon.games.attentionTrou', {
-                abstract: true,
+              url: '/attentionTrou',
                 views: {
                     'game': {
                         templateUrl: 'anon/games/attention_au_trou.html',
@@ -59,10 +59,7 @@ angular.module('app')
                     }
                 }
             })
-            .state('anon.games.attentionTrou.trou', {
-                url: '/attentionTrou',
-                templateUrl: 'anon/games/trou.svg.html'
-            })
+
             .state('anon.games.boucheTrou', {
                 url: '/bouche-trou',
                 views: {
