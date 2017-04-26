@@ -1,8 +1,8 @@
-<div class="game container">
+<div class="game container" ng-class="{'hidden-behind-modal': descriptionShown}">
     <h2>{{ nomDuJeu }}</h2>
 
-    <button ng-click='toggleDescription()'>Open Modal Dialog</button>
-    <modal show='descriptionShown' width='750px' height='60%'>
+    <button ng-click="toggleDescription()">Open Modal Dialog</button>
+    <modal show="descriptionShown" title="" width="750px" height="60%">
         <p>Modal Content Goes here</p>
     </modal>
 
@@ -21,8 +21,6 @@
     <div class="bulle-container characters row">
         <img class="character greg flip-horizontal" src="/img/greg.png">
         <img class="character lea" src="/img/lea.png">
-        <speech-bubble ng-show="true" character="bulle.character" content="bulle.content" flip="bulle.character.toLowerCase() === 'greg'"></speech-bubble>
+        <speech-bubble ng-show="true" character="bulle.character" content="bulle.content" flip="bulle.character.toLowerCase() === "greg""></speech-bubble>
     </div>
-
-
 </div>
