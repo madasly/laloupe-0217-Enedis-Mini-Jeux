@@ -68,47 +68,16 @@ angular.module('app')
                         controller: 'BoucheTrouController'
                     }
                 },
-              })
-              .state('anon.games.panneau', {
-                  abstract: true,
-                  views: {
-                      'game': {
-                          templateUrl: 'anon/games/panneau.html',
-                          controller: 'panneauController',
-                      }
-                  }
-              })
-              .state('anon.games.panneau.panneau', {
-                  url: '/panneau',
-                  templateUrl: 'anon/games/panneau.svg.html'
-              })
-              .state('anon.games.miroir', {
-                  url: '/miroir',
-                  views: {
-                      'game': {
-                          templateUrl: 'anon/games/miroir.html',
-                          controller: 'miroirController'
-                      }
-                  },
-                })
-                .state('anon.games.coupable', {
-                    url: '/coupable',
-                    views: {
-                        'game': {
-                            templateUrl: 'anon/games/coupable.html',
-                            controller: 'coupableController'
-                        }
-                    },
-                  })
-                .state('anon.games.miniQuiz', {
-                    url: '/miniQuiz',
-                    views: {
-                        'game': {
-                            templateUrl: 'anon/games/miniQuiz.html',
-                            controller: 'miniQuizController'
-                        }
-                    },
-                  })
+            })
+            .state('anon.games.uneSurTrois', {
+                url: '/une-chance-sur-trois',
+                views: {
+                    'game': {
+                        templateUrl: 'anon/games/une_sur_trois.html',
+                        controller: 'uneSurTroisController'
+                    }
+                },
+            })
             .state('anon.games.vraiOuFaux', {
                 url: '/vrai_ou_faux',
                 views: {
