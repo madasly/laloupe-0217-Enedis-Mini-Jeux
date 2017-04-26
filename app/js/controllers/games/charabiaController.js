@@ -1,7 +1,7 @@
 var REPONSE = "C'EST TRÈS DANGEREUX DE TIRER SUR LE FIL D'UN APPAREIL ÉLECTRIQUE POUR LE DÉBRANCHER! IL FAUT TOUJOURS LE PRENDRE PAR LA FICHE POUR LE DÉCONNECTER.";
 angular.module('app')
       .controller('CharabiaController', function($scope) {
-
+      $scope.$parent.nomDuJeu = "Attention au trou";
       $scope.newText = '';
       $scope.compare = function () {
         console.log('content', $scope.newText.content);

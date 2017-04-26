@@ -3,6 +3,8 @@ angular.module('app')
         /*
          * La solution (les mots sont dans le bonne ordre)
          */
+        $scope.$parent.nomDuJeu = "Le Bouche-Trou";
+
         var WORDS = [
             'débrancher',
             'électrique',

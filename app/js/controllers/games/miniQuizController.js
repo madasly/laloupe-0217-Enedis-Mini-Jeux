@@ -1,5 +1,6 @@
 angular.module('app')
     .controller('miniQuizController', function($scope) {
+      $scope.$parent.nomDuJeu = "Mini Quizz";
       $scope.vrai = function vrai(){
         console.log("bravo");
       };

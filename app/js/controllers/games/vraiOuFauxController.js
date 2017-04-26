@@ -1,6 +1,7 @@
 //Controller du jeux Vrai ou Faux du livret
 angular.module('app')
     .controller('VraiOuFauxController', function($scope) {
+      $scope.$parent.nomDuJeu = "Vrai ou Faux";
         $scope.cacheBouton = false;
         $scope.question1 = 'Aucun risque de s\'électrocuter si l\'on utilise un sèche-cheveux avec les mains mouillées.';
         $scope.question2 = 'Si je touche un lave-linge qui grésille ou qui picote le bout de mes doitgs, je préviens tout de suite mes parents.';
