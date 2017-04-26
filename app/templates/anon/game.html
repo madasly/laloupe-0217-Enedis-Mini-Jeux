@@ -2,8 +2,14 @@
     <!-- TODO faire un titre custom par page-->
     <h2></h2>
 
-    <div class="game-container row" ui-view="game">
+    <div class="indice-game-container">
+        <div ng-hide="indiceIsDisplayed" class="game row" ui-view="game"></div>
+        <div indice ng-show="indiceIsDisplayed"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </div>
     </div>
+
+    <button ng-click="toggleIndice()" class="indice-button">
+        <span class="glyphicon glyphicon-search"></span>
+    </button>
 
     <!-- TODO insérer les personnages en svg -->
     <!-- TODO rendre les bulles propres -->

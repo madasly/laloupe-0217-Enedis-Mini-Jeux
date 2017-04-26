@@ -11,10 +11,16 @@ angular.module('app')
             content: ''
         };
 
+        $scope.indiceIsDisplayed = false;
+
         /*
          * Affiche les bulles
          */
         $scope.showBulle = function(bulle) {
             $scope.bulle = bulle;
+        };
+
+        $scope.toggleIndice = function() {
+            $scope.indiceIsDisplayed = !$scope.indiceIsDisplayed;
         };
     });
