@@ -10,11 +10,15 @@ angular.module('app')
             character: '',
             content: ''
         };
-
+        $scope.nomDuJeu = "";
+        $scope.theme = "";
+        
         /*
          * Affiche les bulles
          */
         $scope.showBulle = function(bulle) {
             $scope.bulle = bulle;
         };
+
+
     });
