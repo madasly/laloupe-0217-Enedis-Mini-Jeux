@@ -11,8 +11,9 @@ angular.module('app')
             content: ''
         };
 
-        $scope.indiceIsDisplayed = false;
-
+        $scope.clueShown = false;
+        $scope.descriptionShown = true;
+        
         /*
          * Affiche les bulles
          */
@@ -20,7 +21,11 @@ angular.module('app')
             $scope.bulle = bulle;
         };
 
-        $scope.toggleIndice = function() {
-            $scope.indiceIsDisplayed = !$scope.indiceIsDisplayed;
+        $scope.toggleClue = function() {
+            $scope.clueShown = !$scope.clueShown;
+        };
+
+        $scope.toggleDescription = function() {
+            $scope.descriptionShown = !$scope.descriptionShown;
         };
     });
