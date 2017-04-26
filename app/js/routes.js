@@ -111,6 +111,15 @@ angular.module('app')
                         templateUrl: 'anon/games/vrai_ou_faux.html',
                         controller: 'VraiOuFauxController'
                     }
+                },
+              })
+            .state('anon.games.tomber', {
+                url: '/tomber',
+                views: {
+                    'game': {
+                        templateUrl: 'anon/games/tomber.html',
+                        controller: 'tomberController'
+                    }
                 }
 
             });
