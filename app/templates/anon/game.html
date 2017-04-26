@@ -1,5 +1,6 @@
-<div class="game container" ng-class="{'hidden-behind-modal': descriptionShown}">
-    <h2>{{ nomDuJeu }}</h2>
+<div class="game container theme-{{ theme }}" ng-class="{'hidden-behind-modal': descriptionShown}">
+    <!-- TODO faire un titre custom par page-->
+    <h2 class="titre-jeu ubuntu-li text-center">{{nomDuJeu}}</h2>
 
     <button ng-click="toggleDescription()">Open Modal Dialog</button>
     <modal show="descriptionShown" title="" width="750px" height="60%">
