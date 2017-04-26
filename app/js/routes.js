@@ -59,7 +59,33 @@ angular.module('app')
                     }
                 }
             })
-
+            .state('anon.games.miroir', {
+           url: '/miroir',
+           views: {
+               'game': {
+                   templateUrl: 'anon/games/miroir.html',
+                   controller: 'miroirController'
+               }
+           },
+       })
+       .state('anon.games.coupable', {
+           url: '/coupable',
+           views: {
+               'game': {
+                   templateUrl: 'anon/games/coupable.html',
+                   controller: 'coupableController'
+               }
+           },
+       })
+       .state('anon.games.miniQuiz', {
+           url: '/miniQuiz',
+           views: {
+               'game': {
+                   templateUrl: 'anon/games/miniQuiz.html',
+                   controller: 'miniQuizController'
+               }
+           },
+         })
             .state('anon.games.boucheTrou', {
                 url: '/bouche-trou',
                 views: {
