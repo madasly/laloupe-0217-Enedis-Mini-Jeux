@@ -118,7 +118,7 @@ angular.module('app')
                 views: {
                     'game': {
                         templateUrl: 'anon/games/tomber.html',
-                        controller: 'tomberController'
+                        controller: 'TomberController'
                     }
                 }
 
