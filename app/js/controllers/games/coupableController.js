@@ -1,6 +1,6 @@
 angular.module('app')
     .controller('coupableController', function($scope) {
-      
+
       $scope.vrai = function vrai(){
         console.log("bonne réponse");
       };
@@ -8,5 +8,8 @@ angular.module('app')
         console.log("Mauvaise réponse");
 
       };
+      $scope.options = {
+  playlist: ['/sound/games/coupable/P6J6.mp3']
 
+};
     });
