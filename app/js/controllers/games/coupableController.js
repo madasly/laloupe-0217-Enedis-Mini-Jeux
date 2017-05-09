@@ -1,33 +1,36 @@
 angular.module('app')
-    .controller('coupableController', function($scope) {
+  .controller('coupableController', function($scope) {
 
-      $scope.$parent.nomDuJeu = "Qui est le coupable ?";
+    // variable d'information général du jeu
+    $scope.$parent.nomDuJeu = "Qui est le coupable ?";
+    $scope.$parent.theme = "Maison";
 
-      $scope.$parent.msgFail = [{
-        character: 'Greg',
-        content: 'Mauvaise réponse',
-        show: true
-      }, {
-        character: 'Lea',
-        content: 'Le coupable n',
-        show: true
-      }];
-      $scope.$parent.msgSuccess = [{
-        character: 'Greg',
-        content: 'Bravo tu as gagné !!',
-        show: true
-      }, {
-        character: 'Lea',
-        content: 'Si tu as la chance d\'avoir des animaux domestique a la maison, fait bien attention qu\'il ne ronge pas les fils électriques',
-        show: true
-      }];
 
-      $scope.vrai = function vrai(){
-        console.log("bonne réponse");
-      };
-      $scope.faux = function faux(){
-        console.log("Mauvaise réponse");
+    // Lorsque l'utilisateur clic sur le Lapin
+    $scope.vrai = function vrai() {
+      $scope.showBulle({
+        show: true,
+        character: "Greg",
+        content: "Félicitation tu a bien répondu a la question !!"
+      });
+    };
 
-      };
+    // Lorsque l'utilisateur clic sur le poison
+    $scope.fauxPoison = function faux() {
+      $scope.showBulle({
+        show: true,
+        character: "Lea",
+        content: "Ce poison a t'il vraiment pu sortir de son aquarium pour allez manger le fil élèctrique ?"
+      });
+    };
 
-    });
+    // Lorsque l'utilisateur clic sur l'oiseau
+    $scope.fauxOiseau = function faux() {
+      $scope.showBulle({
+        show: true,
+        character: "Lea",
+        content: "Cette oiseau n'as pas les dents assez pouintu pour manger ce fil élèctrique !!"
+      });
+    };
+
+  });
