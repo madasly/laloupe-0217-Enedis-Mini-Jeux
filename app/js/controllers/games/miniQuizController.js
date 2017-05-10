@@ -7,6 +7,7 @@ angular.module('app')
 
     //Function en cas de bonne réponses
     $scope.vrai = function vrai() {
+      $scope.animateGreg();
       $scope.showBulle({
         show: true,
         character: "Greg",
@@ -16,6 +17,7 @@ angular.module('app')
 
     // Si l'utilisateur clic sur le bouton 2
     $scope.faux1 = function faux() {
+      $scope.animateLea();
       $scope.showBulle({
         show: true,
         character: "Lea",
@@ -25,6 +27,7 @@ angular.module('app')
 
     // Si l'utilisateur clic sur le bouton 3
     $scope.faux = function faux() {
+      $scope.animateLea();
       $scope.showBulle({
         show: true,
         character: "Lea",
