@@ -3,11 +3,17 @@
     <div class="introduction">
         <p>Pour entretenir in jardin, les adultes peuvent utiliser des appareils électriques comme une tondeuse ou un taille-haie...</p>
         <p>Dans ces situations, nous allons voir que certaines mesures de sécurité s'imposent.</p>
+        <button ng-audio="sound/games/bouchetrou/P11J17.mp3">textconseil<i class="fa fa-play" aria-hidden="true"></i>
+</button>
+
     </div>
 
     <div class="instructions">
         <h2>Le bouche trou</h2>
-        <div class="instructions">Complète ce texte à trous en utilisant les 4 mots suivants : </div>
+        <div class="instructions">Complète ce texte à trous en utilisant les 4 mots suivants :
+          <button ng-audio="sound/games/bouchetrou/trou.mp3">consigne<i class="fa fa-play" aria-hidden="true"></i>
+</button>
+</div>
         <ul class="words">
             <li ng-repeat="word in words"><span class="word" data-drag="true" jqyoui-draggable="{index: {{$index}}, animate:true}" data-jqyoui-options="{revert: 'invalid', placeholder: true, opacity: 0.5}" ng-model="words">{{ word }}</span></li>
         </ul>

@@ -3,6 +3,9 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <p>Sur ce dessin, deux pécheurs n'ont pas respecté les consignes de sécurité pour pêcher.</br>
       Lesquels?</p>
+      <button ng-audio="sound/games/tombepanneau/panneau.mp3">consigne<i class="fa fa-play" aria-hidden="true"></i>
+</button>
+
       <img rwdimgmap id="river" src="/img/games/tomber/pecheurs.svg" width="904" height="567" usemap="#holeclick" alt="">
       <map id="holeclick" name="holeclick">
               <area shape="circle" coords="370,340,40" ng-click="badChoice()" alt="">
@@ -10,6 +13,9 @@
               <area shape="circle" coords="620,411,36" ng-click="goodChoice()" alt="">
               <area shape="circle" coords="737,300,42" ng-click="goodChoice()" alt="">
             </map>
+            <button ng-audio="sound/games/tombepanneau/savais.mp3">savais tu?<i class="fa fa-play" aria-hidden="true"></i>
+      </button>
+
     </div>
 
   </div>

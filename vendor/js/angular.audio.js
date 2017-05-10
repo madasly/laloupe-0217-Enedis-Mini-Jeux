@@ -13,7 +13,7 @@ angular.module('ngAudio', [])
             //ngAudio:'='
         },
         controller: function($scope, $attrs, $element, $timeout) {
-            
+
             /* Loads the sound from destination */
             var audio;
             function initSound(){
@@ -23,25 +23,25 @@ angular.module('ngAudio', [])
 
                 /* Remove watching features for improved performance */
                 audio.unbind();
-            }            
+            }
 
             if (!$scope.disablePreload){
                 initSound();
-            }        
-            
+            }
+
 
             $element.on('click', function() {
                 if ($scope.clickPlay === false) {
                     return;
                 }
-                
+
                 if ($scope.disablePreload){
                     initSound();
-                }        
+                }
 
                 /* iOS workaround: Call the play method directly in listener function */
                 audio.audio.play();
-                
+
                 /* Set volume to $scope volume if it exists, or default to audio's current value */
                 audio.volume = $scope.volume || audio.volume;
                 audio.loop = $scope.loop;
@@ -64,10 +64,10 @@ angular.module('ngAudio', [])
             var audio = ngAudio.load($attrs.ngAudioHover);
 
             $element.on('mouseover rollover hover', function() {
-                
+
                 /* iOS workaround: Call the play method directly in listener function */
                 audio.audio.play();
-                
+
                 audio.volume = $attrs.volumeHover || audio.volume;
                 audio.loop = $attrs.loop;
                 audio.currentTime = $attrs.startHover || 0;
@@ -178,7 +178,7 @@ angular.module('ngAudio', [])
             $willPlay = true;
             return this;
         };
-        
+
         var completeListeners = [];
         this.complete = function(callback){
             completeListeners.push(callback);
@@ -278,7 +278,7 @@ angular.module('ngAudio', [])
             $interval.cancel(interval);
             interval = $interval(checkWatchers, ngAudioGlobals.performance);
         })
-        
+
         function checkWatchers() {
             if ($audioWatch) {
                 $audioWatch();
@@ -324,7 +324,7 @@ angular.module('ngAudio', [])
                     audioObject.progress = audio.currentTime / audio.duration;
                     audioObject.paused = audio.paused;
                     audioObject.src = audio.src;
-                    
+
                     if (audioObject.currentTime >= audioObject.duration) {
                         completeListeners.forEach(function(listener){
                             listener(audioObject);
@@ -384,7 +384,7 @@ angular.module('ngAudio', [])
 }])
 .filter("trackTime", function(){
     /* Conveniently takes a number and returns the track time */
-    
+
     return function(input){
 
         var totalSec = Math.floor(input | 0);
@@ -398,19 +398,19 @@ angular.module('ngAudio', [])
 
             hours = Math.floor(totalSec / 3600);
             minutes = Math.floor((totalSec - (hours * 3600)) / 60);
-            seconds = (totalSec - ((minutes * 60) + (hours * 3600))); 
+            seconds = (totalSec - ((minutes * 60) + (hours * 3600)));
 
             if (hours.toString().length == 1) {
                 hours = "0" + (Math.floor(totalSec / 3600)).toString();
-            } 
+            }
 
             if (minutes.toString().length == 1) {
                 minutes = "0" + (Math.floor((totalSec - (hours * 3600)) / 60)).toString();
-            } 
+            }
 
             if (seconds.toString().length == 1) {
-                seconds = "0" + (totalSec - ((minutes * 60) + (hours * 3600))).toString(); 
-            } 
+                seconds = "0" + (totalSec - ((minutes * 60) + (hours * 3600))).toString();
+            }
 
             output = hours + ":" + minutes + ":" + seconds;
 
@@ -440,11 +440,11 @@ angular.module('ngAudio', [])
             output = totalSec + "s";
 
         }
-        
+
         if (Number.isNaN(output)){
             debugger;
         }
 
-        return output; 
+        return output;
     }
 });

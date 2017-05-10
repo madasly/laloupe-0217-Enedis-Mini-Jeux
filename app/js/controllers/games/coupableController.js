@@ -8,7 +8,7 @@ angular.module('app')
       console.log("Mauvaise réponse");
 
     };
-    $scope.$parent.options.text.playlist = ['/sound/games/coupable/P6J6.mp3'];
-    $scope.$parent.options.consigne.playlist = ['/sound/games/coupable/P6J6.mp3'];
+    // $scope.$parent.options.text.playlist = ['/sound/games/coupable/P6J6.mp3'];
+    // $scope.$parent.options.consigne.playlist = ['/sound/games/coupable/P6J6.mp3'];
 
   });

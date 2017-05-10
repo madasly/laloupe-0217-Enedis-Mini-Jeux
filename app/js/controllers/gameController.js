@@ -13,20 +13,20 @@ angular.module('app')
         $scope.nomDuJeu = "";
         $scope.theme = "";
 
-        $scope.options =  {
-          consigne: {
-            playlist: []
-          },
-          indice: {
-            playlist: []
-          },
-          info: {
-            playlist: []
-          },
-          text: {
-            playlist: []
-          }
-        };
+        // $scope.options =  {
+        //   consigne: {
+        //     playlist: []
+        //   },
+        //   indice: {
+        //     playlist: []
+        //   },
+        //   info: {
+        //     playlist: []
+        //   },
+        //   text: {
+        //     playlist: []
+        //   }
+        // };
 
 
 
