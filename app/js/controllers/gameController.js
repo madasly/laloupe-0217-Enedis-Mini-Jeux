@@ -22,8 +22,13 @@ angular.module('app')
           },
           info: {
             playlist: []
+          },
+          text: {
+            playlist: []
           }
         };
+
+
 
         /*
          * Affiche les bulles
