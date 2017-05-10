@@ -2,7 +2,7 @@ angular.module('app')
   .controller('panneauController', function($scope) {
 
     // Variable d'information général du jeu
-    $scope.$parent.nomduJeu = "Ville";
+    $scope.$parent.theme = "Ville";
     $scope.$parent.nomDuJeu = "Le Bon Panneau !";
 
 
