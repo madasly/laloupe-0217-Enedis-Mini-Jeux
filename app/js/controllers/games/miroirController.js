@@ -1,6 +1,7 @@
 angular.module('app')
     .controller('miroirController', function($scope) {
       /* Here is your main controller */
+      $scope.$parent.nomDuJeu = "LA TÊTE A L'ENVERS";
             $scope.solution = 'quelque soit le sport surtout ne t approche pas des lignes electriques';
             $scope.solution1 = 'quelque soit le sport surtout ne t approche pas des ligne electrique';
             $scope.solution2 = 'quelque soit le sport surtout ne t\' approches pas des ligne electriques';

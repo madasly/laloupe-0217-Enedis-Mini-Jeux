@@ -9,13 +9,10 @@ angular.module('app')
       };
 
       $scope.faux = function faux(){
-        console.log("Mauvaise Réponse");
         $scope.showBulle({
           show: true,
           character: "Lea",
           content: "mon cul sur la commode"
         });
       };
-
-
     });

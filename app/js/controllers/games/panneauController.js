@@ -1,28 +1,35 @@
 angular.module('app')
   .controller('panneauController', function($scope) {
 
+    // Variable d'information général du jeu
+    $scope.$parent.theme = "Ville";
     $scope.$parent.nomDuJeu = "Le Bon Panneau !";
 
-    $scope.$parent.msgFail = [{
-      character: 'Greg',
-      content: 'Mon log',
-      show: true
-    }, {
-      character: 'Lea',
-      content: 'Ton log',
-      show: true
-    }];
 
-    
-    $scope.$parent.msgSuccess = [];
+    // Quand l'utilisateur clic sur le panneau de gauche (flocon de neige)
+    $scope.faux1 = function() {
+      $scope.showBulle({
+        show: true,
+        character: "Lea",
+        content: "Ce panneau représente un flocon de neige. il n'y as pas de lien entre un flocon de neige et l'électricité"
+      });
+    };
 
+    //  Quand l'utilisateur clic sur le panneau de droite (produit inflammable)
     $scope.faux = function() {
-      console.log("mauvaise réponse");
-
+      $scope.showBulle({
+        show: true,
+        character: "Lea",
+        content: "Ce panneau représente une flamme, cela veut dire : produit inflammable"
+      });
     };
 
+    // Quand lutilisateur clic sur le panneau danger élétricque
     $scope.vrai = function() {
-      console.log("Bravo !! C'est la bonne réponse");
+      $scope.showBulle({
+        show: true,
+        character: "Greg",
+        content: "Bravo c'est la bonne réponse !"
+      });
     };
-
   });

@@ -1,28 +1,22 @@
-<div class="container">
-
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <p class="ubuntu-light coupable-preambule">Si tu as la chance d'avoir un animal chez toi, ne le laisse pas ronger les fils électriques. car des fils abimés, ce sont des fils qui ne sont plus isolés et qui deviennent extrèmement dangereux</p>
-        </div>
-    </div>
+<div class="container coupable-container">
 
     <div class="row text-center coupable-marge">
         <div class="col-xs-12">
             <p class="ubuntu-bold coupable-consigne">À ton avis, quel animal a grignoté ce fil électrique ? </p>
         </div>
-        <div class="col-xs-12 coupable-marge img-responsive animated fadeIn">
+        <div class="col-xs-12 coupable-marge img-responsive animated fadeIn max">
             <img src="img/games/coupable/prise+plainte.svg" alt="">
         </div>
     </div>
 
     <div class="row coupable-marge text-center">
-        <div class="col-xs-4 img-responsive animated fadeInLeftBig poison" ng-click="faux()">
+        <div class="col-xs-4 img-responsive animated fadeInLeftBig poison max" ng-click="fauxPoison()">
             <img src="img/games/coupable/fish.svg" alt="un poison">
         </div>
-        <div class="col-xs-4 img-responsive animated fadeInDownBig" ng-click="faux()">
+        <div class="col-xs-4 img-responsive animated fadeInDownBig max" ng-click="fauxOiseau()">
             <img src="img/games/coupable/bird.svg" alt="un oiseau">
         </div>
-        <div class="col-xs-4 img-responsive animated fadeInRightBig" ng-click="vrai()">
+        <div class="col-xs-4 img-responsive animated fadeInRightBig max" ng-click="vrai()">
             <img src="img/games/coupable/lapin.svg" alt="un lapin">
         </div>
     </div>
