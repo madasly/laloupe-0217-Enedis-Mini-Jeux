@@ -8,6 +8,7 @@ angular.module('app')
 
     // Lorsque l'utilisateur clic sur le Lapin
     $scope.vrai = function vrai() {
+      $scope.animateGreg();
       $scope.showBulle({
         show: true,
         character: "Greg",
@@ -17,6 +18,7 @@ angular.module('app')
 
     // Lorsque l'utilisateur clic sur le poison
     $scope.fauxPoison = function faux() {
+      $scope.animateLea();
       $scope.showBulle({
         show: true,
         character: "Lea",
@@ -26,6 +28,7 @@ angular.module('app')
 
     // Lorsque l'utilisateur clic sur l'oiseau
     $scope.fauxOiseau = function faux() {
+      $scope.animateLea();
       $scope.showBulle({
         show: true,
         character: "Lea",
