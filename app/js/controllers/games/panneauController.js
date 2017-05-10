@@ -31,5 +31,6 @@ angular.module('app')
         character: "Greg",
         content: "Bravo c'est la bonne réponse !"
       });
+        $scope.animateGreg();
     };
   });
