@@ -18,8 +18,8 @@
 
     <modal-characters show="charactersShown" title="nomDuJeu" width="750px" height="60%" theme="theme">
         <div class="bulle-container characters row">
-            <div ng-show="gregShown" ng-class="{animated:animGreg, fadeInLeftBig:animGreg}" class="character greg"><img class="flip-horizontal" src="/img/greg.png"></div>
-            <div ng-show="leaShown" ng-class="{animated:animLea, fadeInRightBig:animLea}" class="character lea"><img src="/img/lea.png"></div>
+            <div ng-show="greg.show" ng-class="{animated:greg.animate, fadeInLeftBig:greg.animate}" class="character greg"><img class="flip-horizontal" src="/img/greg.png"></div>
+            <div ng-show="lea.show" ng-class="{animated:lea.animate, fadeInRightBig:lea.animate}" class="character lea"><img src="/img/lea.png"></div>
             <speech-bubble ng-show="true" character="bulle.character" content="bulle.content" flip="bulle.character.toLowerCase() === 'greg'"></speech-bubble>
         </div>
     </modal-characters>

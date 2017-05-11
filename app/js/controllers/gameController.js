@@ -17,12 +17,16 @@ angular.module('app')
         $scope.nomDuJeu = "";
         $scope.theme = "";
         $scope.modalClosedOnce = false;
-        $scope.animLea = false;
-        $scope.leaShown = false;
-        $scope.charactersShown = false;
-        $scope.animGreg = false;
-        $scope.gregShown = false;
 
+        $scope.lea = {
+            animate: false,
+            show: false
+        };
+        $scope.charactersShown = false;
+        $scope.greg = {
+            animate: false,
+            show: false
+        };
         /*
          * Affiche les bulles
          */
@@ -46,22 +50,22 @@ angular.module('app')
 
         $scope.animateLea = function() {
             $scope.charactersShown = true;
-            $scope.animLea = true;
-            $scope.leaShown = true;
-            $scope.gregShown = false;
+            $scope.lea.animate = true;
+            $scope.lea.show = true;
+            $scope.greg.show = false;
             $timeout(function() {
-                $scope.animLea = false;
+                $scope.lea.animate = false;
             }, 1000);
         };
 
         //Code qui permet d'animer Greg
         $scope.animateGreg = function() {
             $scope.charactersShown = true;
-            $scope.animGreg = true;
-            $scope.gregShown = true;
-            $scope.leaShown = false;
+            $scope.greg.animate = true;
+            $scope.greg.show = true;
+            $scope.lea.show = false;
             $timeout(function() {
-                $scope.animGreg = false;
+                $scope.greg.animate = false;
             }, 1000);
         };
     });
