@@ -45,7 +45,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Greg",
-        content: "Bonne réponse !! Ici il ne risque pas d'avoir de fil élèctrique derrière"
+        content: "Bonne réponse !! Ici il ne risque pas d'avoir de fil électrique derrière"
       });
     };
   });
