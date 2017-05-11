@@ -18,7 +18,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Mauvaise Réponse. À cause de l'eau environnante, il y a un risque de court-circuit, cela pourrait meme provoquer un incendie dans la maison !!"
+        content: "Mauvaise Réponse. À cause de l'eau environnante, il y a un risque de court-circuit. Cela pourrait même provoquer un incendie dans la maison !!"
       });
     };
 
@@ -27,7 +27,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Mauvaise Réponse, le fil a etait racommoder avec du ruban adhésif, cela risque de provoquer un court-circuit !"
+        content: "Mauvaise Réponse, le fil a été réparé avec du ruban adhésif.Cela risque de provoquer un court-circuit !"
       });
     };
   });

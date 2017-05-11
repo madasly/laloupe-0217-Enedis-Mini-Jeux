@@ -12,7 +12,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Non, a cause de la lampe il peut y avoir un fil élèctrique derrère ce mur !! "
+        content: "Non, il peut y avoir un fil électrique derrière ce mur à cause de la lampe  !! "
       });
     };
 
@@ -22,7 +22,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Nous ne pouvons pas faire de trou ici a cause de l'intérupteur au dessus !!"
+        content: "Nous ne pouvons pas faire de trou ici à cause de l'interrupteur au dessus !!"
       });
     };
 
@@ -32,7 +32,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Non, a cause de la prise de courant il peut y avoir un fil élèctrique derrère ce mur !! "
+        content: "Non, il peut y avoir un fil électrique derrière ce mur à cause de la prise de courant  !! "
       });
     };
 
