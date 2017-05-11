@@ -13,9 +13,9 @@ angular.module('app')
 
         $scope.clueShown = false;
         $scope.descriptionShown = true;
+        $scope.description = "";
         $scope.nomDuJeu = "";
         $scope.theme = "";
-
         /*
          * Affiche les bulles
          */

@@ -7,7 +7,8 @@ angular.module('app').directive('modal', function() {
         restrict: 'E',
         scope: {
             show: '=',
-            titre: '='
+            title: '=',
+            theme: '='
         },
         replace: true, // Replace with the template below
         transclude: true, // we want to insert custom content inside the directive
