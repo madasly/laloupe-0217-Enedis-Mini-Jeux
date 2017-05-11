@@ -4,6 +4,6 @@
     <div class='ng-modal-close' ng-click='hideModal()'>X</div>
     <!-- TODO ajout form enedis -->
     <h3 class="ng-modal-dialog-title">{{ title }}</h3>
-    <div class='ng-modal-dialog-content' ng-transclude></div>
+    <div class='ng-modal-dialog-content' ng-class="{'with-background': hasBackground}" ng-transclude></div>
   </div>
 </div>

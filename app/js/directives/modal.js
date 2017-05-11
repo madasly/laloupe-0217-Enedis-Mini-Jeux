@@ -8,7 +8,8 @@ angular.module('app').directive('modal', function() {
         scope: {
             show: '=',
             title: '=',
-            theme: '='
+            theme: '=',
+            hasBackground: '=background'
         },
         replace: true, // Replace with the template below
         transclude: true, // we want to insert custom content inside the directive
