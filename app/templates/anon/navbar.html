@@ -9,14 +9,12 @@
       </button>
       <a class="navbar-brand" ui-sref="anon.home"><img class="logo-navbar" src="img/logo.svg" alt=""/></a>
     </div>
-    <div class="collapse navbar-collapse " id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right list-burger">
           <li ui-sref-active=""><a ui-sref="anon.login" ng-hide="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Connecte toi !</button></a></li>
           <li ui-sref-active=""><a ui-sref="anon.register" ng-hide="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Inscris toi !</button></a></li>
           <li ui-sref-active=""><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">Liste des jeux</a></li>
           <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
-        </li>
       </ul>
     </div>
   </div>

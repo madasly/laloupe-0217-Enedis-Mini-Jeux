@@ -22,6 +22,15 @@ angular.module('app')
                     }
                 }
             })
+            .state('anon.register', {
+                url: '/',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/register.html',
+                        controller: 'RegisterController'
+                    }
+                }
+            })
             .state('anon.login', {
                 url: '/login',
                 views: {
