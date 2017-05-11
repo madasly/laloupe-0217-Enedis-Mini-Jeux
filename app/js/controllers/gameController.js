@@ -16,6 +16,13 @@ angular.module('app')
         $scope.description = "";
         $scope.nomDuJeu = "";
         $scope.theme = "";
+        $scope.modalClosedOnce = false;
+        $scope.animLea = false;
+        $scope.leaShown = false;
+        $scope.charactersShown = false;
+        $scope.animGreg = false;
+        $scope.gregShown = false;
+
         /*
          * Affiche les bulles
          */
@@ -31,10 +38,12 @@ angular.module('app')
             $scope.descriptionShown = !$scope.descriptionShown;
         };
 
+        $scope.loadGameView = function () {
+            $scope.modalClosedOnce = true;
+        };
+
         // Code qui permet d'animer Léa
-        $scope.animLea = false;
-        $scope.leaShown = false;
-        $scope.charactersShown = false;
+
         $scope.animateLea = function() {
             $scope.charactersShown = true;
             $scope.animLea = true;
@@ -46,8 +55,6 @@ angular.module('app')
         };
 
         //Code qui permet d'animer Greg
-        $scope.animGreg = false;
-        $scope.gregShown = false;
         $scope.animateGreg = function() {
             $scope.charactersShown = true;
             $scope.animGreg = true;
