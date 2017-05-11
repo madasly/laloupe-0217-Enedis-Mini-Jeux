@@ -33,19 +33,28 @@ angular.module('app')
 
         // Code qui permet d'animer Léa
         $scope.animLea = false;
-        $scope.animateLea = function(){
-          $scope.animLea = true;
-          $timeout(function(){
-            $scope.animLea = false;
-          }, 1000);
+        $scope.leaShown = false;
+        $scope.charactersShown = false;
+        $scope.animateLea = function() {
+            $scope.charactersShown = true;
+            $scope.animLea = true;
+            $scope.leaShown = true;
+            $scope.gregShown = false;
+            $timeout(function() {
+                $scope.animLea = false;
+            }, 1000);
         };
 
         //Code qui permet d'animer Greg
         $scope.animGreg = false;
-        $scope.animateGreg = function(){
-          $scope.animGreg = true;
-          $timeout(function(){
-            $scope.animGreg = false;
-          }, 1000);
+        $scope.gregShown = false;
+        $scope.animateGreg = function() {
+            $scope.charactersShown = true;
+            $scope.animGreg = true;
+            $scope.gregShown = true;
+            $scope.leaShown = false;
+            $timeout(function() {
+                $scope.animGreg = false;
+            }, 1000);
         };
     });

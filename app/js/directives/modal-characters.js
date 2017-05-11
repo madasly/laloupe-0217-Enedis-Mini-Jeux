@@ -2,7 +2,7 @@
  * Directive pour des modals
  * Tiré de http://adamalbrecht.com/2013/12/12/creating-a-simple-modal-dialog-directive-in-angular-js/
  */
-angular.module('app').directive('modal', function() {
+angular.module('app').directive('modalCharacters', function() {
     return {
         restrict: 'E',
         scope: {
@@ -24,6 +24,6 @@ angular.module('app').directive('modal', function() {
                 scope.show = false;
             };
         },
-        templateUrl: 'anon/directives/modal.html'
+        templateUrl: 'anon/directives/modal-characters.html'
     };
 });
