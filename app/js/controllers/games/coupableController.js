@@ -12,7 +12,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Greg",
-        content: "Félicitation tu a bien répondu a la question !!"
+        content: "Félicitation! tu as bien répondu à la question !!"
       });
     };
 
@@ -22,7 +22,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Ce poison a t'il vraiment pu sortir de son aquarium pour allez manger le fil élèctrique ?"
+        content: "Ce poison a t'il vraiment pu sortir de son aquarium pour allez manger le fil électrique ?"
       });
     };
 
@@ -32,7 +32,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Cette oiseau n'as pas les dents assez pouintu pour manger ce fil élèctrique !!"
+        content: "Les oiseaux n' ont pas de dents ! "
       });
     };
 

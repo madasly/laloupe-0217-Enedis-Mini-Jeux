@@ -8,7 +8,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Mauvaise réponse. Ce pecheur respecte bien les consignes de sécurité"
+        content: "Mauvaise réponse. Ce pêcheur respecte bien les consignes de sécurité"
       });
     };
 
@@ -17,7 +17,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Greg",
-        content: "Bonne réponse !! Ce pécheurs ce mets en danger en dessous des ligne élèctrique"
+        content: "Bonne réponse !! Ce pêcheur se met en danger en dessous des lignes élèctriques"
       });
     };
 

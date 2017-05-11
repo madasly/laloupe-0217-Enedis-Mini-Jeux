@@ -12,7 +12,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Ce panneau représente un flocon de neige. il n'y as pas de lien entre un flocon de neige et l'électricité"
+        content: "Ce panneau représente un flocon de neige. il n'y a pas de lien entre un flocon de neige et l'électricité"
       });
     };
 
@@ -22,7 +22,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Ce panneau représente une flamme, cela veut dire : produit inflammable"
+        content: "Ce panneau représente une flamme, cela veut dire que c'est un produit inflammable"
       });
     };
 
