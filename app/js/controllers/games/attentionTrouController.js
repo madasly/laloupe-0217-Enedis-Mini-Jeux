@@ -1,11 +1,51 @@
 angular.module('app')
-    .controller('AttentionTrouController', function($scope) {
-        $scope.$parent.nomDuJeu = "Attention au trou !";
-        $scope.$parent.description = "Attention avant de percer un mur, il faut vérifier qu'aucun fil électrique n'est caché derrière... Car, si la perceuse en touche un, ça peut être dangereux !";
-        $scope.badRep = function() {
-            console.log("pas bien");
-        };
-        $scope.goodRep = function() {
-            console.log("bien!!!!!");
-        };
-    });
+  .controller('AttentionTrouController', function($scope) {
+
+
+    //Information general du jeu Attention au Trou !!
+    $scope.$parent.nomDuJeu = "Attention au trou !";
+    $scope.$parent.theme = "Maison";
+
+    // Quand l'utilisateur clic sur le cercle en dessous de la lampe
+    $scope.badRep = function() {
+      $scope.animateLea();
+      $scope.showBulle({
+        show: true,
+        character: "Lea",
+        content: "Non, a cause de la lampe il peut y avoir un fil élèctrique derrère ce mur !! "
+      });
+    };
+
+    // Quand l'utilisateur clic sur le cercle en dessous de l'intérupteur
+    $scope.badRep2 = function() {
+      $scope.animateLea();
+      $scope.showBulle({
+        show: true,
+        character: "Lea",
+        content: "Nous ne pouvons pas faire de trou ici a cause de l'intérupteur au dessus !!"
+      });
+    };
+
+    // Quand l'utilisateur clic sur le cercle a gauche de la prise
+    $scope.badRep3 = function() {
+      $scope.animateLea();
+      $scope.showBulle({
+        show: true,
+        character: "Lea",
+        content: "Non, a cause de la prise de courant il peut y avoir un fil élèctrique derrère ce mur !! "
+      });
+    };
+
+
+
+
+
+    $scope.goodRep = function() {
+      $scope.animateGreg();
+      $scope.showBulle({
+        show: true,
+        character: "Greg",
+        content: "Bonne réponse !! Ici il ne risque pas d'avoir de fil élèctrique derrière"
+      });
+    };
+  });

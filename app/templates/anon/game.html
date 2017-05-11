@@ -18,8 +18,8 @@
     </button>
 
     <div class="bulle-container characters row">
-        <img class="character greg flip-horizontal" src="/img/greg.png">
-        <img class="character lea" src="/img/lea.png">
-        <speech-bubble ng-show="true" character="bulle.character" content="bulle.content" flip="bulle.character.toLowerCase() === 'greg'"></speech-bubble>
+        <div ng-class="{animated:animGreg, bounce:animGreg}"  class="character greg"><img class="flip-horizontal" src="/img/greg.png"></div>
+        <div ng-class="{animated:animLea, shake:animLea}" class="character lea"><img src="/img/lea.png"></div>
+        <speech-bubble  ng-show="true" character="bulle.character" content="bulle.content" flip="bulle.character.toLowerCase() === 'greg'"></speech-bubble>
     </div>
 </div>
