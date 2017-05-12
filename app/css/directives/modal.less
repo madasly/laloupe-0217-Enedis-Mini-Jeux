@@ -1,0 +1,62 @@
+.ng-modal {
+
+    &-overlay {
+        /* A dark translucent div that covers the whole screen */
+        position: absolute;
+        z-index: 9999;
+        top: @navbar-height;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0.8;
+    }
+
+    &-dialog {
+        .border-enedis();
+
+        /* A centered div above the overlay with a box shadow. */
+        z-index: 10000;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+
+        /* Center the dialog */
+        top: calc(@navbar-height ~"+ 50%"); // sinon less calcule lui même des trucs
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-1deg);
+        -webkit-transform: translate(-50%, -50%) rotate(-1deg);
+        -moz-transform: translate(-50%, -50%) rotate(-1deg);
+        background-color: #fff;
+        box-shadow: 4px 4px 80px #000;
+
+        /* Padding */
+        padding : 30px 50px 30px 50px;
+
+        /* Default theme */
+        background-color: @green-greg;
+        color: @white;
+
+        &-title {
+            text-transform: uppercase;
+            font-size: 2.5em;
+        }
+
+        &-content {
+
+        }
+    }
+
+
+    &-close {
+        position: absolute;
+        top: 3px;
+        right: 5px;
+        padding: 5px;
+        cursor: pointer;
+        font-size: 120%;
+        display: inline-block;
+        font-weight: bold;
+        font-family: 'arial', 'sans-serif';
+    }
+}

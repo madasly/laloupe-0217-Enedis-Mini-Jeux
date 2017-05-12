@@ -1,0 +1,30 @@
+.ng-modal-characters {
+
+    &-overlay {
+        /* A dark translucent div that covers the whole screen */
+        position: absolute;
+        z-index: 9999;
+        top: @navbar-height;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0.8;
+    }
+
+    &-center {
+
+        /* A centered div above the overlay with a box shadow. */
+        z-index: 10000;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+
+        /* Center the dialog */
+        top: calc(@navbar-height ~"+ 50%"); // sinon less calcule lui même des trucs
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+    }
+}

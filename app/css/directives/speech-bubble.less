@@ -1,0 +1,44 @@
+@bulle-min-height: 75px;
+@bulle-min-width: 2 * @bulle-min-height;
+@bulle-offset: 50px;
+
+.speech-bubble {
+    .bulle {
+        color: @white;
+        position: absolute;
+        text-align: center;
+        max-width: @bulle-min-width * 3;
+
+        .content {
+            -webkit-clip-path: url("#bulle-shape");
+            clip-path: url("#bulle-shape");
+            position: relative;
+            padding: 10% 30% 10% 10%;
+            width: 100%;
+            min-width: @bulle-min-width;
+            min-height: @bulle-min-height;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &.lea {
+            right: @lea-width + 5px;
+            top: @bulle-min-width;
+
+            .content {
+                background-color: @red-lea;
+            }
+        }
+
+        &.greg {
+            left: @greg-width + 5px;
+            top: @lea-height - (0.66 * @greg-height);
+
+            .content {
+                background-color: @green-greg;
+            }
+        }
+    }
+}

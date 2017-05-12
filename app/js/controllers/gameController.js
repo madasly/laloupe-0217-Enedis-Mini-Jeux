@@ -10,40 +10,62 @@ angular.module('app')
             character: '',
             content: ''
         };
+
+        $scope.clueShown = false;
+        $scope.descriptionShown = true;
+        $scope.description = "";
         $scope.nomDuJeu = "";
         $scope.theme = "";
+        $scope.modalClosedOnce = false;
 
-
-
-          //Affiche les bulles
+        $scope.lea = {
+            animate: false,
+            show: false
+        };
+        $scope.charactersShown = false;
+        $scope.greg = {
+            animate: false,
+            show: false
+        };
+        /*
+         * Affiche les bulles
+         */
         $scope.showBulle = function(bulle) {
             $scope.bulle = bulle;
         };
 
+        $scope.toggleClue = function() {
+            $scope.clueShown = !$scope.clueShown;
+        };
 
+        $scope.toggleDescription = function() {
+            $scope.descriptionShown = !$scope.descriptionShown;
+        };
 
+        $scope.loadGameView = function () {
+            $scope.modalClosedOnce = true;
+        };
 
         // Code qui permet d'animer Léa
-        $scope.animLea = false;
-        $scope.animateLea = function(){
-          $scope.animLea = true;
-          $timeout(function(){
-            $scope.animLea = false;
-          }, 1000);
+
+        $scope.animateLea = function() {
+            $scope.charactersShown = true;
+            $scope.lea.animate = true;
+            $scope.lea.show = true;
+            $scope.greg.show = false;
+            $timeout(function() {
+                $scope.lea.animate = false;
+            }, 1000);
         };
 
         //Code qui permet d'animer Greg
-        $scope.animGreg = false;
-
-        $scope.animateGreg = function(){
-          $scope.animGreg = true;
-          $timeout(function(){
-            $scope.animGreg = false;
-          }, 1000);
+        $scope.animateGreg = function() {
+            $scope.charactersShown = true;
+            $scope.greg.animate = true;
+            $scope.greg.show = true;
+            $scope.lea.show = false;
+            $timeout(function() {
+                $scope.greg.animate = false;
+            }, 1000);
         };
-
-
-
-
-
     });
