@@ -43,6 +43,7 @@ angular.module('app')
         };
 
         $scope.loadGameView = function () {
+            console.log('loading game');
             $scope.modalClosedOnce = true;
         };
 
