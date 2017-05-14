@@ -108,6 +108,15 @@ angular.module('app')
                }
            },
          })
+         .state('anon.games.attitude', {
+             url: '/attitude',
+             views: {
+                 'game': {
+                     templateUrl: 'anon/games/attitude.html',
+                     controller: 'attitudeController'
+                 }
+             },
+           })
             .state('anon.games.boucheTrou', {
                 url: '/bouche-trou',
                 views: {
