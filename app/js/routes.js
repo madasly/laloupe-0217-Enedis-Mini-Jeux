@@ -117,6 +117,7 @@ angular.module('app')
         url: '/panneau',
         templateUrl: 'anon/games/panneau.svg.html'
       })
+
       .state('anon.games.filGreg', {
         abstract: true,
         views: {
@@ -130,6 +131,7 @@ angular.module('app')
         url: '/fil-greg',
         templateUrl: 'anon/games/fil-greg.svg.html'
       })
+      
       .state('anon.games.uneSurTrois', {
         url: '/une-chance-sur-trois',
         views: {
