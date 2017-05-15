@@ -150,6 +150,15 @@ angular.module('app')
           }
         },
       })
+      .state('anon.games.attitude', {
+        url: '/attitude',
+        views: {
+          'game': {
+            templateUrl: 'anon/games/attitude.html',
+            controller: 'AttitudeController'
+          }
+        },
+      })
       .state('anon.games.tomber', {
         url: '/tomber',
         views: {
