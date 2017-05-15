@@ -1,30 +1,20 @@
 <div class="game container theme-{{ theme }}" ng-class="{'hidden-behind-modal': descriptionShown || charactersShown}">
     <h2 class="titre-jeu ubuntu-li text-center">{{nomDuJeu}}</h2>
 
-    <button ng-click="toggleDescription()" class="panneau-bouton">Consignes</button>
-    <modal show="descriptionShown" on-first-hide="loadGameView()" title="nomDuJeu" width="750px" height="60%" theme="theme">
-        {{ description }}
-    </modal>
-
-    <div class="clue-game-container" ng-show="modalClosedOnce">
-        <div ng-hide="clueShown" class="game row" ui-view="game"></div>
-        <div clue ng-show="clueShown"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </div>
+    <div class="game-container">
+        <div class="game-view" ui-view="game" ng-show="gameLoadedOnce"></div>
+        <div class="window-container" ng-show="show !== WINDOWS.game">
+            <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.consignes"> CONSIGNES </div>
+            <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.indice"> INDICES </div>
+            <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.conseils"> CONSEILS </div>
+            <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.characters"> CHARACTERS </div>
+        </div>
     </div>
 
-    <button ng-click="toggleClue()" class="clue-button">
-        <span class="glyphicon glyphicon-search"></span>
-    </button>
-
-    <modal-characters show="charactersShown" title="nomDuJeu" width="750px" height="60%" theme="theme">
-        <div class="bulle-container characters row">
-            <div ng-show="greg.show" ng-class="{animated:greg.animate, fadeInLeftBig:greg.animate}" class="character greg">
-                <img class="flip-horizontal" src="/img/greg.png">
-            </div>
-            <div ng-show="lea.show" ng-class="{animated:lea.animate, fadeInRightBig:lea.animate}" class="character lea">
-                <img src="/img/lea.png">
-            </div>
-            <speech-bubble ng-show="true" character="bulle.character" content="bulle.content" flip="bulle.character.toLowerCase() === 'greg'"></speech-bubble>
-        </div>
-    </modal-characters>
+    <div class="button-container row">
+        <div class="col-xs-1"><button ng-click="toggle(WINDOWS.consignes)" >Consignes</button></div>
+        <div class="col-xs-1"><button ng-click="toggle(WINDOWS.conseils)" >Conseils</button></div>
+        <div class="col-xs-1"><button ng-click="toggle(WINDOWS.indice)" >Indice</button></div>
+        <div class="col-xs-1 col-xs-offset-7"><button ng-click="back()">Retour</button></div>
+    </div>
 </div>

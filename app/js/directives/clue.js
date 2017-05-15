@@ -5,6 +5,6 @@ angular.module('app')
             replace: true,
             templateUrl: 'anon/directives/clue.html',
             scope: {},
-            transclude: true
+            transclude: true,
         };
     });

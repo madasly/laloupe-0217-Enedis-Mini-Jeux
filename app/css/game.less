@@ -1,33 +1,16 @@
+@game-container-width: 80vw;
+@game-container-height: 70vh;
+
 .game {
-    .bulle-container {
+
+    &-container {
+        height: @game-container-height;
+        width: @game-container-width;
         position: relative;
+        margin: 0 auto;
     }
 
-    .characters {
-        position: relative;
-        min-height: @lea-height + @bulle-min-height / 2;
-
-        .character {
-            z-index: 10;
-            position: absolute;
-            bottom: 0;
-
-            &.lea {
-                right: 0;
-            }
-
-            &.greg {
-                left: 0;
-            }
-        }
+    .titre-jeu{
+        font-weight: bold;
     }
-}
-.titre-jeu{
-  font-weight: bold;
-}
-
-.theme-jardin {
-  .titre-jeu {
-    color: blue;
-  }
 }
