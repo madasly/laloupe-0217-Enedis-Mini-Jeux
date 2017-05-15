@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('uneSurTroisController', function($scope) {
+  .controller('UneSurTroisController', function($scope) {
 
     $scope.$parent.nomDuJeu = "Une Chance Sur Trois";
     $scope.$parent.theme = "jardin";

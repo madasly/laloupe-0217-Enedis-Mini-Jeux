@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('miniQuizController', function($scope) {
+  .controller('MiniQuizController', function($scope) {
 
     // Variable d'information général du jeu
     $scope.$parent.nomDuJeu = "Mini Quizz";
