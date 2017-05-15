@@ -1,4 +1,6 @@
 <div class="indice">
     <h3><img class="loupe" src="/img/directives/indice/loupetrou.svg" alt="Une loupe"> Un indice ?</h3>
-    <div ng-transclude></div>
+    <div>
+        <p ng-repeat="line in texte">{{ line }}</p>
+    </div>
 </div>

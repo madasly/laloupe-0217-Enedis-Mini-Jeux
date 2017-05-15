@@ -13,7 +13,7 @@ angular.module('app')
             ],
             indice: [
                 "Prête bien attention à l'emplacement des installations électriques !",
-                "Dans le doute, coupe l'électricité au disjoncteur"
+                "Dans le doute, coupe l'électricité au disjoncteur."
             ]
         };
 

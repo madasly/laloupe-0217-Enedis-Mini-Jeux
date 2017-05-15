@@ -4,7 +4,8 @@ angular.module('app')
             restrict: 'A',
             replace: true,
             templateUrl: 'anon/directives/indice.html',
-            scope: {},
-            transclude: true,
+            scope: {
+                texte: "="
+            },
         };
     });
