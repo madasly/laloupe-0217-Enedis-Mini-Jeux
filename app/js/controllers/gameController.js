@@ -9,10 +9,10 @@
 angular.module('app')
     .controller('GameController', function($scope, $timeout, $state) {
         /*
-        * Gestion des fenêtres
-        */
+         * Gestion des fenêtres
+         */
         // Cette objet contient tous les états possibles d'affichage pour la fenêtre de base
-        var WINDOWS =  Object.freeze({
+        var WINDOWS = Object.freeze({
             game: 0,
             consignes: 1,
             conseils: 2,
@@ -25,15 +25,20 @@ angular.module('app')
 
 
         /*
-        * Gestion des variables changeables par le enfants
-        */
-        $scope.description = "";
-        $scope.nomDuJeu = "";
-        $scope.theme = "";
+         * Gestion des variables changeables par le enfants
+         */
+        $scope.props = {
+            nomDuJeu: "",
+            theme: "default",
+            consignes: [],
+            conseils: [],
+            indice: [],
+        };
+
 
         /*
-        * Gestion des bulles
-        */
+         * Gestion des bulles
+         */
         $scope.bulle = {
             show: false,
             character: '',

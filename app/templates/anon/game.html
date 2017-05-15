@@ -1,26 +1,30 @@
-<div class="game theme-{{ theme }}" ng-class="{'hidden-behind-modal': descriptionShown || charactersShown}">
-    <h2 class="titre-jeu ubuntu-li text-center">{{nomDuJeu}}</h2>
+<div class="game theme-{{ props.theme }}" ng-class="{'hidden-behind-modal': descriptionShown || charactersShown}">
+    <h2 class="titre-jeu ubuntu-li text-center">{{props.nomDuJeu}}</h2>
 
     <div class="game-container">
         <div class="game-view" ui-view="game" ng-show="gameLoadedOnce"></div>
         <div class="window-container" ng-show="show !== WINDOWS.game">
             <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.consignes">
-                <div>Sit cillum deserunt non aliquip id ut et sint minim ea dolore irure duis laboris.</div>
+                <div consignes texte="props.consignes"></div>
             </div>
             <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.indice">
-                <div indice> Ut reprehenderit magna fugiat veniam duis do qui qui ut laboris exercitation esse adipisicing irure aliqua magna.</div>
+                <div indice texte="props.indice"></div>
             </div>
             <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.conseils">
-                <div>Sit cillum deserunt non aliquip id ut et sint minim ea dolore irure duis laboris.</div>
+                <div conseils texte="props.conseils"></div>
             </div>
-            <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.characters"> CHARACTERS </div>
+            <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.characters">
+                <div characters></div>
+            </div>
         </div>
     </div>
 
     <div class="button-container container">
-        <div class="col-xs-1"><button ng-click="toggle(WINDOWS.consignes)" >Consignes</button></div>
-        <div class="col-xs-1"><button ng-click="toggle(WINDOWS.conseils)" >Conseils</button></div>
-        <div class="col-xs-1"><button ng-click="toggle(WINDOWS.indice)" >Indice</button></div>
-        <div class="col-xs-1 col-xs-offset-7"><button ng-click="back()">Retour</button></div>
+        <div class="col-xs-11">
+            <div ng-show="props.consignes.length > 0" class="col-xs-1"><button ng-click="toggle(WINDOWS.consignes)">Consignes</button></div>
+            <div ng-show="props.conseils.length > 0" class="col-xs-1"><button ng-click="toggle(WINDOWS.conseils)">Conseils</button></div>
+            <div ng-show="props.indice.length > 0" class="col-xs-1"><button ng-click="toggle(WINDOWS.indice)">Indice</button></div>
+        </div>
+        <div class="col-xs-1"><button ng-click="back()">Retour</button></div>
     </div>
 </div>

@@ -60,7 +60,7 @@ angular.module('app')
                 }
             })
             .state('anon.games.attentionTrou', {
-              url: '/attentionTrou',
+                url: '/attentionTrou',
                 views: {
                     'game': {
                         templateUrl: 'anon/games/attention_au_trou.html',
@@ -69,45 +69,45 @@ angular.module('app')
                 }
             })
             .state('anon.games.miroir', {
-           url: '/miroir',
-           views: {
-               'game': {
-                   templateUrl: 'anon/games/miroir.html',
-                   controller: 'miroirController'
-               }
-           },
-       })
-       .state('anon.games.panneau', {
-            abstract: true,
-            views: {
-                'game': {
-                    templateUrl: 'anon/games/panneau.html',
-                    controller: 'panneauController',
+                url: '/miroir',
+                views: {
+                    'game': {
+                        templateUrl: 'anon/games/miroir.html',
+                        controller: 'miroirController'
+                    }
+                },
+            })
+            .state('anon.games.panneau', {
+                abstract: true,
+                views: {
+                    'game': {
+                        templateUrl: 'anon/games/panneau.html',
+                        controller: 'panneauController',
+                    }
                 }
-            }
-        })
-        .state('anon.games.panneau.panneau', {
-            url: '/panneau',
-            templateUrl: 'anon/games/panneau.svg.html'
-        })
-       .state('anon.games.coupable', {
-           url: '/coupable',
-           views: {
-               'game': {
-                   templateUrl: 'anon/games/coupable.html',
-                   controller: 'coupableController'
-               }
-           },
-       })
-       .state('anon.games.miniQuiz', {
-           url: '/miniQuiz',
-           views: {
-               'game': {
-                   templateUrl: 'anon/games/miniQuiz.html',
-                   controller: 'miniQuizController'
-               }
-           },
-         })
+            })
+            .state('anon.games.panneau.panneau', {
+                url: '/panneau',
+                templateUrl: 'anon/games/panneau.svg.html'
+            })
+            .state('anon.games.coupable', {
+                url: '/coupable',
+                views: {
+                    'game': {
+                        templateUrl: 'anon/games/coupable.html',
+                        controller: 'coupableController'
+                    }
+                },
+            })
+            .state('anon.games.miniQuiz', {
+                url: '/miniQuiz',
+                views: {
+                    'game': {
+                        templateUrl: 'anon/games/miniQuiz.html',
+                        controller: 'miniQuizController'
+                    }
+                },
+            })
             .state('anon.games.boucheTrou', {
                 url: '/bouche-trou',
                 views: {
@@ -134,7 +134,7 @@ angular.module('app')
                         controller: 'VraiOuFauxController'
                     }
                 },
-              })
+            })
             .state('anon.games.tomber', {
                 url: '/tomber',
                 views: {
