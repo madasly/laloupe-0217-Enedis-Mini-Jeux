@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('AttitudeController.js', function($scope) {
+    .controller('AttitudeController', function($scope) {
 
       $scope.$parent.theme = "Maison";
       $scope.$parent.nomDuJeu = "La Bonne Attitude";
@@ -14,7 +14,7 @@ angular.module('app')
       };
 
       $scope.faux = function(){
-        console.log("... Sérieux !! ?");
+        console.log("... Sérieux !?");
         $scope.showBulle({
           show: true,
           character: "Lea",
