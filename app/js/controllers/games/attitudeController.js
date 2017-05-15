@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('attitudeController.js', function($scope) {
+    .controller('AttitudeController.js', function($scope) {
 
       $scope.$parent.theme = "Maison";
       $scope.$parent.nomDuJeu = "La Bonne Attitude";

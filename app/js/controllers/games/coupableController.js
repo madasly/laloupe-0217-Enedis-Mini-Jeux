@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('coupableController', function($scope) {
+  .controller('CoupableController', function($scope) {
 
     // variable d'information général du jeu
     $scope.$parent.nomDuJeu = "Qui est le coupable ?";

@@ -73,7 +73,7 @@ angular.module('app')
            views: {
                'game': {
                    templateUrl: 'anon/games/miroir.html',
-                   controller: 'miroirController'
+                   controller: 'MiroirController'
                }
            },
        })
@@ -82,7 +82,7 @@ angular.module('app')
             views: {
                 'game': {
                     templateUrl: 'anon/games/panneau.html',
-                    controller: 'panneauController',
+                    controller: 'PanneauController',
                 }
             }
         })
@@ -95,7 +95,7 @@ angular.module('app')
            views: {
                'game': {
                    templateUrl: 'anon/games/coupable.html',
-                   controller: 'coupableController'
+                   controller: 'CoupableController'
                }
            },
        })
@@ -104,7 +104,7 @@ angular.module('app')
            views: {
                'game': {
                    templateUrl: 'anon/games/miniQuiz.html',
-                   controller: 'miniQuizController'
+                   controller: 'MiniQuizController'
                }
            },
          })
@@ -113,7 +113,7 @@ angular.module('app')
              views: {
                  'game': {
                      templateUrl: 'anon/games/attitude.html',
-                     controller: 'attitudeController'
+                     controller: 'AttitudeController'
                  }
              },
            })
@@ -131,7 +131,7 @@ angular.module('app')
                 views: {
                     'game': {
                         templateUrl: 'anon/games/une_sur_trois.html',
-                        controller: 'uneSurTroisController'
+                        controller: 'UneSurTroisController'
                     }
                 },
             })
