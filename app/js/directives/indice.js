@@ -1,9 +1,9 @@
 angular.module('app')
-    .directive('clue', function() {
+    .directive('indice', function() {
         return {
             restrict: 'A',
             replace: true,
-            templateUrl: 'anon/directives/clue.html',
+            templateUrl: 'anon/directives/indice.html',
             scope: {},
             transclude: true,
         };

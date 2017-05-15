@@ -49,6 +49,13 @@ angular.module('app')
         };
 
 
+
+
+        $scope.showBulle = function(bulle) {
+            $scope.bulle = bulle;
+            $scope.toggle(WINDOWS.characters);
+        };
+
         $scope.toggle = function(window) {
             if (window === WINDOWS.game) {
                 $scope.gameLoadedOnce = true;
@@ -57,6 +64,7 @@ angular.module('app')
             $scope.show = window;
         };
 
+        // TODO refactoriser les personnages
         // Code qui permet d'animer Léa
         $scope.animateLea = function() {
             $scope.charactersShown = true;

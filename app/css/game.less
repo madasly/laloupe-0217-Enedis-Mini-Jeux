@@ -2,15 +2,30 @@
 @game-container-height: 70vh;
 
 .game {
+    height: 100%;
+    background-color: salmon;
+    padding: 20px;
 
     &-container {
         height: @game-container-height;
         width: @game-container-width;
         position: relative;
         margin: 0 auto;
+        overflow: hidden;
+    }
+
+    &-view {
+        background-color: white;
+        height: 100%;
+        width: 100%;
     }
 
     .titre-jeu{
         font-weight: bold;
+        margin-top: 0;
+    }
+
+    .container {
+        margin-top: 0;
     }
 }

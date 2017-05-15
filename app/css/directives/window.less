@@ -1,4 +1,3 @@
-
 .window {
     position: absolute;
     top: 0;
@@ -10,7 +9,7 @@
 
     &-overlay {
         background-color: black;
-        opacity: 0.8;
+        opacity: 0.9;
         height: 100%;
         width: 100%;
         position: absolute;
@@ -29,6 +28,9 @@
         display: inline-block;
         font-weight: bold;
         font-family: 'arial', 'sans-serif';
+        color: @white;
+        background-color: @green-greg;
+        z-index: 20;
     }
 
     &-dialog {
@@ -36,7 +38,6 @@
         margin: 0 auto;
         height: 80%;
         width: 60%;
-        background-color: white;
         z-index: 15;
     }
 }
