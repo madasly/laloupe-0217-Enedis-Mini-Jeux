@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('panneauController', function($scope) {
+  .controller('PanneauController', function($scope) {
 
     // Variable d'information général du jeu
     $scope.$parent.theme = "Ville";

@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('miroirController', function($scope) {
+    .controller('MiroirController', function($scope) {
       /* Here is your main controller */
       $scope.$parent.nomDuJeu = "LA TÊTE A L'ENVERS";
             $scope.solution = 'quelque soit le sport surtout ne t approche pas des lignes electriques';

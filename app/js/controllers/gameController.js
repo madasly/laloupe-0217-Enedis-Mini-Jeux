@@ -32,6 +32,7 @@ angular.module('app')
          */
         $scope.showBulle = function(bulle) {
             $scope.bulle = bulle;
+            $scope.charactersShown = true;
         };
 
         $scope.toggleClue = function() {
