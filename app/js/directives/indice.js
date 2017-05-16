@@ -5,7 +5,8 @@ angular.module('app')
             replace: true,
             templateUrl: 'anon/directives/indice.html',
             scope: {
-                texte: "="
+                texte: "=",
+                image: "="
             },
         };
     });

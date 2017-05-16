@@ -1,9 +1,9 @@
 angular.module('app')
-    .directive('consignes', function() {
+    .directive('conseils', function() {
         return {
             restrict: 'A',
             replace: true,
-            templateUrl: 'anon/directives/consignes.html',
+            templateUrl: 'anon/directives/conseils.html',
             scope: {
                 texte: "=",
                 image: "="

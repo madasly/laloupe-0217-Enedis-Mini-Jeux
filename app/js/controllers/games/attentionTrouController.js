@@ -2,7 +2,7 @@ angular.module('app')
     .controller('AttentionTrouController', function($scope) {
 
 
-        //Information general du jeu Attention au Trou !!
+        //Informations générales du jeu Attention au Trou !!
         $scope.$parent.props = {
             nomDuJeu: "Attention au trou !",
             theme: "maison",
@@ -14,6 +14,10 @@ angular.module('app')
             indice: [
                 "Prête bien attention à l'emplacement des installations électriques !",
                 "Dans le doute, coupe l'électricité au disjoncteur."
+            ],
+            conseils: [
+                "Attention, avant de percer un mur il faut vérifier qu'aucun fil électrique n'est caché derrière...",
+                "Car, si la perceuse en touche un, ça peut être dangeureux !"
             ]
         };
 
