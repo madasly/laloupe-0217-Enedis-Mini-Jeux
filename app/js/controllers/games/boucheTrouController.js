@@ -3,7 +3,20 @@ angular.module('app')
         /*
          * La solution (les mots sont dans le bonne ordre)
          */
-        $scope.$parent.nomDuJeu = "Le Bouche-Trou";
+        $scope.$parent.props = {
+            nomDuJeu: "Le Bouche-Trou",
+            theme: "default",
+            consignes: ["Complète ce texte à trous en utilisant les mots dans la liste."],
+            conseils: [
+                "Pour entretenir un jardin, les adultes peuvent utiliser des appareils électriques comme une tondeuse ou un taille-haie...",
+                "Dans ces situations, nou allons voir que certaines mesures de sécurité s'imposent."
+            ],
+            indice: [],
+            audio: {
+                conseils: "sound/games/bouchetrou/P11J17.mp3",
+                consignes: "sound/games/bouchetrou/trou.mp3"
+            }
+        };
 
         var WORDS = [
             'débrancher',

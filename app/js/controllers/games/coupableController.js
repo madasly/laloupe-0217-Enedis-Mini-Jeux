@@ -2,9 +2,21 @@ angular.module('app')
   .controller('CoupableController', function($scope) {
 
     // variable d'information général du jeu
-    $scope.$parent.nomDuJeu = "Qui est le coupable ?";
-    $scope.$parent.theme = "Maison";
-
+    $scope.$parent.props = {
+        nomDuJeu: "Qui est le coupable ?",
+        theme: "maison",
+        consignes: [
+            "À ton avis, quel animal a grignoté ce fil électrique ?"
+        ],
+        conseils: [
+            "Si tu as la chance d'avoir un animal chez toi, ne le laisse pas ronger les fils électriques. Car des fils abimés, ce sont des fils qui ne sont plus isolés et qui deviennent extrêmement dangereux"
+        ],
+        indice: [],
+        audio: {
+            consignes: "sound/games/coupable/guilty.mp3",
+            conseils:"sound/games/coupable/P6J6.mp3"
+        }
+    };
 
     // Lorsque l'utilisateur clic sur le Lapin
     $scope.vrai = function vrai() {

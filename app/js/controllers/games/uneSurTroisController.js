@@ -6,7 +6,14 @@ angular.module('app')
             theme: "jardin",
             consignes: ["Le papa de Greg et Léa a fini de bricoler...",
                 "Laquelle de ces vignettes ne représente aucun risque électrique.",
-                "Sauras tu la trouver ?"],
+                "Sauras tu la trouver ?"
+            ],
+            conseils: [],
+            indice: [],
+            audio: {
+                consignes:"sound/games/chance/chance.mp3",
+
+            }
         };
 
         $scope.vrai = function() {
