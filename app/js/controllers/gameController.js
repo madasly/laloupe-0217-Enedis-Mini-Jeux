@@ -10,13 +10,13 @@ angular.module('app')
             character: '',
             content: ''
         };
-
+          // repasser descriptionshown en true et modalClosedOne en false
         $scope.clueShown = false;
-        $scope.descriptionShown = true;
+        $scope.descriptionShown = false;
         $scope.description = "";
         $scope.nomDuJeu = "";
         $scope.theme = "";
-        $scope.modalClosedOnce = false;
+        $scope.modalClosedOnce = true;
 
         $scope.lea = {
             animate: false,
