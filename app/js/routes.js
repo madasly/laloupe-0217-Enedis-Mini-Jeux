@@ -77,6 +77,15 @@ angular.module('app')
           }
         },
       })
+      .state('anon.games.zoom', {
+        url: '/zoom',
+        views: {
+          'game': {
+            templateUrl: 'anon/games/zoom.html',
+            controller: 'ZoomController'
+          }
+        },
+      })
       .state('anon.games.coupable', {
         url: '/coupable',
         views: {
