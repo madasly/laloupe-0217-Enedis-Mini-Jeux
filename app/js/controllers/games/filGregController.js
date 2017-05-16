@@ -1,8 +1,14 @@
 angular.module('app')
     .controller('FilGregController', function($scope) {
 
-      $scope.$parent.nomDuJeu = "Le Fil de Greg";
-      $scope.$parent.theme = "Maison";
+      $scope.$parent.props = {
+          nomDuJeu: "Le Fil de Greg",
+          theme: "maison",
+          consignes: [],
+          conseils: [],
+          indice: [],
+          audio: {}
+      };
 
       $scope.faux = function(){
         console.log("mauvaise réponse");

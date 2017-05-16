@@ -18,7 +18,12 @@ angular.module('app')
             conseils: [
                 "Attention, avant de percer un mur il faut vérifier qu'aucun fil électrique n'est caché derrière...",
                 "Car, si la perceuse en touche un, ça peut être dangeureux !"
-            ]
+            ],
+            audio: {
+                conseils: "sound/games/attention/P9J13.mp3",
+                consignes:"sound/games/attention/attention.mp3",
+                indices: "sound/games/attention/indice.mp3"
+            }
         };
 
         // Quand l'utilisateur clic sur le cercle en dessous de la lampe

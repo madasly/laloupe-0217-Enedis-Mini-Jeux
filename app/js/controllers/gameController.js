@@ -25,7 +25,7 @@ angular.module('app')
 
 
         /*
-         * Gestion des variables changeables par le enfants
+         * Gestion des variables changeables par les enfants
          */
         $scope.props = {
             nomDuJeu: "",
@@ -33,6 +33,7 @@ angular.module('app')
             consignes: [],
             conseils: [],
             indice: [],
+            audio: {}
         };
 
 
