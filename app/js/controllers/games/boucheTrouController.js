@@ -1,8 +1,6 @@
 angular.module('app')
     .controller('BoucheTrouController', function($scope, $timeout) {
-        /*
-         * La solution (les mots sont dans le bonne ordre)
-         */
+
         $scope.$parent.props = {
             nomDuJeu: "Le Bouche-Trou",
             theme: "default",
@@ -18,6 +16,9 @@ angular.module('app')
             }
         };
 
+        /*
+         * La solution (les mots sont dans le bonne ordre)
+         */
         var WORDS = [
             'débrancher',
             'électrique',
