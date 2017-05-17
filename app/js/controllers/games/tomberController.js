@@ -1,7 +1,19 @@
 angular.module('app')
   .controller('TomberController', function($scope) {
+    $scope.$parent.props = {
+        nomDuJeu: "Ne tombe pas dans le panneau!",
+        theme: "default",
+        consignes: [
+            "Sur ce dessin, deux pêcheurs n'ont pas respecté les consignes de sécurité pour pêcher.",
+            "Lesquels?"
+        ],
+        conseils: [],
+        indice: [],
+        audio: {
+            consignes: "sound/games/tombepanneau/panneau.mp3"
+        }
+     };
 
-    $scope.$parent.nomDuJeu = "Ne tombe pas dans le panneau!";
 
     $scope.badChoice = function() {
       $scope.animateLea();

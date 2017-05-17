@@ -2,8 +2,16 @@ angular.module('app')
   .controller('MiniQuizController', function($scope) {
 
     // Variable d'information général du jeu
-    $scope.$parent.nomDuJeu = "Mini Quizz";
-    $scope.$parent.theme = "Ville";
+    $scope.$parent.props = {
+        nomDuJeu: "Mini Quizz",
+        theme: "ville",
+        consignes: [],
+        conseils: [],
+        indice: [],
+        audio: {
+            consignes: "sound/games/quiz/quiz.mp3"
+        }
+    };
 
     //Function en cas de bonne réponses
     $scope.vrai = function vrai() {

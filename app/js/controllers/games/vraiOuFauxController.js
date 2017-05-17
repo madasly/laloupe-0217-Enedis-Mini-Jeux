@@ -1,8 +1,18 @@
 //Controller du jeux Vrai ou Faux du livret
 angular.module('app')
   .controller('VraiOuFauxController', function($scope) {
-    $scope.$parent.nomDuJeu = "Vrai ou Faux";
-    $scope.$parent.theme = "non défini";
+    $scope.$parent.props = {
+        nomDuJeu: "Vrai ou Faux",
+        theme: "default",
+        consignes: ["Parmi les affirmations suivantes, distingue les vraies des fausses en cliquant sur le bon bouton."],
+        conseils: [],
+        indice: [],
+        audio: {
+            consignes: "sound/games/vrai/vrai.mp3"
+        }
+    };
+
+
 
     $scope.cacheBouton = false;
 

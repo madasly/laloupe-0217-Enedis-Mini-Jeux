@@ -1,9 +1,20 @@
 angular.module('app')
   .controller('PanneauController', function($scope) {
 
-    // Variable d'information général du jeu
-    $scope.$parent.theme = "Ville";
-    $scope.$parent.nomDuJeu = "Le Bon Panneau !";
+    $scope.$parent.props = {
+        nomDuJeu: "Le Bon Panneau !",
+        theme: "ville",
+        consignes: [
+            "Sur tous les coffrets électrique, il y a un panneau qui signifie \"danger électricité\".",
+            "Parmis les panneaux dessinées ci-contre, lequel est-ce ?"
+        ],
+        conseils: [],
+        indice: [],
+        audio: {
+            conseils: "sound/games/bonpanneau/P14J23.mp3",
+            consignes: "sound/games/bonpanneau/bon.mp3"
+        }
+    };
 
 
     // Quand l'utilisateur clic sur le panneau de gauche (flocon de neige)
