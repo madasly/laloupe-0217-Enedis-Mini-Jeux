@@ -104,6 +104,15 @@ angular.module('app')
           }
         },
       })
+      .state('anon.games.depannage', {
+        url: '/depannage',
+        views: {
+          'game': {
+            templateUrl: 'anon/games/depannage.html',
+            controller: 'DepannageController'
+          }
+        },
+      })
       .state('anon.games.boucheTrou', {
         url: '/bouche-trou',
         views: {
