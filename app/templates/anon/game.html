@@ -4,7 +4,7 @@
     <div class="game-container">
         <div class="game-view" ui-view="game" ng-show="gameLoadedOnce"></div>
         <div class="window-container" ng-show="show !== WINDOWS.game">
-            <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.consignes">
+            <div window on-close="toggle(WINDOWS.game);loadGame();" ng-show="show === WINDOWS.consignes">
                 <div consignes texte="props.consignes"></div>
             </div>
             <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.indice">

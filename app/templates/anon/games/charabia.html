@@ -1,14 +1,8 @@
-<div class="row text-center">
-    <div class=" col-xs-12 col-sm-12 col-md-12">
-
-        <h2><strong class="charabia-clem">Message codé :</strong></h2>
-        <p>C'ESZZT TRZÈZS DAZNGEZREZUZX DEZ TIZRER SZURZ LZE FZIL D'UZN AZPPAZREIL ÉZLECTZRIZQUE PZOUZR LZE DÉZBRZANZCZHER! IL FZAZUT TOZUJZZOURZS LEZ PRENZDZRE PZAR LAZ FIZCHZE PZOUZR LZE DÉCOZNNZECTERZ.</p>
-        <h2>Réponse:</h2>
-        <form ng-submit="compare()" method="post">
-            <textarea class="charabia-textarea" name="name" rows="3" ng-model="newText" cols="60"></textarea>
-            <div class=" col-xs-12 col-sm-12 col-md-12 ">
-                <button class="charabia-button" type="submit">Valide ta réponse</button>
-            </div>
-        </form>
-    </div>
+<div class="phrase">
+  <p>Phrase complete : {{ charabiaDecode.slice(0, indexMot).join(" ") }}</p>
+  <p>Nombre d'érreur : {{compteurFaux}}</p>
+</div>
+<div class="charabia-divMot animated text-center" ng-class="{fadeInLeftBig:bascule, fadeOutRightBig:!bascule}">
+  <span class="charabia-carte text-center {{ carte.classes.join(' ') }}"
+  ng-click="select(carte)"  ng-repeat="carte in charabia[indexMot]">{{ carte.lettre }}</span>
 </div>
