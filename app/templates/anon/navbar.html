@@ -7,15 +7,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" ui-sref="anon.home"><img class="logo-navbar" src="img/logo.svg" alt=""/></a>
+      <a class="navbar-brand" ui-sref="anon.home"><img class="logo-navbar" src="img/logo.svg" alt="" /></a>
+        <i href class="glyphicon glyphicon-volume-up" ng-show="!show" ng-click="cutSound()" style="font-size:35px"></i>
+        <i href class="glyphicon glyphicon-volume-off" ng-show="show" ng-click="cutSound()" style="font-size:35px"></i>
     </div>
-    <i class="glyphicon glyphicon-volume-up"  ng-click="cutSound()" style="font-size:35px;"></i>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav navbar-right list-burger">
-          <li ui-sref-active=""><a ui-sref="anon.login" ng-hide="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Connecte toi !</button></a></li>
-          <li ui-sref-active=""><a ui-sref="anon.register" ng-hide="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Inscris toi !</button></a></li>
-          <li ui-sref-active=""><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">Liste des jeux</a></li>
-          <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
+        <li ui-sref-active=""><a ui-sref="anon.login" ng-hide="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Connecte toi !</button></a></li>
+        <li ui-sref-active=""><a ui-sref="anon.register" ng-hide="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Inscris toi !</button></a></li>
+        <li ui-sref-active=""><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">Liste des jeux</a></li>
+        <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
       </ul>
     </div>
   </div>
