@@ -56,7 +56,6 @@ angular.module('app')
             character: "Greg",
             content: "Bonne réponse"
           });
-          $scope.animateGreg();
           $scope.currentQuestion = $scope.reponse[compteur].question;
         } else {
           $scope.cacheBouton = true;
@@ -73,7 +72,6 @@ angular.module('app')
           character: "Lea",
           content: "Mauvaise réponse !"
         });
-        $scope.animateLea();
       }
     };
   });

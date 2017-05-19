@@ -19,7 +19,6 @@ angular.module('app')
 
     // Quand l'utilisateur clic sur le panneau de gauche (flocon de neige)
     $scope.faux1 = function() {
-      $scope.animateLea();
       $scope.showBulle({
         show: true,
         character: "Lea",
@@ -29,7 +28,6 @@ angular.module('app')
 
     //  Quand l'utilisateur clic sur le panneau de droite (produit inflammable)
     $scope.faux = function() {
-      $scope.animateLea();
       $scope.showBulle({
         show: true,
         character: "Lea",
@@ -39,12 +37,10 @@ angular.module('app')
 
     // Quand lutilisateur clic sur le panneau danger élétricque
     $scope.vrai = function() {
-      $scope.animateGreg();
       $scope.showBulle({
         show: true,
         character: "Greg",
         content: "Bravo c'est la bonne réponse !"
       });
-        $scope.animateGreg();
     };
   });

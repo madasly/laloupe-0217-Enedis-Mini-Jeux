@@ -17,7 +17,6 @@ angular.module('app')
         };
 
         $scope.vrai = function() {
-            $scope.animateGreg();
             $scope.showBulle({
                 show: true,
                 character: "Greg",
@@ -26,7 +25,6 @@ angular.module('app')
         };
 
         $scope.faux = function() {
-            $scope.animateLea();
             $scope.showBulle({
                 show: true,
                 character: "Lea",
@@ -35,7 +33,6 @@ angular.module('app')
         };
 
         $scope.faux2 = function() {
-            $scope.animateLea();
             $scope.showBulle({
                 show: true,
                 character: "Lea",
