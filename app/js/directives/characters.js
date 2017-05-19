@@ -1,7 +1,7 @@
 var character = {
     scope: {
         show: '=',
-        animate: '='
+        animate: '=',
     },
     replace: true,
     transclude: true,
@@ -15,9 +15,9 @@ angular.module('app')
         return {
             restrict: 'A',
             scope: {
-                greg:"=greg",
-                lea:"=lea",
-                bulle:"=bulle"
+                greg: "=greg",
+                lea: "=lea",
+                bulle: "=bulle",
             },
             replace: true, // Replace with the template below
             link: function(scope, element, attrs) {
@@ -26,7 +26,7 @@ angular.module('app')
             templateUrl: 'anon/directives/characters.html'
         };
     })
-    .directive('lea', function() {
+    .directive('lea', function($timeout) {
         return {
             restrict: 'E',
             scope: character.scope,
@@ -36,7 +36,7 @@ angular.module('app')
             templateUrl: 'anon/directives/lea.html'
         };
     })
-    .directive('greg', function() {
+    .directive('greg', function($timeout) {
         return {
             restrict: 'E',
             scope: character.scope,
