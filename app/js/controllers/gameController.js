@@ -47,15 +47,12 @@ angular.module('app')
         };
         $scope.lea = {
             animate: false,
-            show: false
+            show: false,
         };
         $scope.greg = {
             animate: false,
             show: false
         };
-
-
-
 
         $scope.showBulle = function(bulle) {
             $scope.bulle = bulle;
