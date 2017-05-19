@@ -56,6 +56,11 @@ angular.module('app')
 
         $scope.showBulle = function(bulle) {
             $scope.bulle = bulle;
+            if (bulle.character.toLowerCase() === 'lea') {
+                $scope.animateLea();
+            } else {
+                $scope.animateGreg();
+            }
             $scope.toggle(WINDOWS.characters);
         };
 

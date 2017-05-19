@@ -16,7 +16,6 @@ angular.module('app')
 
 
     $scope.badChoice = function() {
-      $scope.animateLea();
       $scope.showBulle({
         show: true,
         character: "Lea",
@@ -25,7 +24,6 @@ angular.module('app')
     };
 
     $scope.goodChoice = function() {
-      $scope.animateGreg();
       $scope.showBulle({
         show: true,
         character: "Greg",

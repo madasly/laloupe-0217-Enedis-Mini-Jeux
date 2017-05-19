@@ -28,7 +28,6 @@ angular.module('app')
 
         // Quand l'utilisateur clic sur le cercle en dessous de la lampe
         $scope.badRep = function() {
-            $scope.animateLea();
             $scope.showBulle({
                 show: true,
                 character: "Lea",
@@ -38,7 +37,6 @@ angular.module('app')
 
         // Quand l'utilisateur clic sur le cercle en dessous de l'intérupteur
         $scope.badRep2 = function() {
-            $scope.animateLea();
             $scope.showBulle({
                 show: true,
                 character: "Lea",
@@ -48,7 +46,6 @@ angular.module('app')
 
         // Quand l'utilisateur clic sur le cercle a gauche de la prise
         $scope.badRep3 = function() {
-            $scope.animateLea();
             $scope.showBulle({
                 show: true,
                 character: "Lea",
@@ -61,7 +58,6 @@ angular.module('app')
 
 
         $scope.goodRep = function() {
-            $scope.animateGreg();
             $scope.showBulle({
                 show: true,
                 character: "Greg",
