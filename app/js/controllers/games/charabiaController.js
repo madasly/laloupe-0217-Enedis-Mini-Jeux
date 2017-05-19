@@ -9,9 +9,7 @@ angular.module('app')
             ],
             conseils: [],
             indice: [],
-            audio: {
-                consignes: "sound/games/charabia/charabia.mp3"
-            }
+            audio: {}
         };
         $scope.newText = '';
         $scope.compare = function() {
