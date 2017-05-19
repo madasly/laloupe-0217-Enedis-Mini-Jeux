@@ -1,10 +1,9 @@
 <div class="speech-bubble">
-    <div class="bulle {{character.toLowerCase()}}">
-        <div class="content" ng-class="{'flip-horizontal': flip}">
+    <div class="animated zoomIn bulle {{character.toLowerCase()}}">
+        <div class="bulle-content" ng-class="{'flip-horizontal': flip}">
             <div ng-class="{'flip-horizontal': flip}">{{ content }}</div>
         </div>
     </div>
-
     <svg viewbox="0 0 500 500" width="30%">
         <defs>
             <clipPath id="bulle-shape" clipPathUnits="objectBoundingBox">

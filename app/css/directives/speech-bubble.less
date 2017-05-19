@@ -9,7 +9,7 @@
         text-align: center;
         max-width: @bulle-min-width * 3;
 
-        .content {
+        &-content {
             -webkit-clip-path: url("#bulle-shape");
             clip-path: url("#bulle-shape");
             position: relative;
@@ -27,7 +27,7 @@
             right: @lea-width + 5px;
             top: @bulle-min-width;
 
-            .content {
+            .bulle-content {
                 background-color: @red-lea;
             }
         }
@@ -36,7 +36,7 @@
             left: @greg-width + 5px;
             top: @lea-height - (0.66 * @greg-height);
 
-            .content {
+            .bulle-content {
                 background-color: @green-greg;
             }
         }
