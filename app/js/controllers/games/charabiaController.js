@@ -58,15 +58,15 @@ angular.module('app')
       if (carte.peutDisparaitre === false) {
         $scope.compteurFaux++;
         console.log($scope.compteurFaux);
-        carte.classes.push('animated flash charabia-red');
+        carte.classes.push('flash charabia-red');
       }
       if ($scope.compteurFaux >= 5) {
-        console.log("PERDU LACHE LE CLAVIER SALOWW");
+        console.log("PERDU LACHE LE CLAVIER");
       }
       // Si clic sur le bonne réponse (un Z)
       if (carte.peutDisparaitre === true) {
         compteur++;
-        carte.classes.push('animated bounceOut');
+        carte.classes.push('bounceOut');
 
       }
       if (compteur === nombreDeZ) {

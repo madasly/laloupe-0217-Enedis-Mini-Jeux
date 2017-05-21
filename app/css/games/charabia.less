@@ -8,6 +8,12 @@
   height: 1.5em;
   font-size: 2em;
   border: 1px solid black;
+  /*No Selection*/
+  -moz-user-select: -moz-none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -o-user-select: none;
+   user-select: none;
 }
 
 .charabia-red{
@@ -23,3 +29,36 @@
 
 
 /************************ANIMATION**************************************/
+.charabia-animRotate
+{
+    -webkit-animation: rotationCustom 3s infinite;
+}
+/* ANIMATION DE ROTATION*/
+@-webkit-keyframes rotationCustom {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*ANIMATION DE SHAKE GAUCHE DROITE*/
+.charabia-animGaucheDroite
+{
+    -webkit-animation: gaucheDroiteCustom 3s infinite;
+}
+@-webkit-keyframes gaucheDroiteCustom {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
