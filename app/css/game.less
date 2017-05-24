@@ -2,33 +2,75 @@
 @game-container-height: 70vh;
 
 .game {
+  height: 100%;
+  // TODO changer le background color
+  background-color: salmon;
+  padding: 20px;
+
+  &-container {
+    // TODO changer le background color par défault
+    background-color: white;
+    height: @game-container-height;
+    width: @game-container-width;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  &-view {
+    background-color: white;
     height: 100%;
-    // TODO changer le background color
-    background-color: salmon;
-    padding: 20px;
+    width: 100%;
+  }
 
-    &-container {
-        // TODO changer le backgournd color par défault
-        background-color: white;
-        height: @game-container-height;
-        width: @game-container-width;
-        position: relative;
-        margin: 0 auto;
-        overflow: hidden;
-    }
+  .titre-jeu {
+    font-weight: bold;
+    margin-top: 0;
+  }
 
-    &-view {
-        background-color: white;
-        height: 100%;
-        width: 100%;
-    }
+  .container {
+    margin-top: 0;
+  }
+  .button-container{
+    margin-top: 5px;
+  }
+  .btn-consignes {
+    height: 53px;
+    width: 52px;
+    background-color: #90C72F;
+    border: black solid 2px;
+    border-radius: 50%;
+    -webkit-box-shadow: 6px 5px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 5px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 6px 5px 13px 0px rgba(0,0,0,0.75);
+  }
 
-    .titre-jeu{
-        font-weight: bold;
-        margin-top: 0;
-    }
+  .btn-conseils {
+    height: 53px;
+    width: 52px;
+    background-color: yellow;
+    border: black solid 2px;
+    border-radius: 50%;
+    -webkit-box-shadow: 6px 5px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 5px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 6px 5px 13px 0px rgba(0,0,0,0.75);
+  }
 
-    .container {
-        margin-top: 0;
-    }
+  .btn-indice {
+    background-color: #005EB8;
+    border: black solid 2px;
+    width: 52px;
+    height: 53px;
+    border-radius: 50%;
+    -webkit-box-shadow: 6px 0 13px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 0 13px 0 rgba(0,0,0,0.75);
+    box-shadow: 6px 0 13px 0 rgba(0,0,0,0.75);
+  }
+
+  // .game-indice {
+  //   transform: rotate(45deg);
+  // }
+  .fonction{
+    color: black;
+  }
 }
