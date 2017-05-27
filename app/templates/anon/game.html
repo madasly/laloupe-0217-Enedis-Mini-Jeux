@@ -21,9 +21,9 @@
 
     <div class="button-container container">
         <div class="col-xs-11">
-            <div ng-show="props.consignes.length > 0" class="col-xs-1"><button ng-click="toggle(WINDOWS.consignes);audio.play(props.audio.consignes)">Consignes</button></div>
-            <div ng-show="props.conseils.length > 0" class="col-xs-1"><button ng-click="toggle(WINDOWS.conseils)">Conseils</button></div>
-            <div ng-show="props.indice.length > 0" class="col-xs-1"><button ng-click="toggle(WINDOWS.indice)">Indice</button></div>
+            <div ng-show="props.consignes.length > 0" class="col-xs-1"><button ng-click="toggle(WINDOWS.consignes);play(props.audio.consignes)">Consignes</button></div>
+            <div ng-show="props.conseils.length > 0" class="col-xs-1"><button ng-click="toggle(WINDOWS.conseils);play(props.audio.conseils)">Conseils</button></div>
+            <div ng-show="props.indice.length > 0" class="col-xs-1"><button ng-click="toggle(WINDOWS.indice);play(props.audio.indices)">Indice</button></div>
         </div>
         <div class="col-xs-1"><button ng-click="back()">Retour</button></div>
     </div>
