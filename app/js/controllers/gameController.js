@@ -7,7 +7,7 @@
 
 
 angular.module('app')
-    .controller('GameController', function($scope, $timeout, $state, ngAudio) {
+    .controller('GameController', function($scope, $timeout, $state, ngAudio, Sound) {
         /*
          * Gestion des fenêtres
          */
@@ -33,10 +33,14 @@ angular.module('app')
             consignes: [],
             conseils: [],
             indice: [],
-            audio: {  }
+            audio: {}
         };
 
-        $scope.audio = ngAudio;
+        $scope.play = function(file) {
+          if(Sound.getSoundStatus()) {
+            ngAudio.play(file);
+          }
+        };
 
         /*
          * Gestion des bulles
