@@ -21,9 +21,9 @@
 
     <div class="button-container container">
         <div class="col-xs-11 fonction">
-            <div ng-show="props.consignes.length > 0" class="col-xs-1 text-center"><a href=""><img class="btn-consignes" ng-click="toggle(WINDOWS.consignes);audio.play(props.audio.consignes)" src="img/agent.svg"></a>consignes</div>
-            <div ng-show="props.conseils.length > 0" class="col-xs-offset-1 col-xs-1 text-center"><a href=""><img  class="btn-conseils" ng-click="toggle(WINDOWS.conseils);audio.play(props.audio.conseils)" src="img/ampoule.svg"></a>conseils</div>
-            <div ng-show="props.indice.length > 0" class=" col-xs-offset-1 col-xs-1 text-center"><a href=""><div><img class="btn-indice"  ng-click="toggle(WINDOWS.indice);audio.play(props.audio.indices)" src="img/loupe.svg" style="transform:rotate(45deg)" ></div></a>indices</div>
+            <div ng-show="props.consignes.length > 0" class="col-xs-1 text-center"><a href=""><img class="btn-consignes" ng-click="toggle(WINDOWS.consignes);play(props.audio.consignes)" src="img/agent.svg"></a>consignes</div>
+            <div ng-show="props.conseils.length > 0" class="col-xs-offset-1 col-xs-1 text-center"><a href=""><img  class="btn-conseils" ng-click="toggle(WINDOWS.conseils);play(props.audio.conseils)" src="img/ampoule.svg"></a>conseils</div>
+            <div ng-show="props.indice.length > 0" class=" col-xs-offset-1 col-xs-1 text-center"><a href=""><div><img class="btn-indice"  ng-click="toggle(WINDOWS.indice);play(props.audio.indices)" src="img/loupe.svg" style="transform:rotate(45deg)" ></div></a>indices</div>
         </div>
 
         <div class="col-xs-1"><button ng-click="back()">Retour</button></div>
