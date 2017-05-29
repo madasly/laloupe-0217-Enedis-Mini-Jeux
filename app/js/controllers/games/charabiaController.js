@@ -79,10 +79,7 @@ angular.module('app')
           }, 750);
         }, 750);
 
-        compteur = 0;
-
-
-
+        compteur = 0;  
       }
     };
 

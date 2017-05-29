@@ -15,7 +15,6 @@
    -o-user-select: none;
    user-select: none;
 }
-
 .charabia-red{
     margin: 0 2px;
     display: inline-block;
@@ -25,8 +24,6 @@
     border: 1px solid red;
     color: red;
 }
-
-
 
 /************************ANIMATION**************************************/
 .charabia-animRotate
@@ -49,14 +46,42 @@
 /*ANIMATION DE SHAKE GAUCHE DROITE*/
 .charabia-animGaucheDroite
 {
-    -webkit-animation: gaucheDroiteCustom 3s infinite;
+    -webkit-animation: gaucheDroiteCustom 5s infinite;
 }
 @-webkit-keyframes gaucheDroiteCustom {
   0% {
     transform: translateX(0px);
   }
-  50% {
+  25% {
     transform: translateX(200px);
+  }
+  75% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+/*ANIMATION DEPLACEMENT CARRé*/
+.charabia-animDeplacement
+{
+  -webkit-animation: gaucheDroiteCustom 5s infinite;
+}
+@-webkit-keyframes gaucheDroiteCustom {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(200px);
+  }
+  40% {
+    transform: translateY(-200px) translateX(200px);
+  }
+  60% {
+    transform: translateX(-200px) translateY(-200px);
+  }
+  80% {
+    transform: translateY(0px) translateX(-200px);
   }
   100% {
     transform: translateX(0px);
