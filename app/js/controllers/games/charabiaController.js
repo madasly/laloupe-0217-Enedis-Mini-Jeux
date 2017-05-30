@@ -3,11 +3,12 @@ angular.module('app')
     $scope.gameLoaded = false;
     $scope.indexMot = 0;
     $scope.bascule = true;
+    $scope.animation = ["charabia-animRotate", "charabia-animGaucheDroite", "charabia-animDeplacement"];
     $scope.$parent.props = {
       nomDuJeu: "C'est quoi ce Charabia",
       theme: "maison",
       consignes: [
-        "Pour déchiffrer ce message codé qui t'explique comment débrancher un appareil électrique sans danger, supprime toutes les lettres Z."
+        "Pour déchiffrer ce message codé qui t'explique comment débrancher un appareil électrique sans danger, supprime toutes mauvaise lettre."
       ],
       conseils: [],
       indice: [],
@@ -40,9 +41,9 @@ angular.module('app')
       };
       return carte;
     }
-    var MSG_CODE = ("C'ESZZT TRZÈZS DAZNGEZREZUZX DEZ TIZRER SZURZ LZE FZIL D'UZN AZPPAZREIL ÉZLECTZRIZQUE " +
-      "PZOUZR LZE DÉZBRZANZCZHER! IZL FZAZUT TOZUJZZOURZS LEZ PRENZDZRE PZAR LAZ FIZCHZE " +
-      "PZOUZR LZE DÉCOZNNZECTERZ.");
+    var MSG_CODE = ("C'ESZZT TRZEZS DAZNGEZREZUZX DEZ TIZRER SZURZ LZE FZIL D'UZN AZPPAZREIL EZLECTZRIZQUE " +
+      "PZOUZR LZE DEBRZANZCZHER! IZL FZAZUT TOZUJZZOURZS LEZ PRENZDZRE PZAR LAZ FIZCHZE " +
+      "PZOUZR LZE DECOZNNZECTERZ.");
 
     $scope.charabiaDecode = MSG_CODE.replace(/[zZ]/g, '').split(' ');
     $scope.charabia = MSG_CODE.split(' ').map(function(mot) {
@@ -79,7 +80,7 @@ angular.module('app')
           }, 750);
         }, 750);
 
-        compteur = 0;  
+        compteur = 0;
       }
     };
 

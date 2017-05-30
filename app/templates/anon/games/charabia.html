@@ -1,11 +1,25 @@
-<div class="phrase">
-  <p>Nombre d'érreur : {{compteurFaux}}</p>
-  <p class="plok">Phrase complete : {{ charabiaDecode.slice(0, indexMot).join(" ") }}</p>
-
+<div class="row">
+  <div class="col-xs-12">
+    <p class="plok text-center">Phrase complete :</p>
+    <p> {{ charabiaDecode.slice(0, indexMot).join(" ") }}</p>
+  </div>
 </div>
-<div class="charabia-divMot animated text-center" ng-class="{fadeInLeftBig:bascule, fadeOutRightBig:!bascule}">
-  <div class="charabia-animGaucheDroite" style="border:1px solid red;">
-    <span class="plok charabia-carte text-center animated {{carte.classes.join(' ')}}"
-    ng-mousedown="select(carte)" ng-repeat="carte in charabia[indexMot]">{{ carte.lettre }}</span>
+
+<div class="row motQuiBouge" style="border: 1px solid red;">
+  <div class="col-xs-12">
+    <div class="charabia-divMot animated text-center" ng-class="{fadeInLeftBig:bascule, fadeOutRightBig:!bascule}">
+      <div class="charabia-animRotate">
+        <span class="plok charabia-carte text-center animated {{carte.classes.join(' ')}}"
+        ng-mousedown="select(carte)" ng-repeat="carte in charabia[indexMot]">{{ carte.lettre }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row charabia-faute navbar-fixed-bottom" style="border:1px solid green;">
+  <div class="col-xs-12 text-right">
+    <div class="phrase">
+      <p class="plok">Faute : {{compteurFaux}}</p>
+    </div>
   </div>
 </div>
