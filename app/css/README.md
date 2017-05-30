@@ -8,7 +8,7 @@ Pour utilisez les 6 polices différente ubuntu :
 
 ### Les classe custom
 
-Dans votre fichier.html placer les classe suivante pour modifier la polices
+Dans votre fichier.html placer les classes suivantes pour modifier la police
 
 + .ubuntu pour la police Ubuntu.ttf
 + .ubuntu-bold pour la police Ubuntu-Bold.ttf
