@@ -19,6 +19,7 @@ module.exports = function(lineman) {
                 "app/js/app.js",
                 "app/js/consts/*.js",
                 "app/js/directives/*.js",
+                "app/js/directives/games/*.js",
                 "app/js/factories/*.js",
                 "app/js/services/*.js",
                 "app/js/controllers/*.js",
