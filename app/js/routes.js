@@ -40,6 +40,15 @@ angular.module('app')
           }
         }
       })
+      .state('anon.selection', {
+        url: '/selection',
+        views: {
+          'content@': {
+            templateUrl: 'anon/selection.html',
+            controller: 'SelectionController'
+          }
+        }
+      })
       .state('anon.games', {
         abstract: true,
         url: '/games',
