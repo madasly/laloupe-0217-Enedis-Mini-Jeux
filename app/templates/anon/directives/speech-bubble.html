@@ -1,7 +1,7 @@
 <div class="speech-bubble">
     <div class="animated zoomIn bulle {{character.toLowerCase()}}">
         <div class="bulle-content" ng-class="{'flip-horizontal': flip}">
-            <div ng-class="{'flip-horizontal': flip}">{{ content }}</div>
+            <div ng-class="{'flip-horizontal': flip}" ng-transclude></div>
         </div>
     </div>
     <svg viewbox="0 0 500 500" width="30%">
