@@ -1,5 +1,5 @@
 angular.module('app')
-  .config(function($stateProvider, $urlRouterProvider, AccessLevels) {
+  .config(function ($stateProvider, $urlRouterProvider, AccessLevels) {
     $stateProvider
       .state('anon', {
         abstract: true,
@@ -114,7 +114,7 @@ angular.module('app')
         },
       })
       .state('anon.games.panneau', {
-        abstract: true,
+        url: '/panneau',
         views: {
           'game': {
             templateUrl: 'anon/games/panneau.html',
@@ -122,94 +122,84 @@ angular.module('app')
           }
         }
       })
-      .state('anon.games.panneau.panneau', {
-        url: '/panneau',
-        templateUrl: 'anon/games/panneau.svg.html'
+      .state('anon.games.filGreg', {
+        url: '/fil-greg',
+        views: {
+          'game': {
+            templateUrl: 'anon/games/fil-greg.html',
+            controller: 'FilGregController'
+          }
+        },
       })
+      .state('anon.games.uneSurTrois', {
+        url: '/une-chance-sur-trois',
+        views: {
+          'game': {
+            templateUrl: 'anon/games/une_sur_trois.html',
+            controller: 'UneSurTroisController'
+          }
+        },
+      })
+      .state('anon.games.vraiOuFaux', {
+        url: '/vrai_ou_faux',
+        views: {
+          'game': {
+            templateUrl: 'anon/games/vrai_ou_faux.html',
+            controller: 'VraiOuFauxController'
+          }
+        },
+      })
+      .state('anon.games.attitude', {
+        url: '/attitude',
+        views: {
+          'game': {
+            templateUrl: 'anon/games/attitude.html',
+            controller: 'AttitudeController'
+          }
+        },
+      })
+      .state('anon.games.tomber', {
+        url: '/tomber',
+        views: {
+          'game': {
+            templateUrl: 'anon/games/tomber.html',
+            controller: 'TomberController'
+          }
+        }
 
-            .state('anon.games.filGreg', {
-                abstract: true,
-                views: {
-                    'game': {
-                        templateUrl: 'anon/games/fil_greg.html',
-                        controller: 'FilGregController'
-                    }
-                },
-            })
-            .state('anon.games.filGreg.filGreg', {
-                url: '/fil-greg',
-                templateUrl: 'anon/games/fil-greg.svg.html'
-            })
+      });
 
-            .state('anon.games.uneSurTrois', {
-                url: '/une-chance-sur-trois',
-                views: {
-                    'game': {
-                        templateUrl: 'anon/games/une_sur_trois.html',
-                        controller: 'UneSurTroisController'
-                    }
-                },
-            })
-            .state('anon.games.vraiOuFaux', {
-                url: '/vrai_ou_faux',
-                views: {
-                    'game': {
-                        templateUrl: 'anon/games/vrai_ou_faux.html',
-                        controller: 'VraiOuFauxController'
-                    }
-                },
-            })
-            .state('anon.games.attitude', {
-                url: '/attitude',
-                views: {
-                    'game': {
-                        templateUrl: 'anon/games/attitude.html',
-                        controller: 'AttitudeController'
-                    }
-                },
-            })
-            .state('anon.games.tomber', {
-                url: '/tomber',
-                views: {
-                    'game': {
-                        templateUrl: 'anon/games/tomber.html',
-                        controller: 'TomberController'
-                    }
-                }
-
-            });
-
-        $stateProvider
-            .state('user', {
-                abstract: true,
-                url: '/user',
-                views: {
-                    'navbar@': {
-                        templateUrl: 'user/navbar.html',
-                        controller: 'NavbarController'
-                    }
-                },
-                data: {
-                    access: AccessLevels.user
-                }
-            })
-            .state('user.dashboard', {
-                url: '/dashboard',
-                views: {
-                    'content@': {
-                        templateUrl: 'user/dashboard.html',
-                        controller: 'DashboardController'
-                    }
-                }
-            })
-            .state('user.profile', {
-                url: '/profile',
-                views: {
-                    'content@': {
-                        templateUrl: 'user/profile.html',
-                        controller: 'ProfileController'
-                    }
-                }
-            });
-        $urlRouterProvider.otherwise('/');
-    });
+    $stateProvider
+      .state('user', {
+        abstract: true,
+        url: '/user',
+        views: {
+          'navbar@': {
+            templateUrl: 'user/navbar.html',
+            controller: 'NavbarController'
+          }
+        },
+        data: {
+          access: AccessLevels.user
+        }
+      })
+      .state('user.dashboard', {
+        url: '/dashboard',
+        views: {
+          'content@': {
+            templateUrl: 'user/dashboard.html',
+            controller: 'DashboardController'
+          }
+        }
+      })
+      .state('user.profile', {
+        url: '/profile',
+        views: {
+          'content@': {
+            templateUrl: 'user/profile.html',
+            controller: 'ProfileController'
+          }
+        }
+      });
+    $urlRouterProvider.otherwise('/');
+  });
