@@ -1,11 +1,62 @@
+ @bulle-min-height: 75px;
+@bulle-min-width: 2 * @bulle-min-height;
+@bulle-offset: 50px;
 .home{
-  padding-top: 220px;
   background-image: url(/img/maison-jardin.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+background-position:center;
+background-size: cover;
+background-repeat: no-repeat;
+height: 100vh;
+position: relative;
 }
+
 .greg-position{
-  position: absolute;
-  bottom: 0;
+    position: absolute;
+    left:190px;
+    bottom: 0px;
 }
+.lea-position{
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+}
+.speech-bubble {
+    .bulle {
+        color: @white;
+        position: absolute;
+        text-align: center;
+        max-width: @bulle-min-width * 3;
+
+        &-content {
+            -webkit-clip-path: url("#bulle-shape");
+            clip-path: url("#bulle-shape");
+            position: relative;
+            padding: 10% 30% 10% 10%;
+            width: 100%;
+            min-width: @bulle-min-width;
+            min-height: @bulle-min-height;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &.lea {
+            right:277px;
+            top: 73px;
+
+            .bulle-content {
+                background-color: @red-lea;
+            }
+        }
+
+        &.greg {
+            left: 159px;
+            top: 66px ;
+          }
+
+            .bulle-content {
+                background-color: @green-greg;
+            }
+        }
+    }
