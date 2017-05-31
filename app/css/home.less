@@ -1,62 +1,71 @@
- @bulle-min-height: 75px;
-@bulle-min-width: 2 * @bulle-min-height;
+@bulle-min-height:0.85 * @bulle-min-width;
+@bulle-min-width:  250px;
 @bulle-offset: 50px;
-.home{
-  background-image: url(/img/maison-jardin.svg);
-background-position:center;
-background-size: cover;
-background-repeat: no-repeat;
-height: 100vh;
-position: relative;
-}
 
-.greg-position{
-    position: absolute;
-    left:190px;
-    bottom: 0px;
-}
-.lea-position{
-  position: absolute;
-  right: 10px;
-  bottom: 0px;
-}
-.speech-bubble {
+.home {
+  background-image: url("/img/maison-jardin.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(~"100vh -" @navbar-height);
+  // height: 100vh;
+  position: relative;
+
+  .speech-bubble {
     .bulle {
-        color: @white;
-        position: absolute;
-        text-align: center;
-        max-width: @bulle-min-width * 3;
+      color: @white;
+      position: absolute;
+      text-align: center;
+      max-width: @bulle-min-width * 3;
 
-        &-content {
-            -webkit-clip-path: url("#bulle-shape");
-            clip-path: url("#bulle-shape");
-            position: relative;
-            padding: 10% 30% 10% 10%;
-            width: 100%;
-            min-width: @bulle-min-width;
-            min-height: @bulle-min-height;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+      &-content {
+        -webkit-clip-path: url("#bulle-shape");
+        clip-path: url("#bulle-shape");
+        position: relative;
+        padding: 10% 30% 10% 10%;
+        width: 100%;
+        min-width: @bulle-min-width;
+        min-height: @bulle-min-height;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &.lea {
+        right: @lea-width + 115px;
+        top: @bulle-min-width - 115px;
+
+        .bulle-content {
+          background-color: @red-lea;
         }
+      }
 
-        &.lea {
-            right:277px;
-            top: 73px;
+      &.greg {
+        left: @greg-width + 25px;
+        top: @lea-height - (1.36 * @greg-height);
 
-            .bulle-content {
-                background-color: @red-lea;
-            }
+        .bulle-content {
+          background-color: @green-greg;
         }
-
-        &.greg {
-            left: 159px;
-            top: 66px ;
-          }
-
-            .bulle-content {
-                background-color: @green-greg;
-            }
-        }
+      }
     }
+  }
+}
+.play-button {
+  position: fixed;
+  left: 200px;
+  bottom:  0;
+}
+
+.greg-position {
+  position: absolute;
+  left: 1vw;
+  bottom: 0;
+}
+
+.lea-position {
+  position: absolute;
+  right: 0.5vw;
+  bottom: 0;
+}
