@@ -1,5 +1,5 @@
-@bulle-min-height:0.85 * @bulle-min-width;
-@bulle-min-width:  250px;
+@bulle-min-height: 75px;
+@bulle-min-width: 2 * @bulle-min-height;
 @bulle-offset: 50px;
 
 .home {
@@ -16,11 +16,9 @@
       color: @white;
       position: absolute;
       text-align: center;
-      max-width: @bulle-min-width * 3;
+      max-width: 200px;
 
       &-content {
-        -webkit-clip-path: url("#bulle-shape");
-        clip-path: url("#bulle-shape");
         position: relative;
         padding: 10% 30% 10% 10%;
         width: 100%;
@@ -33,39 +31,36 @@
       }
 
       &.lea {
-        right: @lea-width + 115px;
-        top: @bulle-min-width - 115px;
-
-        .bulle-content {
-          background-color: @red-lea;
-        }
-      }
-
-      &.greg {
-        left: @greg-width + 25px;
-        top: @lea-height - (1.36 * @greg-height);
-
-        .bulle-content {
-          background-color: @green-greg;
-        }
+        right: @lea-width + 5px;
+        top: @bulle-min-width;
       }
     }
+
+    &.greg {
+      left: @greg-width + 5px;
+      top: @lea-height - (0.66 * @greg-height);
+    }
   }
-}
-.play-button {
-  position: fixed;
-  left: 200px;
-  bottom:  0;
 }
 
 .greg-position {
   position: absolute;
-  left: 1vw;
-  bottom: 0;
+  left: 15px;
+  bottom: 2px;
 }
 
 .lea-position {
   position: absolute;
-  right: 0.5vw;
-  bottom: 0;
+  right: 15px;
+  bottom: 10px;
+}
+
+.play-bouton {
+  position: absolute;
+  bottom: 80px;
+}
+
+.play {
+  background-color: @blue-enedis;
+  color: white;
 }

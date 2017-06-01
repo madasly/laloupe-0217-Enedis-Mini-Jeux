@@ -1,14 +1,18 @@
-<div class="home">
-      <div class="greg-position animated fadeInLeftBig">
-        <img class="flip-horizontal " src="/img/greg.png">
-        <speech-bubble character="'greg'" flip="true">{{"Salut, moi c'est Greg! Viens avec moi , on va bien s'amuser!"}}</speech-bubble>
-      </div>
+<div class="container-fluid home">
+  <div class="row perso">
+    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 text-center greg-position animated fadeInLeftBig">
+      <img class="flip-horizontal " src="/img/greg.png">
+      <speech-bubble character="'greg'" flip="true">{{"Salut, moi c'est Greg! Viens avec moi , on va bien s'amuser!"}}</speech-bubble>
+    </div>
+    <div class="col-xs-offset-3 col-xs-4 col-sm-offset-3 col-sm-4 col-md-offset-3 col-md-4 col-lg-offset-3 col-lg-4 text-center lea-position animated fadeInRightBig">
+      <img src="/img/lea.png ">
+      <speech-bubble character="'lea'" flip="false">{{"Salut, moi c'est Léa! La grande soeur de Greg. Tu vas apprendre les bons gestes pour éviter les risques électriques à la maison, dehors et mêmes dans tes loisirs"}}</speech-bubble>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-xs-12 play-bouton">
+    <a  sref="anon.selection"><button class="play" type="btn-primary" name="button">JOUER</button></a>
+    </div>
 
-      <div class="lea-position animated fadeInRightBig">
-        <img src="/img/lea.png ">
-        <speech-bubble character="'lea'" flip="false">{{"Salut, moi c'est Léa! La grande soeur de Greg. Tu vas apprendre les bons gestes pour éviter les risques électriques à la maison, dehors et mêmes dans tes loisirs"}}</speech-bubble>
-      </div>
-      <div class="play-bouton">
-        <button type="btn-success" name="button"><a  sref="anon.selection">JOUER</a></button>
-      </div>
+  </div>
 </div>
