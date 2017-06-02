@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12">
-    <p class="plok text-center">Phrase complete :</p>
+    <p class="text-center">Phrase complete :</p>
     <p> {{ charabiaDecode.slice(0, indexMot).join(" ") }}</p>
   </div>
 </div>
@@ -9,7 +9,7 @@
   <div class="col-xs-12">
     <div class="charabia-divMot animated text-center" ng-class="{fadeInLeftBig:bascule, fadeOutRightBig:!bascule}">
       <div class="charabia-animRotate">
-        <span class="plok charabia-carte text-center animated {{carte.classes.join(' ')}}"
+        <span class="charabia-carte text-center animated {{carte.classes.join(' ')}}"
         ng-mousedown="select(carte)" ng-repeat="carte in charabia[indexMot]">{{ carte.lettre }}</span>
       </div>
     </div>
@@ -19,7 +19,7 @@
 <div class="row charabia-faute">
   <div class="col-xs-12 text-right">
     <div class="phrase">
-      <p class="plok">Faute : {{compteurFaux}}</p>
+      <p class="">Faute : {{compteurFaux}}</p>
     </div>
   </div>
 </div>
