@@ -17,6 +17,7 @@
       position: absolute;
       text-align: center;
       max-width: 200px;
+      max-height: 250px;
 
       &-content {
         position: relative;
@@ -31,36 +32,44 @@
       }
 
       &.lea {
-        right: @lea-width + 5px;
-        top: @bulle-min-width;
+        left: 80%;
+        right: 12%;
+        top: 45%;
+        bottom: 10%;
+      }
+
+      &.greg {
+        left: 15%;
+        right: 10%;
+        top: 50%;
+        bottom: 10px;
       }
     }
-
-    &.greg {
-      left: @greg-width + 5px;
-      top: @lea-height - (0.66 * @greg-height);
-    }
   }
-}
 
-.greg-position {
-  position: absolute;
-  left: 15px;
-  bottom: 2px;
-}
+  .lea-position {
+    position: absolute;
+    left: 73%;
+    right: 8%;
+    top: 26%;
+    bottom: 5%;
+  }
+  .greg-position {
+    position: absolute;
+    left: 7%;
+    right: 5%;
+    top: 37%;
+    bottom: 5%;
+  }
 
-.lea-position {
-  position: absolute;
-  right: 15px;
-  bottom: 10px;
-}
 
-.play-bouton {
-  position: absolute;
-  bottom: 80px;
-}
+  .play-bouton {
+    position: absolute;
+    bottom: 80px;
+  }
 
-.play {
-  background-color: @blue-enedis;
-  color: white;
+  .play {
+    background-color: @blue-enedis;
+    color: white;
+  }
 }
