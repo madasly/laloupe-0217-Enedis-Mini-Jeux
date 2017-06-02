@@ -33,7 +33,13 @@ angular.module('app')
             consignes: [],
             conseils: [],
             indice: [],
-            audio: {}
+            audio: {},
+            onLoad: function() {}
+        };
+        $scope.onLoad = function() {
+          if (!$scope.gameLoadedOnce) {
+            $scope.props.onLoad();
+          }
         };
 
         $scope.play = function(file) {

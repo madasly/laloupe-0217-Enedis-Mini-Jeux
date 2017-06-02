@@ -1,24 +1,99 @@
-.charabia-clem {
-  height:250px;
-  color: #CC0060;
+.charabia-divMot{
+  padding-top: 30%;
 }
-.charab-button{
-  font-size: 20px;
-  color: white;
-  background-color: @green-greg;
-  border-radius: 20px;
-  padding: 10px;
-  height: 60px;
+.charabia-carte {
+  margin: 0 2px;
+  display: inline-block;
+  width: 1.25em;
+  height: 1.5em;
+  font-size: 2em;
+  border: 1px solid black;
+  /*No Selection*/
+  -moz-user-select: -moz-none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -o-user-select: none;
+   user-select: none;
 }
-.charabia-button{
-  font-size: 19px;
-  color: white;
-  background-color: #90C72F;
-  height: 90px;
-  margin-top: 30px;
-  border-radius: 12px;
+.charabia-red{
+    margin: 0 2px;
+    display: inline-block;
+    width: 1.25em;
+    height: 1.5em;
+    font-size: 2em;
+    border: 1px solid red;
+    color: red;
 }
-.charabia-textarea{
-      margin-top: 30px;
-    border-radius: 25px;
+
+.charabia-faute{
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 300px;
+  height: 200px;
+}
+.test{
+  font-size: 35px;
+}
+/************************ANIMATION**************************************/
+.charabia-animRotate
+{
+    -webkit-animation: rotationCustom 3s infinite;
+}
+/* ANIMATION DE ROTATION*/
+@-webkit-keyframes rotationCustom {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*ANIMATION DE SHAKE GAUCHE DROITE*/
+.charabia-animGaucheDroite
+{
+    -webkit-animation: gaucheDroiteCustom 5s infinite;
+}
+@-webkit-keyframes gaucheDroiteCustom {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(200px);
+  }
+  75% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+/*ANIMATION DEPLACEMENT CARRé*/
+.charabia-animDeplacement
+{
+  -webkit-animation: gaucheDroiteCustom 5s infinite;
+}
+@-webkit-keyframes gaucheDroiteCustom {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(200px);
+  }
+  40% {
+    transform: translateY(-200px) translateX(200px);
+  }
+  60% {
+    transform: translateX(-200px) translateY(-200px);
+  }
+  80% {
+    transform: translateY(0px) translateX(-200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
