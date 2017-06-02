@@ -1,6 +1,7 @@
 @game-container-width: 80vw;
-@game-container-height: calc(~"100vh -" @navbar-height);
-;
+@button-height: 53px;
+@container-margin: 120px;
+@game-container-height: calc(~"100vh -" (@navbar-height + @button-height + @container-margin));
 
 .game {
   height: 100%;
@@ -36,7 +37,7 @@
     margin-top: 5px;
   }
   .btn-consignes {
-    height: 53px;
+    height: @button-height;
     width: 52px;
     background-color: #90C72F;
     border: black solid 2px;
@@ -47,7 +48,7 @@ box-shadow: 6px 5px 13px 0px rgba(0,0,0,0.75);
   }
 
   .btn-conseils {
-    height: 53px;
+    height: @button-height;
     width: 52px;
     background-color: yellow;
     border: black solid 2px;
@@ -61,7 +62,7 @@ box-shadow: 6px 5px 13px 0px rgba(0,0,0,0.75);
     background-color: #005EB8;
     border: black solid 2px;
     width: 52px;
-    height: 53px;
+    height: @button-height;
     border-radius: 50%;
     -webkit-box-shadow: 6px 0 13px 0 rgba(0,0,0,0.75);
     -moz-box-shadow: 6px 0 13px 0 rgba(0,0,0,0.75);

@@ -21,8 +21,6 @@
 
 
       &-content {
-        -webkit-clip-path: url("#bulle-shape");
-        clip-path: url("#bulle-shape");
         position: relative;
         padding: 10% 30% 10% 10%;
         width: 100%;
@@ -41,6 +39,8 @@
         bottom: calc(~"5% +" @lea-height/2);
         // bottom: 0;
         .bulle-content {
+          -webkit-clip-path: url("#bulle-shape-lea");
+          clip-path: url("#bulle-shape-lea");
           background-color: @red-lea;
         }
       }
@@ -51,6 +51,8 @@
         left: calc(~"7% +" @greg-width);
         bottom: calc(~"5% +" @greg-height/2);
         .bulle-content {
+          -webkit-clip-path: url("#bulle-shape-greg");
+          clip-path: url("#bulle-shape-greg");
           background-color: @green-greg;
         }
       }

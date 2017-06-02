@@ -11,8 +11,8 @@
       max-width: @bulle-min-width * 3;
 
       &-content {
-        -webkit-clip-path: url("#bulle-shape");
-        clip-path: url("#bulle-shape");
+        -webkit-clip-path: url("#bulle-shape-greg"); // valeur par défault
+        clip-path: url("#bulle-shape-greg"); // valeur par défault
         position: relative;
         padding: 10% 30% 10% 10%;
         width: 100%;
@@ -29,6 +29,8 @@
         top: @bulle-min-width;
 
         .bulle-content {
+          -webkit-clip-path: url("#bulle-shape-lea");
+          clip-path: url("#bulle-shape-lea");
           background-color: @red-lea;
         }
       }
@@ -37,7 +39,10 @@
         left: @greg-width + 5px;
         top: @lea-height - (0.66 * @greg-height);
 
+
         .bulle-content {
+          -webkit-clip-path: url("#bulle-shape-greg");
+          clip-path: url("#bulle-shape-greg");
           background-color: @green-greg;
         }
       }
