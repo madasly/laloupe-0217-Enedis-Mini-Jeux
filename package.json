@@ -10,10 +10,11 @@
     "production": "lineman clean build && node production.js"
   },
   "dependencies": {
+    "dragula": "^3.7.2",
     "express": "",
+    "less-plugin-glob": "^2.0.0",
     "lineman": "~0.37.0",
     "lineman-angular": "^0.3.0",
-    "less-plugin-glob": "^2.0.0",
     "lineman-less": "^0.1.0"
   }
 }

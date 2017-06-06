@@ -1,25 +1,16 @@
 <!-- TODO make better animation when dropping words -->
 <div class="bouche-trou">
+        <ul class="words">
+                <li ng-repeat="word in text.words track by $index"><span class="word" data-drag="true" jqyoui-draggable="{index: {{$index}}, animate:false}" data-jqyoui-options="{revert: 'invalid', placeholder: true, opacity: 0.5}"
+                                ng-model="text.words">{{ word }}</span></li>
+        </ul>
 
-    <ul class="words">
-        <li ng-repeat="word in words"><span class="word" data-drag="true" jqyoui-draggable="{index: {{$index}}, animate:true}" data-jqyoui-options="{revert: 'invalid', placeholder: true, opacity: 0.5}" ng-model="words">{{ word }}</span></li>
-    </ul>
-
-    <div class="fill-in-the-blank text-center">
-        Il est très important de
-        <span class="hole" data-drop="true" jqyoui-droppable="{index: 0, onDrop: 'onDrop'}" ng-model="holes">
-                <span class="word" ng-if="holes[0] !== ''" data-drag="true" jqyoui-draggable="{index: 0, animate:true}" data-jqyoui-options="{revert: 'invalid', direction: 'top'}" ng-model="holes">{{holes[0]}}</span>
-        </span>
-        un appareil
-        <span class="hole" data-drop="true" jqyoui-droppable="{index: 1, onDrop: 'onDrop'}" ng-model="holes">
-                <span class="word" ng-if="holes[1] !== ''" data-drag="true" jqyoui-draggable="{index: 1, animate:true}" data-jqyoui-options="{revert: 'invalid', direction: 'top'}" ng-model="holes">{{holes[1]}}</span>
-        </span>
-        avant de le
-        <span class="hole" data-drop="true" jqyoui-droppable="{index: 2, onDrop: 'onDrop'}" ng-model="holes">
-                <span class="word" ng-if="holes[2] !== ''" data-drag="true" jqyoui-draggable="{index: 2, animate:true}" data-jqyoui-options="{revert: 'invalid', direction: 'top'}" ng-model="holes">{{holes[2]}}</span>
-        </span>. Si tes parents n'y pensent pas, ils risquent de se
-        <span class="hole" data-drop="true" jqyoui-droppable="{index: 3, onDrop: 'onDrop'}" ng-model="holes">
-                <span class="word" ng-if="holes[3] !== ''" data-drag="true" jqyoui-draggable="{index: 3, animate:true}" data-jqyoui-options="{revert: 'invalid', direction: 'top'}" ng-model="holes">{{holes[3]}}</span>
-        </span>.
-    </div>
+        <div class="fill-in-the-blank text-center">
+                <div ng-repeat="part in text.sentence track by $index" class="part">
+                        <span ng-show="part === '_'" class="hole" data-drop="true" jqyoui-droppable="{index: $index, onDrop: 'onDrop'}" ng-model="text.holes">
+                                <span class="word" ng-if="text.holes[$index] !== undefined" data-drag="true" jqyoui-draggable="{index: $index, animate:false}" data-jqyoui-options="{revert: 'invalid', direction: 'top'}" ng-model="text.holes">{{text.holes[$index]}}</span>
+                        </span>
+                        <span ng-hide="part === '_'" class="text">{{ part }}</span>
+                </div>
+        </div>
 </div>

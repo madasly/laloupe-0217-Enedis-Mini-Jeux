@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('BoucheTrouController', function($scope, $timeout) {
+    .controller('BoucheTrouController', function ($scope, $timeout) {
 
         $scope.$parent.props = {
             nomDuJeu: "Le Bouche-Trou",
@@ -16,28 +16,24 @@ angular.module('app')
             }
         };
 
-        /*
-         * La solution (les mots sont dans le bonne ordre)
-         */
-        var WORDS = [
-            'débrancher',
-            'électrique',
-            'nettoyer',
-            'blesser'
-        ];
-        Object.freeze(WORDS); // rend constant WORDS, ce qui est utile pour éviter des bugs
-
-        $scope.words = WORDS.slice(0); // copie l'array (puisque WORDS est constant);
-        $scope.holes = WORDS.map(function() {
-            return "";
-        }); // pour que words et holes soient bien de la même longueure
+        // TODO rendre l'affichage des mots aléatoires
+        $scope.text = {
+            sentence: [
+                "Il est très important de", "_",
+                "un appareil", "_", "avant de le", "_",
+                ". Si tes parents n'y pensent pas, ils risquent de se",
+                "_"
+            ],
+            words: ["débrancher", "électrique", "débrancher", "blesser"],
+            holes: []
+        };
 
         /*
          * Vérifie la solution
          */
         function checkSolution(proposedSolution) {
-            return proposedSolution.length === WORDS.length && proposedSolution.every(function(word, index) {
-                return word === WORDS[index];
+            return proposedSolution.length === text.words.length && proposedSolution.every(function (word, index) {
+                return word === text.words[index];
             });
         }
 
@@ -57,7 +53,7 @@ angular.module('app')
          * Gère ce qu'il faut faire en cas d'échec
          */
         function tryAgain() {
-            var allFilled = $scope.holes.every(function(hole) {
+            var allFilled = $scope.holes.every(function (hole) {
                 return hole !== '';
             });
             if (allFilled) {
@@ -71,10 +67,11 @@ angular.module('app')
         }
 
         /*
-         * Est déclenchée lorsque des élements sont lachés au dessus des trous
+         * Est déclenchée lorsque des éléments sont lachés au dessus des trous
          */
-        $scope.onDrop = function() {
-            $timeout(function() { // sinon l'animation de déplacement se fait après l'affichage du message
+        $scope.onDrop = function (test) {
+            console.log(test);
+            $timeout(function () { // sinon l'animation de déplacement se fait après l'affichage du message
                 var isRightAnswer = checkSolution($scope.holes);
                 if (isRightAnswer) {
                     endGame();
