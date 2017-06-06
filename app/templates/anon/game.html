@@ -1,7 +1,7 @@
 <div class="game theme-{{ props.theme }}" ng-class="{'hidden-behind-modal': descriptionShown || charactersShown}">
     <h2 class="titre-jeu ubuntu-li text-center">{{props.nomDuJeu}}</h2>
 
-    <div class="game-container">
+    <div class="game-container game-jeux-container">
         <div class="game-view" ui-view="game" ng-show="gameLoadedOnce"></div>
         <div class="window-container" ng-show="show !== WINDOWS.game">
             <div window on-close="toggle(WINDOWS.game);loadGame();" ng-show="show === WINDOWS.consignes">
@@ -24,12 +24,12 @@
 
         <div class="col-xs-10 fonction text-center">
 
-            <div ng-show="props.consignes.length > 0" class="col-xs-3 col-md-2 col-lg-2"><a href=""><div><img class="btn-consignes" ng-click="toggle(WINDOWS.consignes);play(props.audio.consignes)" src="img/agent.svg"></div></a>consignes</div>
-            <div ng-show="props.conseils.length > 0" class="col-xs-3 col-md-2 col-lg-2"><a href=""><div><img  class="btn-conseils" ng-click="toggle(WINDOWS.conseils);play(props.audio.conseils)" src="img/ampoule.svg"></div></a>conseils</div>
-            <div ng-show="props.indice.length > 0" class="col-xs-3 col-md-2 col-lg-2"><a href=""><div><img class="btn-indice"  ng-click="toggle(WINDOWS.indice);play(props.audio.indices)" src="img/loupe.svg"></div></a>indices</div>
+            <div ng-show="props.consignes.length > 0" class="hvr-grow col-xs-3 col-md-2 col-lg-2"><a href=""><div><img class="btn-consignes" ng-click="toggle(WINDOWS.consignes);play(props.audio.consignes)" src="img/agent.svg"></div></a>consignes</div>
+            <div ng-show="props.conseils.length > 0" class="hvr-grow col-xs-3 col-md-2 col-lg-2"><a href=""><div><img  class="btn-conseils" ng-click="toggle(WINDOWS.conseils);play(props.audio.conseils)" src="img/ampoule.svg"></div></a>conseils</div>
+            <div ng-show="props.indice.length > 0" class="hvr-grow col-xs-3 col-md-2 col-lg-2"><a href=""><div><img class="btn-indice"  ng-click="toggle(WINDOWS.indice);play(props.audio.indices)" src="img/loupe.svg"></div></a>indices</div>
         </div>
 
-        <div class="col-xs-2"><button ng-click="back()">Retour</button></div>
+        <div class="col-xs-2"><button class="bouton-retour hvr-grow" ng-click="back()">Retour</button></div>
       </div>
     </div>
 </div>

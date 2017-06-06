@@ -6,7 +6,11 @@
 .game {
   height: 100%;
   // TODO changer le background color
-  background-color: salmon;
+  background-image: url(/img/fond-maison.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   padding: 20px;
 
   &-container {
@@ -69,6 +73,26 @@ box-shadow: 6px 5px 13px 0px rgba(0,0,0,0.75);
     box-shadow: 6px 0 13px 0 rgba(0,0,0,0.75);
     transform:rotate(45deg);
   }
+.bouton-retour{
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #91C84C;
+  text-shadow:0 0 3px red;
+  color: white;
+  margin-top: 0px;
+  height: 50px;
+  width: 135px;
+  border-radius: 15px 15px 15px 15px;
+  }
+
+.game-jeux-container{
+  border-radius: 25px 25px 25px 25px;
+  border: 2px solid black;
+  -webkit-box-shadow: 4px 6px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 6px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 4px 6px 10px 0px rgba(0,0,0,0.75);
+margin-bottom: 1%;
+}
 
   // .game-indice {
   //   transform: rotate(45deg);

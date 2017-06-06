@@ -107,6 +107,6 @@ angular.module('app')
         };
 
         $scope.back = function() {
-            $state.go('anon.home');
+            $state.go('anon.selection');
         };
     });
