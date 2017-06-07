@@ -5,7 +5,7 @@ angular.module('app')
         //Informations générales du jeu Attention au Trou !!
         $scope.$parent.props = {
             nomDuJeu: "Attention au trou !",
-            theme: "maison",
+            theme: "attention-trou",
             consignes: [
                 "Léa et son papa veulent poser des étagères ..",
                 "Ils doivent donc faire attention à l'endroit où ils percent le mur",
