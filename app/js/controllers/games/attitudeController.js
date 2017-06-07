@@ -3,7 +3,7 @@ angular.module('app')
 
       $scope.$parent.props = {
           nomDuJeu: "La Bonne Attitude",
-          theme: "maison",
+          theme: "attitude",
           consignes: [
               "Observe ces trois vignettes ; une seule montre la bonne attitude à avoir... laquelle ?"
           ],
