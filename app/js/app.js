@@ -1,1 +1,1 @@
-angular.module('app', ['ui.router', 'ui.bootstrap', 'ngDragDrop']);
+angular.module('app', ['ui.router', 'ui.bootstrap','rwdImageMaps', 'ngDragDrop','ngAudio']);

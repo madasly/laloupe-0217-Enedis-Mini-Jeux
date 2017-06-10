@@ -1,10 +1,4 @@
-<div class="container">
-    <div class="row vrai-ou-faux-consigne text-center">
-        <div class="col-xs-12">
-            <p class="vrai-ou-faux-titre">VRAI OU FAUX</p>
-            <p>Parmi les affirmations suivantes, distingue les vraies des fausses en cliquant sur le bon bouton.</p>
-        </div>
-    </div>
+<div class="center-horizontally center-vertically">
     <!-- Start Question -->
     <div class="row">
         <div class="col-xs-12 text-center vrai-ou-faux-question">
@@ -15,10 +9,10 @@
     <!-- Start Bouton Vrai ou Faux -->
     <div ng-hide="cacheBouton" class="row vrai-ou-faux-bouton">
         <div class=" col-xs-6 text-right">
-            <button ng-click="vrai(reponseUtilisateur)" type="button" class="btn">Vrai</button>
+            <button ng-click="vraiOuFaux(true)" type="button" class="btn">Vrai</button>
         </div>
         <div class=" col-xs-6 text-left">
-            <button ng-click="faux(reponseUtilisateur)" type="button" class="faux">Faux</button>
+            <button ng-click="vraiOuFaux(false)" type="button" class="faux">Faux</button>
         </div>
     </div>
     <!-- End Bouton Vrai ou Faux -->

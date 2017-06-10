@@ -1,0 +1,51 @@
+@navbar-height: 80px;
+.glyphicon{
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+}
+
+.navbar-container{
+  background-color: @blue-enedis;
+  min-height: @navbar-height;
+}
+.logo-navbar{
+  height: 50px;
+}
+.navbar-brand {
+  min-height: @navbar-height;
+}
+.bouton-navbar{
+  font-size: 19px;
+  color: white;
+  background-color: @green-enedis;
+  margin-top: 0px;
+  height: 50px;
+  width: 150px;
+  border-radius: 15px 15px 15px 15px;
+}
+.shadow-navbar{
+  -webkit-box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.75);
+}
+.navbar-toggle{
+  height: 50px;
+  width: 45px;
+  margin-top: 2%;
+}
+.icon-bar{
+  margin: 0 auto;
+}
+.list-burger{
+  & > li {
+    display: inline-block;
+  }
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+button,
+input,
+textarea {
+    outline-style: none;
+
+    &:focus {
+        outline-style: none!important;
+    }
+}
+/*
+* Carré avec trois coins ronds et un coin carré
+* Voir 'le module' dans la charte des fondamentaux
+*/
+.border-enedis {
+    border-radius: 20px 0px 20px 20px;
+    transform: rotate(-0.5deg);
+    -webkit-transform: rotate(-0.5deg);
+    -moz-transform: rotate(-0.5deg);
+
+    * {
+        -ms-transform: rotate(0.5deg); /* IE 9 */
+        -webkit-transform: rotate(0.5deg); /* Chrome, Safari, Opera */
+        transform: rotate(0.5deg);
+    }
+}

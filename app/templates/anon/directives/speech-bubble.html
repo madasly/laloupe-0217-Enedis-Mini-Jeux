@@ -1,0 +1,21 @@
+<div class="speech-bubble">
+    <div class="animated zoomIn bulle {{character.toLowerCase()}}">
+        <div class="bulle-content" ng-class="{'flip-horizontal': flip}">
+            <div ng-class="{'flip-horizontal': flip}" ng-transclude></div>
+        </div>
+    </div>
+    <svg viewbox="0 0 0 0" width="30%">
+        <defs>
+            <clipPath id="bulle-shape-{{character.toLowerCase()}}" clipPathUnits="objectBoundingBox">
+                <polygon class="st0" points="0.045,1.000 0.000,0.000 0.772,0.060 0.76.287 1.000,0.172 0.760,0.521 0.738,0.932"/>
+            </clipPath>
+        </defs>
+    </svg>
+    <svg viewbox="0 0 0 0" width="30%">
+        <defs>
+            <clipPath id="bulle-shape-{{character.toLowerCase()}}-responsive" clipPathUnits="objectBoundingBox">
+                <polygon class="st0" points="0.73 0.33, 0.73 0.10, 0.03 0.02, 0.06 0.98, 0.72 0.93, 0.73 0.47, 1 0.53"/>
+            </clipPath>
+        </defs>
+    </svg>
+</div>

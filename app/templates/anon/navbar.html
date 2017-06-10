@@ -1,27 +1,23 @@
 <nav class="navbar navbar-default" role="navigation" ng-controller="NavbarController">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+  <div class="container-fluid navbar-container shadow-navbar">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-            <a class="navbar-brand" href="#"></a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav">
-                <li ui-sref-active="active"><a ui-sref="anon.home">Home</a></li>
-
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <li ui-sref-active="active"><a ui-sref="anon.login" ng-hide="auth.isAuthenticated()">Login</a></li>
-                    <li ui-sref-active="active"><a ui-sref="anon.register" ng-hide="auth.isAuthenticated()">Register</a></li>
-                    <li ui-sref-active="active"><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">Dashboard</a></li>
-                    <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand" ui-sref="anon.home"><img class="logo-navbar" src="img/logo.svg" alt="" /></a>
+      <i href class="glyphicon glyphicon-volume-up" ng-show="isSoundOn" ng-click="toggleSound()" style="font-size:35px"></i>
+      <i href class="glyphicon glyphicon-volume-off" ng-hide="isSoundOn" ng-click="toggleSound()" style="font-size:35px"></i>
     </div>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right list-burger">
+        <li ui-sref-active=""><a ui-sref="anon.login" ng-hide="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Connecte toi !</button></a></li>
+        <li ui-sref-active=""><a ui-sref="anon.register" ng-hide="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Inscris toi !</button></a></li>
+        <li ui-sref-active=""><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">Liste des jeux</a></li>
+        <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>

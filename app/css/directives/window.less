@@ -1,0 +1,44 @@
+.window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    height: 100%;
+    width: 100%;
+    padding-top: 10%;
+
+    &-overlay {
+        background-color: black;
+        opacity: 0.7;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left:0;
+        z-index: 10;
+    }
+
+    &-close {
+        position: absolute;
+        top: 3px;
+        right: 5px;
+        padding: 5px;
+        cursor: pointer;
+        font-size: 120%;
+        display: inline-block;
+        font-weight: bold;
+        font-family: 'arial', 'sans-serif';
+        color: @white;
+        background-color: @green-greg;
+        z-index: 20;
+    }
+
+    &-dialog {
+        position: relative;
+        margin: 0 auto;
+        height: 80%;
+        width: 60%;
+        z-index: 15;
+
+    }
+}
