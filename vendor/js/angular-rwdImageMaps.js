@@ -24,6 +24,7 @@ angular.module('rwdImageMaps',[])
 						h = $(element).attr('height');
 
 					function resize(){
+						console.log('resize');
 						if (!w || !h) {
 							var temp = new Image();
 							temp.src = $(element).attr('src');

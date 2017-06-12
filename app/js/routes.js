@@ -68,11 +68,11 @@ angular.module('app')
           }
         }
       })
-      .state('anon.games.attentionTrou', {
-        url: '/attentionTrou',
+      .state('anon.games.attention', {
+        url: '/attention',
         views: {
           'game': {
-            templateUrl: 'anon/games/attention_au_trou.html',
+            templateUrl: 'anon/games/attention.html',
             controller: 'AttentionTrouController',
           }
         }
