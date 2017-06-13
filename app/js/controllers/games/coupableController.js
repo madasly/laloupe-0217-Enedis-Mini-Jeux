@@ -4,7 +4,7 @@ angular.module('app')
     // variable d'information général du jeu
     $scope.$parent.props = {
         nomDuJeu: "Qui est le coupable ?",
-        theme: "maison",
+        theme: "coupable",
         consignes: [
             "À ton avis, quel animal a grignoté ce fil électrique ?"
         ],
