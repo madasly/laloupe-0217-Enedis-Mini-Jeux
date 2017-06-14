@@ -19,7 +19,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Mauvaise réponse. Ce pêcheur respecte bien les consignes de sécurité"
+        content: "Mauvaise réponse. Ce pêcheur respecte bien les consignes de sécurité."
       });
     };
 
