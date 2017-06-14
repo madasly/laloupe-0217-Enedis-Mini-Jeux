@@ -15,7 +15,7 @@ angular.module('app')
         $scope.showBulle({
           show: true,
           character: "Lea",
-          content: "Non !! ce fil n'est vraiment pas en bonne état"
+          content: "Non !! ce fil n'est vraiment pas en bon état."
         });
       };
 
