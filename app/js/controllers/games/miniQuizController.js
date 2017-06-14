@@ -18,7 +18,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Greg",
-        content: "Félicitation tu as bien répondu a la question !!"
+        content: "Félicitation, tu as bien répondu à la question !!"
       });
     };
 
@@ -27,7 +27,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Non !! Surtout ne touche pas à la branche !! tu risques l'électrocution voir même dans le pire des cas la mort !!"
+        content: "Attenion!! Surtout ne touche pas à la branche !! tu risques l'électrocution voir même dans le pire des cas la mort !!"
       });
     };
 
@@ -36,7 +36,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Mauvaise réponse. Si personne ne prévient Énedis il y a encore plus de risque qu'il y ai des accidents."
+        content: "ATTENTION!! Un accident peut se produire si personne ne prévient Énedis."
       });
     };
   });
