@@ -25,6 +25,7 @@ angular.module('app')
         character: "Greg",
         content: "Félicitation! tu as bien répondu à la question !!"
       });
+      $scope.$parent.showConfetti = true;
     };
 
     // Lorsque l'utilisateur clic sur le poison
