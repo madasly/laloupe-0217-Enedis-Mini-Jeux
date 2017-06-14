@@ -7,7 +7,7 @@ angular.module('app')
             nomDuJeu: "Attention au trou !",
             theme: "attention-trou",
             consignes: [
-                "Léa et son papa veulent poser des étagères ..",
+                "Léa et son papa veulent poser des étagères ...",
                 "Ils doivent donc faire attention à l'endroit où ils percent le mur",
                 "Aide-les à trouver le bon !"
             ],
@@ -54,14 +54,12 @@ angular.module('app')
         };
 
 
-
-
-
         $scope.goodRep = function() {
             $scope.showBulle({
                 show: true,
                 character: "Greg",
                 content: "Bonne réponse !! Ici il ne risque pas d'avoir de fil électrique derrière"
             });
+            $scope.$parent.showConfetti = true;
         };
     });

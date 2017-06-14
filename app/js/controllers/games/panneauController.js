@@ -8,8 +8,8 @@ angular.module('app')
             "Sur tous les coffrets électrique, il y a un panneau qui signifie \"danger électricité\".",
             "Parmis les panneaux dessinées ci-contre, lequel est-ce ?"
         ],
-        conseils: [],
-        indice: [],
+        conseils: ["Regarde bien l'icone au millieu de chaque panneaux."],
+        indice: ["La bonne réponse n'est pas une l'icone de flamme."],
         audio: {
             conseils: "sound/games/bonpanneau/P14J23.mp3",
             consignes: "sound/games/bonpanneau/bon.mp3"
@@ -42,5 +42,6 @@ angular.module('app')
         character: "Greg",
         content: "Bravo c'est la bonne réponse !"
       });
+      $scope.$parent.showConfetti = true;
     };
   });

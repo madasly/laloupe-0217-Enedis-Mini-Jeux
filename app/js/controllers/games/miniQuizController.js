@@ -5,7 +5,7 @@ angular.module('app')
     $scope.$parent.props = {
         nomDuJeu: "Mini Quizz",
         theme: "ville",
-        consignes: [],
+        consignes: ["Donne la bonne réponse a la question suivante :"],
         conseils: [],
         indice: [],
         audio: {
@@ -20,6 +20,7 @@ angular.module('app')
         character: "Greg",
         content: "Félicitation tu as bien répondu a la question !!"
       });
+      $scope.$parent.showConfetti = true;
     };
 
     // Si l'utilisateur clic sur le bouton 2

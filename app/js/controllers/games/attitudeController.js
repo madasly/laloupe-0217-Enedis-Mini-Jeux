@@ -24,6 +24,7 @@ angular.module('app')
           character: "Greg",
           content: "Félicitation, c'est la bonne réponse"
         });
+        $scope.$parent.showConfetti = true;
       };
 
       $scope.faux = function(){
