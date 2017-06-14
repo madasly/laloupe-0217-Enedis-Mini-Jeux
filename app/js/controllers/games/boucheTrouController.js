@@ -30,7 +30,7 @@ angular.module('app')
         $scope.words = WORDS.slice(0); // copie l'array (puisque WORDS est constant);
         $scope.holes = WORDS.map(function() {
             return "";
-        }); // pour que words et holes soient bien de la même longueure
+        }); // pour que words et holes soient bien de la même longueur
 
         /*
          * Vérifie la solution
