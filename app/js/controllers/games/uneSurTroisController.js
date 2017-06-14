@@ -36,7 +36,7 @@ angular.module('app')
             $scope.showBulle({
                 show: true,
                 character: "Lea",
-                content: "Mauvaise Réponse, le fil a été réparé avec du ruban adhésif.Cela risque de provoquer un court-circuit !"
+                content: "Mauvaise Réponse, le fil a été réparé avec du ruban adhésif. Cela risque de provoquer un court-circuit !"
             });
         };
     });

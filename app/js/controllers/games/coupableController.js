@@ -32,7 +32,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Ce poison a t'il vraiment pu sortir de son aquarium pour allez manger le fil électrique ?"
+        content: "Ce poisson a t'il vraiment pu sortir de son aquarium pour allez manger le fil électrique ?"
       });
     };
 

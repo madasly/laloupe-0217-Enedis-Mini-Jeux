@@ -5,8 +5,8 @@ angular.module('app')
         nomDuJeu: "Le Bon Panneau !",
         theme: "ville",
         consignes: [
-            "Sur tous les coffrets électrique, il y a un panneau qui signifie \"danger électricité\".",
-            "Parmis les panneaux dessinées ci-contre, lequel est-ce ?"
+            "Sur tous les coffrets électriques, il y a un panneau qui signifie \"danger électricité\".",
+            "Parmis les panneaux dessinés ci-contre, lequel est-ce ?"
         ],
         conseils: [],
         indice: [],
