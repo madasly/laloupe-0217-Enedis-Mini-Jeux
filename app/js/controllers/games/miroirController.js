@@ -4,7 +4,7 @@ angular.module('app')
         $scope.$parent.props = {
             nomDuJeu: "La tête à l'envers",
             theme: "default",
-            consignes: ["Regarde cette phrases, elle est écrite à l'envers. Pour la déchiffrer remets les mots et les lettres dans le bon ordre."],
+            consignes: ["Regarde cette phrase, elle est écrite à l'envers. Pour la déchiffrer, remets les mots et les lettres dans le bon ordre."],
             conseils: [],
             indice: [],
             audio: {
