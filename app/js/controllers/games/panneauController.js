@@ -8,8 +8,8 @@ angular.module('app')
             "Sur tous les coffrets électriques, il y a un panneau qui signifie \"danger électricité\".",
             "Parmis les panneaux dessinés ci-contre, lequel est-ce ?"
         ],
-        conseils: ["Regarde bien l'icone au millieu de chaque panneaux."],
-        indice: ["La bonne réponse n'est pas une l'icone de flamme."],
+        conseils: ["Regarde bien l'icone au milieu de chaque panneau."],
+        indice: ["La bonne réponse n'est pas une icone de flamme."],
         audio: {
             conseils: "sound/games/bonpanneau/P14J23.mp3",
             consignes: "sound/games/bonpanneau/bon.mp3"
