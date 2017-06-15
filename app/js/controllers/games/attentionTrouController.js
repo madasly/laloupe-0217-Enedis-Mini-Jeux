@@ -24,9 +24,8 @@ angular.module('app')
             audio: {
                 conseils: "sound/games/attention/P9J13.mp3",
                 consignes:"sound/games/attention/attention.mp3",
-                indice: "sound/games/attention/indice.mp3"
-            },
-
+                indices: "sound/games/attention/indice.mp3"
+            }
         };
 
         // Quand l'utilisateur clic sur le cercle en dessous de la lampe
@@ -35,7 +34,6 @@ angular.module('app')
                 show: true,
                 character: "Greg",
                 content: "Attention!! Il peut y avoir un fil électrique derrière ce mur, la lampe est trop près  !! "
-
             });
         };
 
