@@ -14,6 +14,8 @@ angular.module('app')
           ],
           indice: ["Il ne faut jamais empiler des multiprises !!"],
           audio: {
+            conseils:"sound/games/attitude/P5J3.mp3",
+            consignes:"sound/games/attitude/labonneattitude.mp3"
 
           }
       };

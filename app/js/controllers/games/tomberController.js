@@ -10,7 +10,8 @@ angular.module('app')
         conseils: ["Ne pèche jamais près des lignes élèctriques a hautes tension."],
         indice: ["Les pécheux en danger on quelque choses au dessus d'eux."],
         audio: {
-            consignes: "sound/games/tombepanneau/panneau.mp3"
+            consignes: "sound/games/tombepanneau/panneau.mp3",
+            savais: "sound/games/tombepanneau/savais.mp3"
         }
      };
 

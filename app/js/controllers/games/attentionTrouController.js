@@ -24,7 +24,7 @@ angular.module('app')
             audio: {
                 conseils: "sound/games/attention/P9J13.mp3",
                 consignes:"sound/games/attention/attention.mp3",
-                indices: "sound/games/attention/indice.mp3"
+                indice: "sound/games/attention/indice.mp3"
             }
         };
 
