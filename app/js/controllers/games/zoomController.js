@@ -3,6 +3,7 @@ angular.module('app')
 
       // variable d'information général du jeu
       $scope.$parent.props = {
+          id:'zoom',
           nomDuJeu: "Zoom sur ...",
           theme: "zoom",
           consignes: [
@@ -23,6 +24,7 @@ angular.module('app')
           "Félicitation! tu as bien répondu à la question !!"
         });
         $scope.$parent.showConfetti = true;
+        $scope.endGame();
       };
 
       $scope.faux = function(){

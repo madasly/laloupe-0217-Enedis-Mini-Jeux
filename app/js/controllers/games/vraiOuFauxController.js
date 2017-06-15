@@ -2,6 +2,7 @@
 angular.module('app')
   .controller('VraiOuFauxController', function($scope) {
     $scope.$parent.props = {
+        id: "vrai-ou-faux",
         nomDuJeu: "Vrai ou Faux",
         theme: "default",
         consignes: ["Parmi les affirmations suivantes, distingue les vraies des fausses en cliquant sur le bon bouton."],
@@ -65,6 +66,7 @@ angular.module('app')
             content: "Félicitation tu as bien répondu à toutes les questions !!"
           });
           $scope.$parent.showConfetti = true;
+          $scope.endGame();
         }
       } else {
 

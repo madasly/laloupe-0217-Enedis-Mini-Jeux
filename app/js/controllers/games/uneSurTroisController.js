@@ -2,6 +2,7 @@ angular.module('app')
     .controller('UneSurTroisController', function($scope) {
 
         $scope.$parent.props = {
+            id: 'une-chance-sur-trois',
             nomDuJeu: "Une Chance Sur Trois",
             theme: "jardin",
             consignes: ["Le papa de Greg et Léa a fini de bricoler...",
@@ -23,6 +24,8 @@ angular.module('app')
                 content: "Bonne réponse. Bravo !!"
             });
             $scope.$parent.showConfetti = true;
+            $scope.endGame();
+
         };
 
         $scope.faux = function() {

@@ -3,6 +3,7 @@ angular.module('app')
 
     // Variable d'information général du jeu
     $scope.$parent.props = {
+        id: "mini-quizz",
         nomDuJeu: "Mini Quizz",
         theme: "ville",
         consignes: ["Donne la bonne réponse a la question suivante :"],
@@ -21,6 +22,7 @@ angular.module('app')
         content: "Félicitation, tu as bien répondu à la question !!"
       });
       $scope.$parent.showConfetti = true;
+      $scope.endGame();
     };
 
     // Si l'utilisateur clic sur le bouton 2

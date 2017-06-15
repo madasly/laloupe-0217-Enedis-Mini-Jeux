@@ -4,6 +4,7 @@ angular.module('app')
 
         //Informations générales du jeu Attention au Trou !!
         $scope.$parent.props = {
+            id:"attention-trou",
             nomDuJeu: "Attention au trou !",
             theme: "attention-trou",
             consignes: [
@@ -63,5 +64,6 @@ angular.module('app')
                 content: "Bonne réponse !! Il ne risque pas d'avoir de fil électrique à cet endroit"
             });
             $scope.$parent.showConfetti = true;
+            $scope.endGame();
         };
     });

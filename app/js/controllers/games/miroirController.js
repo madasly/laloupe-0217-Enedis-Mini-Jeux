@@ -2,6 +2,7 @@ angular.module('app')
     .controller('MiroirController', function($scope) {
         /* Here is your main controller */
         $scope.$parent.props = {
+            id:"miroir",
             nomDuJeu: "La tête à l'envers",
             theme: "default",
             consignes: ["Regarde cette phrase, elle est écrite à l'envers. Pour la déchiffrer, remets les mots et les lettres dans le bon ordre."],

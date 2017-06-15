@@ -7,7 +7,7 @@
 
 
 angular.module('app')
-    .controller('GameController', function($scope, $timeout, $state, ngAudio, Sound) {
+    .controller('GameController', function($scope, $timeout, $state, ngAudio, Sound, ProgressionService) {
         /*
          * Gestion des fenêtres
          */
@@ -28,6 +28,7 @@ angular.module('app')
          * Gestion des variables changeables par les enfants
          */
         $scope.props = {
+            id: "",
             nomDuJeu: "",
             theme: "default",
             consignes: [],
@@ -46,6 +47,11 @@ angular.module('app')
           if(Sound.getSoundStatus()) {
             ngAudio.play(file);
           }
+        };
+
+        $scope.endGame = function() {
+          var gameName = $scope.props.id;
+          ProgressionService.markAsDone(gameName);
         };
 
         /*

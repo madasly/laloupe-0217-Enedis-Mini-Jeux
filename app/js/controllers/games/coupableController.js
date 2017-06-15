@@ -3,6 +3,7 @@ angular.module('app')
 
     // variable d'information général du jeu
     $scope.$parent.props = {
+        id: "coupable",
         nomDuJeu: "Qui est le coupable ?",
         theme: "coupable",
         consignes: [
@@ -26,6 +27,7 @@ angular.module('app')
         content: "Félicitation! tu as bien répondu à la question !!"
       });
       $scope.$parent.showConfetti = true;
+      $scope.endGame();
     };
 
     // Lorsque l'utilisateur clic sur le poison
