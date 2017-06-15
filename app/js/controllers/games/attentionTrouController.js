@@ -7,8 +7,10 @@ angular.module('app')
             nomDuJeu: "Attention au trou !",
             theme: "attention-trou",
             consignes: [
-                "Léa et son papa veulent poser des étagères ..",
-                "Ils doivent donc faire attention à l'endroit où ils percent le mur",
+                "Léa et son papa veulent poser des étagères ...",
+
+                "Ils doivent donc faire attention à l'endroit où ils percent le mur.",
+
                 "Aide-les à trouver le bon !"
             ],
             indice: [
@@ -16,8 +18,8 @@ angular.module('app')
                 "Dans le doute, coupe l'électricité au disjoncteur."
             ],
             conseils: [
-                "Attention, avant de percer un mur il faut vérifier qu'aucun fil électrique n'est caché derrière...",
-                "Car, si la perceuse en touche un, ça peut être dangeureux !"
+                "Attention!! Avant de percer un mur, il faut vérifier qu'aucun fil électrique n'est caché derrière...",
+                "Si la perceuse en touche un, ça peut être dangeureux !"
             ],
             audio: {
                 conseils: "sound/games/attention/P9J13.mp3",
@@ -31,7 +33,7 @@ angular.module('app')
             $scope.showBulle({
                 show: true,
                 character: "Lea",
-                content: "Non, il peut y avoir un fil électrique derrière ce mur à cause de la lampe  !! "
+                content: "Attention!! Il peut y avoir un fil électrique derrière ce mur, la lampe est trop près  !! "
             });
         };
 
@@ -40,7 +42,7 @@ angular.module('app')
             $scope.showBulle({
                 show: true,
                 character: "Lea",
-                content: "Nous ne pouvons pas faire de trou ici à cause de l'interrupteur au dessus !!"
+                content: "Attention!! Il peut y avoir un fil électrique derrière ce mur, l'interrupteur est trop près !!"
             });
         };
 
@@ -49,19 +51,17 @@ angular.module('app')
             $scope.showBulle({
                 show: true,
                 character: "Lea",
-                content: "Non, il peut y avoir un fil électrique derrière ce mur à cause de la prise de courant  !! "
+                content: "Attention!! Il peut y avoir un fil électrique derrière ce mur, la prise de courant est trop près  !! "
             });
         };
-
-
-
 
 
         $scope.goodRep = function() {
             $scope.showBulle({
                 show: true,
                 character: "Greg",
-                content: "Bonne réponse !! Ici il ne risque pas d'avoir de fil électrique derrière"
+                content: "Bonne réponse !! Il ne risque pas d'avoir de fil électrique à cet endroit"
             });
+            $scope.$parent.showConfetti = true;
         };
     });

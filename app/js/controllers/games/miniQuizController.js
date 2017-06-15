@@ -5,7 +5,7 @@ angular.module('app')
     $scope.$parent.props = {
         nomDuJeu: "Mini Quizz",
         theme: "ville",
-        consignes: [],
+        consignes: ["Donne la bonne réponse a la question suivante :"],
         conseils: [],
         indice: [],
         audio: {
@@ -18,8 +18,9 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Greg",
-        content: "Félicitation tu as bien répondu a la question !!"
+        content: "Félicitation, tu as bien répondu à la question !!"
       });
+      $scope.$parent.showConfetti = true;
     };
 
     // Si l'utilisateur clic sur le bouton 2
@@ -27,7 +28,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Non !! Surtout ne touche pas à la branche !! tu risques l'électrocution voir même dans le pire des cas la mort !!"
+        content: "Attenion!! Surtout ne touche pas à la branche !! tu risques l'électrocution voir même dans le pire des cas la mort !!"
       });
     };
 
@@ -36,7 +37,7 @@ angular.module('app')
       $scope.showBulle({
         show: true,
         character: "Lea",
-        content: "Mauvaise réponse. Si personne ne prévient Énedis il y a encore plus de risque qu'il y ai des accidents."
+        content: "ATTENTION!! Un accident peut se produire si personne ne prévient Énedis."
       });
     };
   });

@@ -8,7 +8,7 @@
 <div class="row motQuiBouge" style="border: 1px solid red;">
   <div class="col-xs-12">
     <div class="charabia-divMot animated text-center" ng-class="{fadeInLeftBig:bascule, fadeOutRightBig:!bascule}">
-      <div class="charabia-animRotate">
+      <div class="{{animationMot}}">
         <span class="charabia-carte text-center animated {{carte.classes.join(' ')}}"
         ng-mousedown="select(carte)" ng-repeat="carte in charabia[indexMot]">{{ carte.lettre }}</span>
       </div>

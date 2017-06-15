@@ -8,7 +8,7 @@ angular.module('app')
       nomDuJeu: "C'est quoi ce Charabia",
       theme: "maison",
       consignes: [
-        "Pour déchiffrer ce message codé qui t'explique comment débrancher un appareil électrique sans danger, supprime toutes mauvaise lettre."
+        "Pour déchiffrer ce message codé qui t'explique comment débrancher un appareil électrique sans danger, supprime toutes les mauvaises lettres."
       ],
       conseils: [],
       indice: [],
@@ -19,6 +19,11 @@ angular.module('app')
         $scope.gameLoaded = true;
       }
     };
+    $scope.animationMot = $scope.animation[0];
+
+    function nextAnimation() {
+      $scope.animationMot = $scope.animation[$scope.indexMot % $scope.animation.length];
+    }
 
     //Function qui compte le nombre de Z dans un mot en function du current mot
     var lesZ = function(mot) {
@@ -75,7 +80,7 @@ angular.module('app')
           $scope.bascule = false;
           $timeout(function() {
             $scope.indexMot++;
-
+            nextAnimation();
             $scope.bascule = true;
           }, 750);
         }, 750);

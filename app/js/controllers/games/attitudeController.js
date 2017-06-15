@@ -24,14 +24,15 @@ angular.module('app')
           character: "Greg",
           content: "Félicitation, c'est la bonne réponse"
         });
+        $scope.$parent.showConfetti = true;
       };
 
       $scope.faux = function(){
-        console.log("... Sérieux !?");
+        console.log("Mauvaise réponse");
         $scope.showBulle({
           show: true,
           character: "Lea",
-          content: "Non ! La bonne attitude pour les multiprise est de ne pas les superposer !"
+          content: "Non ! La bonne attitude pour les multiprises est de ne pas les superposer !"
         });
       };
 

@@ -2,8 +2,17 @@ angular.module('app')
     .controller('ZoomController', function($scope) {
 
       // variable d'information général du jeu
-      $scope.$parent.nomDuJeu = "Zoom Sur ...";
-      $scope.$parent.theme = "Maison";
+      $scope.$parent.props = {
+          nomDuJeu: "Zoom sur ...",
+          theme: "zoom",
+          consignes: [
+              "Regarde ces troi vignettes et trouve celle dans laquelle la sécurité électrique est assurée."
+          ],
+          conseils: ["Un radiateur... sa chauffe beaucoup..."],
+          audio: {
+
+          }
+      };
 
       $scope.vrai = function(){
         console.log('Bonne réponse');
@@ -13,6 +22,7 @@ angular.module('app')
           content:
           "Félicitation! tu as bien répondu à la question !!"
         });
+        $scope.$parent.showConfetti = true;
       };
 
       $scope.faux = function(){

@@ -4,7 +4,8 @@ angular.module('app')
             restrict: 'A',
             templateUrl: 'anon/directives/window.html',
             scope: {
-                onClose:"&onClose"
+                onClose:"&onClose",
+                showConfetti: "=confetti",
             },
             transclude: true,
             replace: true,
