@@ -25,7 +25,10 @@ const userSchema = new mongoose.Schema({
     isAdmin: {
         type: Boolean,
         default: false
-    }
+    },
+    progression: [{
+        type: Object
+    }]
 });
 
 userSchema.methods.comparePassword = function(pwd, cb) {

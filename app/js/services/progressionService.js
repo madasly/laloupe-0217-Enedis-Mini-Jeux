@@ -72,8 +72,9 @@ angular.module('app')
                 return Object.keys(progressionOriginale).length;
             },
             getNumberOfGamesDone: function() {
-                return Object.keys(progressionOriginale).filter(function(key) {
-                    return progressionOriginale[key].done;
+                var progression = LocalService.get('progression');
+                return Object.keys(progression).filter(function(key) {
+                    return progression[key].done;
                 }).length;
             },
         };
