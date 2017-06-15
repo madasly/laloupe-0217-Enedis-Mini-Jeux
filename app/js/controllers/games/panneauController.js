@@ -1,6 +1,6 @@
 angular.module('app')
   .controller('PanneauController', function($scope) {
-
+    var testingMerge = "je test un merge";
     $scope.$parent.props = {
         nomDuJeu: "Le Bon Panneau !",
         theme: "ville",
