@@ -5,8 +5,8 @@ angular.module('app')
         nomDuJeu: "Vrai ou Faux",
         theme: "default",
         consignes: ["Parmi les affirmations suivantes, distingue les vraies des fausses en cliquant sur le bon bouton."],
-        conseils: [],
-        indice: [],
+        conseils: ["Lis attentivement la question, avant de répondre."],
+        indice: ["il n'y as pas d'indice pour ce jeu. Désolé."],
         audio: {
             consignes: "sound/games/vrai/vrai.mp3"
         }

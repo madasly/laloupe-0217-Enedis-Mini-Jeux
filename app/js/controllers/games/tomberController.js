@@ -7,8 +7,8 @@ angular.module('app')
             "Sur ce dessin, deux pêcheurs n'ont pas respecté les consignes de sécurité pour pêcher.",
             "Lesquels?"
         ],
-        conseils: [],
-        indice: [],
+        conseils: ["Ne pèche jamais près des lignes élèctriques a hautes tension."],
+        indice: ["Les pécheux en danger on quelque choses au dessus d'eux."],
         audio: {
             consignes: "sound/games/tombepanneau/panneau.mp3"
         }
