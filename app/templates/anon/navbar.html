@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default" role="navigation" ng-controller="NavbarController">
   <div class="container-fluid navbar-container shadow-navbar">
-    <div class="navbar-header">
+    <div class="navbar-header" style="border:1px solid yellow;">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -11,8 +11,14 @@
       <i href class="glyphicon glyphicon-volume-up" ng-show="isSoundOn" ng-click="toggleSound()" style="font-size:35px"></i>
       <i href class="glyphicon glyphicon-volume-off" ng-hide="isSoundOn" ng-click="toggleSound()" style="font-size:35px"></i>
     </div>
-    <div class="collapse navbar-collapse" id="navbar">
+    <div class="progress barre-de-progression">
+      <div class="progress-bar active progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+        60% d'acomplie !!
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar" style="border:1px solid yellow;">
       <ul class="nav navbar-nav navbar-right list-burger">
+        <li></li>
         <li ui-sref-active=""><a ui-sref="anon.login" ng-hide="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Connecte toi !</button></a></li>
         <li ui-sref-active=""><a ui-sref="anon.register" ng-hide="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Inscris toi !</button></a></li>
         <li ui-sref-active=""><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">Liste des jeux</a></li>
