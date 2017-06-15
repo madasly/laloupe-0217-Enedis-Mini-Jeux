@@ -11,7 +11,7 @@ angular.module('app')
         conseils: [
             "Si tu as la chance d'avoir un animal chez toi, ne le laisse pas ronger les fils électriques. Car des fils abimés, ce sont des fils qui ne sont plus isolés et qui deviennent extrêmement dangereux"
         ],
-        indice: [],
+        indice: ["Le coupable as des dents !!"],
         audio: {
             consignes: "sound/games/coupable/guilty.mp3",
             conseils:"sound/games/coupable/P6J6.mp3"
