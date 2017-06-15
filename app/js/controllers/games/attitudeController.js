@@ -13,6 +13,8 @@ angular.module('app')
               "Mais attention à ne pas les surcharger, cela pourrait provoquer un incendie !"
           ],
           audio: {
+            conseils:"sound/games/attitude/P5J3.mp3",
+            consignes:"sound/games/attitude/labonneattitude.mp3"
 
           }
       };
