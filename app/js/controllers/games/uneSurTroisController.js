@@ -22,6 +22,7 @@ angular.module('app')
                 character: "Greg",
                 content: "Bonne réponse. Bravo !!"
             });
+            $scope.$parent.showConfetti = true;
         };
 
         $scope.faux = function() {

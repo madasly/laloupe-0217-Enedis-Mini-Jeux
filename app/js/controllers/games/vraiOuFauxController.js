@@ -64,6 +64,7 @@ angular.module('app')
             character: "Greg",
             content: "Félicitation tu as bien répondu à toutes les questions !!"
           });
+          $scope.$parent.showConfetti = true;
         }
       } else {
 

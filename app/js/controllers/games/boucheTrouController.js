@@ -51,6 +51,7 @@ angular.module('app')
                 show: true
             };
             $scope.showBulle(bulle);
+            $scope.$parent.showConfetti = true;
         }
 
         /*
