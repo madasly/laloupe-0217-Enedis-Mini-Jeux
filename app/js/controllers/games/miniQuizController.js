@@ -17,7 +17,7 @@ angular.module('app')
     $scope.vrai = function vrai() {
       $scope.showBulle({
         show: true,
-        character: "Greg",
+        character: "Lea",
         content: "Félicitation, tu as bien répondu à la question !!"
       });
       $scope.$parent.showConfetti = true;
@@ -27,7 +27,7 @@ angular.module('app')
     $scope.faux1 = function faux() {
       $scope.showBulle({
         show: true,
-        character: "Lea",
+        character: "Greg",
         content: "Attenion!! Surtout ne touche pas à la branche !! tu risques l'électrocution voir même dans le pire des cas la mort !!"
       });
     };
@@ -36,7 +36,7 @@ angular.module('app')
     $scope.faux = function faux() {
       $scope.showBulle({
         show: true,
-        character: "Lea",
+        character: "Greg",
         content: "ATTENTION!! Un accident peut se produire si personne ne prévient Énedis."
       });
     };

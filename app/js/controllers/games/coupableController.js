@@ -22,7 +22,7 @@ angular.module('app')
     $scope.vrai = function vrai() {
       $scope.showBulle({
         show: true,
-        character: "Greg",
+        character: "Lea",
         content: "Félicitation! tu as bien répondu à la question !!"
       });
       $scope.$parent.showConfetti = true;
@@ -32,7 +32,7 @@ angular.module('app')
     $scope.fauxPoison = function faux() {
       $scope.showBulle({
         show: true,
-        character: "Lea",
+        character: "Greg",
         content: "Ce poisson a t'il vraiment pu sortir de son aquarium pour allez manger le fil électrique ?"
       });
     };
@@ -41,7 +41,7 @@ angular.module('app')
     $scope.fauxOiseau = function faux() {
       $scope.showBulle({
         show: true,
-        character: "Lea",
+        character: "Greg",
         content: "Les oiseaux n' ont pas de dents ! "
       });
     };

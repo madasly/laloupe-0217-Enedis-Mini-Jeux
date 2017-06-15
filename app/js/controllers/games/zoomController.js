@@ -18,7 +18,7 @@ angular.module('app')
         console.log('Bonne réponse');
         $scope.showBulle({
           show: true,
-          character: "Greg",
+          character: "Lea",
           content:
           "Félicitation! tu as bien répondu à la question !!"
         });
@@ -29,7 +29,7 @@ angular.module('app')
         console.log("Mauvaise réponse");
         $scope.showBulle({
           show: true,
-          character: "Lea",
+          character: "Greg",
           content: "Un Radiateur n'est pas une étagère !!"
         });
       };
