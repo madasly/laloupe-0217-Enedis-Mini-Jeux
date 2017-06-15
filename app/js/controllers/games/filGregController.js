@@ -13,7 +13,6 @@ angular.module('app')
       audio: {}
     };
 
-<<<<<<< HEAD
       $scope.faux = function(){
         console.log("mauvaise réponse");
         $scope.showBulle({
@@ -22,16 +21,7 @@ angular.module('app')
           content: "Non !! ce fil n'est vraiment pas en bon état."
         });
       };
-=======
-    $scope.faux = function() {
-      console.log("mauvaise réponse");
-      $scope.showBulle({
-        show: true,
-        character: "Lea",
-        content: "Non !! ce fil n'est vraiment pas en bonne état"
-      });
-    };
->>>>>>> 837be827fe4b203777286d0e2509d6ac6aa241be
+
 
     $scope.vrai = function() {
       console.log("bonne réponse");

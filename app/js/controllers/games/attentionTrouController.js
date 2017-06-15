@@ -8,11 +8,9 @@ angular.module('app')
             theme: "attention-trou",
             consignes: [
                 "Léa et son papa veulent poser des étagères ...",
-<<<<<<< HEAD
+
                 "Ils doivent donc faire attention à l'endroit où ils percent le mur.",
-=======
-                "Ils doivent donc faire attention à l'endroit où ils percent le mur",
->>>>>>> 837be827fe4b203777286d0e2509d6ac6aa241be
+
                 "Aide-les à trouver le bon !"
             ],
             indice: [
