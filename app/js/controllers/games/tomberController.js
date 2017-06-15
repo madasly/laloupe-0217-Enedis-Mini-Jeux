@@ -18,7 +18,7 @@ angular.module('app')
     $scope.badChoice = function() {
       $scope.showBulle({
         show: true,
-        character: "Lea",
+        character: "Greg",
         content: "Mauvaise réponse. Ce pêcheur respecte bien les consignes de sécurité."
       });
     };
@@ -26,7 +26,7 @@ angular.module('app')
     $scope.goodChoice = function() {
       $scope.showBulle({
         show: true,
-        character: "Greg",
+        character: "Lea",
         content: "Bonne réponse !! Ce pêcheur se met en danger en dessous des lignes élèctriques"
       });
       $scope.$parent.showConfetti = true;

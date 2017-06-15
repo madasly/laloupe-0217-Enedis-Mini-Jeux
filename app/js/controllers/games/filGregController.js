@@ -17,7 +17,7 @@ angular.module('app')
         console.log("mauvaise réponse");
         $scope.showBulle({
           show: true,
-          character: "Lea",
+          character: "Greg",
           content: "Non !! ce fil n'est vraiment pas en bon état."
         });
       };
@@ -27,7 +27,7 @@ angular.module('app')
       console.log("bonne réponse");
       $scope.showBulle({
         show: true,
-        character: "Greg",
+        character: "Lea",
         content: "Félicitation! tu as bien répondu à la question !!"
       });
       $scope.$parent.showConfetti = true;

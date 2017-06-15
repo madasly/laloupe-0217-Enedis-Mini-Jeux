@@ -46,7 +46,7 @@ angular.module('app')
          */
         function endGame() {
             var bulle = {
-                character: 'Greg',
+                character: 'Lea',
                 content: 'Bien joué !',
                 show: true
             };
@@ -63,7 +63,7 @@ angular.module('app')
             });
             if (allFilled) {
                 var bulle = {
-                    character: 'Lea',
+                    character: 'Greg',
                     show: true,
                     content: "Essaye encore !"
                 };
