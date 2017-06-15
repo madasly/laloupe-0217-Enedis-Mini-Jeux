@@ -42,9 +42,14 @@ angular.module('app')
             }
         };
 
+        function isNotEmptyObject(obj) {
+            return JSON.stringify(obj) !== JSON.stringify({});
+        }
+
+
         if (Auth.isAuthenticated) {
             var user = CurrentUser.user();
-            if (user.progression !== undefined) {
+            if (user.progression !== undefined && isNotEmptyObject(user.progression)) {
                 LocalService.set('progression', user.progression);
             }
         }
@@ -77,5 +82,21 @@ angular.module('app')
                     return progression[key].done;
                 }).length;
             },
+            save: function() {
+                if (Auth.isAuthenticated()) {
+                    var user = CurrentUser.user();
+                    user.progression = progression;
+                    console.log('saving progress... | user: ',user._id);
+                    UserService.update(user._id, user);
+                }
+            },
+            load:function() {
+                if (Auth.isAuthenticated()) {
+                    var user = CurrentUser.user();
+                    if (user.progression !== undefined && isNotEmptyObject(user.progression)) {
+                        LocalService.set('progression', user.progression);
+                    }
+                }
+            }
         };
     });

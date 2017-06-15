@@ -26,9 +26,9 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    progression: [{
+    progression: {
         type: Object
-    }]
+    }
 });
 
 userSchema.methods.comparePassword = function(pwd, cb) {
