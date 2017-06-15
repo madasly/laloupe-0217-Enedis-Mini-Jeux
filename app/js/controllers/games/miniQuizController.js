@@ -6,8 +6,8 @@ angular.module('app')
         nomDuJeu: "Mini Quizz",
         theme: "ville",
         consignes: ["Donne la bonne réponse a la question suivante :"],
-        conseils: [],
-        indice: [],
+        conseils: ["lis bien la question avant de répondre"],
+        indice: ["Je ne peut pas te donner d'indice"],
         audio: {
             consignes: "sound/games/quiz/quiz.mp3"
         }

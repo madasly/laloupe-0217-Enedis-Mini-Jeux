@@ -12,6 +12,7 @@ angular.module('app')
               "La solution, c'est d'utiliser des prises multiples ou des rallonges...",
               "Mais attention à ne pas les surcharger, cela pourrait provoquer un incendie !"
           ],
+          indice: ["Il ne faut jamais empiler des multiprises !!"],
           audio: {
 
           }

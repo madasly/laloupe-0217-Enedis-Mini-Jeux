@@ -8,8 +8,8 @@ angular.module('app')
         "Mais il est perdu dans ce labyrinthe de fils électriques.",
         "À toi de trouver le bon en évitant les fils dénudés ou rafistolés qui sont dangereux."
       ],
-      conseils: [],
-      indice: [],
+      conseils: ["Tu doit trouver le bon fil en évitant les fils dénudés ou rafistolés qui sont dangereux."],
+      indice: ["Ce n'est pas le fil de gauche."],
       audio: {}
     };
 

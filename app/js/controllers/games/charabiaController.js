@@ -10,8 +10,8 @@ angular.module('app')
       consignes: [
         "Pour déchiffrer ce message codé qui t'explique comment débrancher un appareil électrique sans danger, supprime toutes les mauvaises lettres."
       ],
-      conseils: [],
-      indice: [],
+      conseils: ["Soit, rapide, agile !!"],
+      indice: ["Les lettre a suprimer sont souvent des Z."],
       audio: {
         consignes: "sound/games/charabia/charabia.mp3"
       },
