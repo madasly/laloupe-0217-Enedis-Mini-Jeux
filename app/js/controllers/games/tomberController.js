@@ -10,7 +10,8 @@ angular.module('app')
         conseils: [],
         indice: [],
         audio: {
-            consignes: "sound/games/tombepanneau/panneau.mp3"
+            consignes: "sound/games/tombepanneau/panneau.mp3",
+            savais: "sound/games/tombepanneau/savais.mp3"
         }
      };
 
