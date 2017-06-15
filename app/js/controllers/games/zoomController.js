@@ -6,10 +6,12 @@ angular.module('app')
           nomDuJeu: "Zoom sur ...",
           theme: "zoom",
           consignes: [
-              "Regarde ces troi vignettes et trouve celle dans laquelle la sécurité électrique est assurée."
+              "Regarde ces trois vignettes et trouve celle dans laquelle la sécurité électrique est assurée."
           ],
           conseils: ["Un radiateur... sa chauffe beaucoup..."],
           audio: {
+            consignes:"sound/games/zoom/zoom.mp3",
+            indices:"sound/games/zoom/indicezoom.mp3",
 
           }
       };
