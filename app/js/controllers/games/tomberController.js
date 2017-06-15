@@ -29,6 +29,7 @@ angular.module('app')
         character: "Greg",
         content: "Bonne réponse !! Ce pêcheur se met en danger en dessous des lignes élèctriques"
       });
+      $scope.$parent.showConfetti = true;
     };
 
   });
