@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('AttentionTrouController', function($scope) {
+    .controller('AttentionTrouController', function($scope,ngAudio,Sound) {
 
 
         //Informations générales du jeu Attention au Trou !!
@@ -53,6 +53,9 @@ angular.module('app')
                 character: "Lea",
                 content: "Attention!! Il peut y avoir un fil électrique derrière ce mur, la prise de courant est trop près  !! "
             });
+            $scope.soundEchec();
+
+
         };
 
 
@@ -63,5 +66,7 @@ angular.module('app')
                 content: "Bonne réponse !! Il ne risque pas d'avoir de fil électrique à cet endroit"
             });
             $scope.$parent.showConfetti = true;
+            $scope.soundSuccess();
+            console.log(play(sound/clap.mp3));
         };
     });
