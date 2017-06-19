@@ -21,6 +21,7 @@ angular.module('app')
         character: "Lea",
         content: "Félicitation, tu as bien répondu à la question !!"
       });
+      $scope.play($scope.$parent.commun.audio.claps);
       $scope.$parent.showConfetti = true;
       $scope.endGame();
     };
@@ -32,6 +33,7 @@ angular.module('app')
         character: "Greg",
         content: "Attenion!! Surtout ne touche pas à la branche !! tu risques l'électrocution voir même dans le pire des cas la mort !!"
       });
+         $scope.play($scope.$parent.commun.audio.electric);
     };
 
     // Si l'utilisateur clic sur le bouton 3
@@ -41,5 +43,6 @@ angular.module('app')
         character: "Greg",
         content: "ATTENTION!! Un accident peut se produire si personne ne prévient Énedis."
       });
+      $scope.play($scope.$parent.commun.audio.electric);
     };
   });

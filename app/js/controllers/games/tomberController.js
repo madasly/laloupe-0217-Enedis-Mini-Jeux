@@ -23,6 +23,7 @@ angular.module('app')
         character: "Greg",
         content: "Mauvaise réponse. Ce pêcheur respecte bien les consignes de sécurité."
       });
+      $scope.play($scope.$parent.commun.audio.electric);
     };
 
     $scope.goodChoice = function() {
@@ -32,6 +33,7 @@ angular.module('app')
         content: "Bonne réponse !! Ce pêcheur se met en danger en dessous des lignes élèctriques"
       });
       $scope.$parent.showConfetti = true;
+      $scope.play($scope.$parent.commun.audio.claps);
       $scope.endGame();
 
     };

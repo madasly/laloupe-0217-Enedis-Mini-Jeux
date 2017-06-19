@@ -21,6 +21,7 @@ angular.module('app')
         character: "Greg",
         content: "Non !! ce fil n'est vraiment pas en bon état."
       });
+      $scope.play($scope.$parent.commun.audio.electric);
     };
 
 
@@ -32,6 +33,7 @@ angular.module('app')
         content: "Félicitation! tu as bien répondu à la question !!"
       });
       $scope.$parent.showConfetti = true;
+      $scope.play($scope.$parent.commun.audio.claps);
       $scope.endGame();
     };
 

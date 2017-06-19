@@ -53,6 +53,7 @@ angular.module('app')
             };
             $scope.showBulle(bulle);
             $scope.$parent.showConfetti = true;
+            $scope.play($scope.$parent.commun.audio.claps);
             $scope.endGame();
         }
 
@@ -70,6 +71,8 @@ angular.module('app')
                     content: "Essaye encore !"
                 };
                 $scope.showBulle(bulle);
+                $scope.play($scope.$parent.commun.audio.electric);
+
             }
         }
 

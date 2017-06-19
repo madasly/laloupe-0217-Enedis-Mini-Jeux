@@ -69,6 +69,7 @@ angular.module('app')
         carte.classes.push('flash charabia-red');
       }
       if ($scope.compteurFaux >= 5) {
+        $scope.play($scope.$parent.commun.audio.electric);
         console.log("PERDU LACHE LE CLAVIER");
       }
       // Si clic sur le bonne réponse (un Z)
