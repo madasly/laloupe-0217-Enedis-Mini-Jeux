@@ -59,7 +59,7 @@ angular.module('app')
         $scope.goodRep = function() {
             $scope.showBulle({
                 show: true,
-                character: "lea",
+                character: "Lea",
                 content: "Bonne réponse !! Il ne risque pas d'avoir de fil électrique à cet endroit"
             });
             $scope.$parent.showConfetti = true;
