@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('BoucheTrouController', function($scope, $timeout) {
+  .controller('BoucheTrouController', function($scope, $timeout) {
 
         $scope.$parent.props = {
             nomDuJeu: "Le Bouche-Trou",
@@ -9,48 +9,49 @@ angular.module('app')
                 "Pour entretenir un jardin, les adultes peuvent utiliser des appareils électriques comme une tondeuse ou un taille-haie...",
                 "Dans ces situations, nou allons voir que certaines mesures de sécurité s'imposent."
             ],
-            indice: [],
+            indice: ["Tu doit reproduire une phrases qui a du sens."],
             audio: {
-                conseils: "sound/games/bouchetrou/P11J17.mp3",
-                consignes: "sound/games/bouchetrou/trou.mp3"
+              consignes: "sound/games/bouchetrou/trou.mp3",
+              conseils: "sound/games/bouchetrou/conseil.mp3"
             }
         };
 
-        /*
-         * La solution (les mots sont dans le bonne ordre)
-         */
-        var WORDS = [
-            'débrancher',
-            'électrique',
-            'nettoyer',
-            'blesser'
-        ];
-        Object.freeze(WORDS); // rend constant WORDS, ce qui est utile pour éviter des bugs
+    /*
+     * La solution (les mots sont dans le bonne ordre)
+     */
+    var WORDS = [
+      'débrancher',
+      'électrique',
+      'nettoyer',
+      'blesser'
+    ];
+    Object.freeze(WORDS); // rend constant WORDS, ce qui est utile pour éviter des bugs
 
-        $scope.words = WORDS.slice(0); // copie l'array (puisque WORDS est constant);
-        $scope.holes = WORDS.map(function() {
-            return "";
-        }); // pour que words et holes soient bien de la même longueure
+    $scope.words = WORDS.slice(0); // copie l'array (puisque WORDS est constant);
+    $scope.holes = WORDS.map(function() {
+      return "";
+    }); // pour que words et holes soient bien de la même longueur
 
-        /*
-         * Vérifie la solution
-         */
-        function checkSolution(proposedSolution) {
-            return proposedSolution.length === WORDS.length && proposedSolution.every(function(word, index) {
-                return word === WORDS[index];
-            });
-        }
+    /*
+     * Vérifie la solution
+     */
+    function checkSolution(proposedSolution) {
+      return proposedSolution.length === WORDS.length && proposedSolution.every(function(word, index) {
+        return word === WORDS[index];
+      });
+    }
 
         /*
          * Gère ce qu'il faut faire lorsque le jeu se termine
          */
         function endGame() {
             var bulle = {
-                character: 'Greg',
+                character: 'Lea',
                 content: 'Bien joué !',
                 show: true
             };
             $scope.showBulle(bulle);
+            $scope.$parent.showConfetti = true;
         }
 
         /*
@@ -62,7 +63,7 @@ angular.module('app')
             });
             if (allFilled) {
                 var bulle = {
-                    character: 'Lea',
+                    character: 'Greg',
                     show: true,
                     content: "Essaye encore !"
                 };
@@ -82,5 +83,6 @@ angular.module('app')
                     tryAgain();
                 }
             }, 200);
-        };
-    });
+
+    };
+  });

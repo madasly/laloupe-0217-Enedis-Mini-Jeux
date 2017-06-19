@@ -1,5 +1,24 @@
 .charabia-divMot{
-  padding-top: 30%;
+  position: relative;
+  top: 250px;
+}
+.charabia-en-tete-complete{
+  font-size: 20px;
+  font-weight: bold;
+}
+.charabia-phrase-recomposer{
+  font-weight: bold;
+  font-size: 25px;
+  color: red;
+  margin-top: 4%;
+}
+
+.charabia-text-faute{
+  position: absolute;
+  font-size: 25px;;
+    bottom: -614px;
+  right: 39px;
+  color: red;
 }
 .charabia-carte {
   margin: 0 2px;
@@ -8,6 +27,7 @@
   height: 1.5em;
   font-size: 2em;
   border: 1px solid black;
+  background-color: white;
   /*No Selection*/
   -moz-user-select: -moz-none;
    -webkit-user-select: none;
@@ -24,7 +44,6 @@
     border: 1px solid red;
     color: red;
 }
-
 .charabia-faute{
   position: absolute;
   top: 120px;
@@ -75,9 +94,9 @@
 /*ANIMATION DEPLACEMENT CARRé*/
 .charabia-animDeplacement
 {
-  -webkit-animation: gaucheDroiteCustom 5s infinite;
+  -webkit-animation: animDeplacement 5s infinite;
 }
-@-webkit-keyframes gaucheDroiteCustom {
+@-webkit-keyframes animDeplacement {
   0% {
     transform: translateX(0px);
   }

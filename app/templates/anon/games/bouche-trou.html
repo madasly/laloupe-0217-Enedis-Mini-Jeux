@@ -1,11 +1,10 @@
 <!-- TODO make better animation when dropping words -->
 <div class="bouche-trou">
-
-    <ul class="words">
-        <li ng-repeat="word in words"><span class="word" data-drag="true" jqyoui-draggable="{index: {{$index}}, animate:true}" data-jqyoui-options="{revert: 'invalid', placeholder: true, opacity: 0.5}" ng-model="words">{{ word }}</span></li>
+    <ul class="words text-center">
+        <li class="hvr-grow" ng-repeat="word in words"><span class="word" data-drag="true" jqyoui-draggable="{index: {{$index}}, animate:true}" data-jqyoui-options="{revert: 'invalid', placeholder: true, opacity: 0.5}" ng-model="words">{{ word }}</span></li>
     </ul>
 
-    <div class="fill-in-the-blank text-center">
+    <div class="fill-in-the-blank text-center text-entre-trou">
         Il est très important de
         <span class="hole" data-drop="true" jqyoui-droppable="{index: 0, onDrop: 'onDrop'}" ng-model="holes">
                 <span class="word" ng-if="holes[0] !== ''" data-drag="true" jqyoui-draggable="{index: 0, animate:true}" data-jqyoui-options="{revert: 'invalid', direction: 'top'}" ng-model="holes">{{holes[0]}}</span>

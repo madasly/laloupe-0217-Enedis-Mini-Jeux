@@ -22,7 +22,7 @@ angular.module('app')
         $scope.WINDOWS = WINDOWS;
         $scope.show = WINDOWS.consignes;
         $scope.gameLoadedOnce = false;
-
+        $scope.showConfetti = false;
 
         /*
          * Gestion des variables changeables par les enfants

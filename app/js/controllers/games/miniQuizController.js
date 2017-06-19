@@ -5,9 +5,9 @@ angular.module('app')
     $scope.$parent.props = {
         nomDuJeu: "Mini Quizz",
         theme: "ville",
-        consignes: [],
-        conseils: [],
-        indice: [],
+        consignes: ["Donne la bonne réponse a la question suivante :"],
+        conseils: ["lis bien la question avant de répondre"],
+        indice: ["Je ne peut pas te donner d'indice"],
         audio: {
             consignes: "sound/games/quiz/quiz.mp3"
         }
@@ -17,17 +17,18 @@ angular.module('app')
     $scope.vrai = function vrai() {
       $scope.showBulle({
         show: true,
-        character: "Greg",
-        content: "Félicitation tu as bien répondu a la question !!"
+        character: "Lea",
+        content: "Félicitation, tu as bien répondu à la question !!"
       });
+      $scope.$parent.showConfetti = true;
     };
 
     // Si l'utilisateur clic sur le bouton 2
     $scope.faux1 = function faux() {
       $scope.showBulle({
         show: true,
-        character: "Lea",
-        content: "Non !! Surtout ne touche pas à la branche !! tu risques l'électrocution voir même dans le pire des cas la mort !!"
+        character: "Greg",
+        content: "Attenion!! Surtout ne touche pas à la branche !! tu risques l'électrocution voir même dans le pire des cas la mort !!"
       });
     };
 
@@ -35,8 +36,8 @@ angular.module('app')
     $scope.faux = function faux() {
       $scope.showBulle({
         show: true,
-        character: "Lea",
-        content: "Mauvaise réponse. Si personne ne prévient Énedis il y a encore plus de risque qu'il y ai des accidents."
+        character: "Greg",
+        content: "ATTENTION!! Un accident peut se produire si personne ne prévient Énedis."
       });
     };
   });

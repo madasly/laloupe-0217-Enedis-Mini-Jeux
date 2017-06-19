@@ -3,7 +3,7 @@ angular.module('app')
 
       $scope.$parent.props = {
           nomDuJeu: "La Bonne Attitude",
-          theme: "maison",
+          theme: "attitude",
           consignes: [
               "Observe ces trois vignettes ; une seule montre la bonne attitude à avoir... laquelle ?"
           ],
@@ -12,7 +12,10 @@ angular.module('app')
               "La solution, c'est d'utiliser des prises multiples ou des rallonges...",
               "Mais attention à ne pas les surcharger, cela pourrait provoquer un incendie !"
           ],
+          indice: ["Il ne faut jamais empiler des multiprises !!"],
           audio: {
+            conseils:"sound/games/attitude/P5J3.mp3",
+            consignes:"sound/games/attitude/labonneattitude.mp3"
 
           }
       };
@@ -24,14 +27,15 @@ angular.module('app')
           character: "Greg",
           content: "Félicitation, c'est la bonne réponse"
         });
+        $scope.$parent.showConfetti = true;
       };
 
       $scope.faux = function(){
-        console.log("... Sérieux !?");
+        console.log("Mauvaise réponse");
         $scope.showBulle({
           show: true,
           character: "Lea",
-          content: "Non ! La bonne attitude pour les multiprise est de ne pas les superposer !"
+          content: "Non ! La bonne attitude pour les multiprises est de ne pas les superposer !"
         });
       };
 

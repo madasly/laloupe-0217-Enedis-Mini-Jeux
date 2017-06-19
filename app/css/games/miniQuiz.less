@@ -1,4 +1,3 @@
-
 .quiz-button{
   font-size: 20px;
   color: white;
@@ -12,6 +11,8 @@
 }
 .miniquiz-question p{
   font-weight: bold;
+  font-size: 25px;
+  margin-top: 10%;
 }
 .miniquiz-reponse-rouge{
   font-weight: bold;
@@ -25,16 +26,9 @@
   font-weight: bold;
   color: blue;
 }
-.miniquiz-proposition{
-  margin-top: 2%;
-  border: 2px solid black;
-  border-radius: 50px 50px 50px 50px;
-  max-height: 510px;
-  -moz-box-shadow: 3px 7px 10px 0px #656565;
-  -webkit-box-shadow: 3px 7px 10px 0px #656565;
-  -o-box-shadow: 3px 7px 10px 0px #656565;
-  box-shadow: 3px 7px 10px 0px #656565;
-  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=156, Strength=10);
+.miniQuizz-text-button{
+  font-size: 20px;
+  color: white;
 }
 .miniquiz-bouton{
   width: 50%;
@@ -57,4 +51,76 @@ margin-top: 2%;
 }
 .miniquiz-solution{
   font-size: 23px;
+}
+
+.quizz-btn-anim1
+{
+  -webkit-animation: boutonUn 4s infinite;
+  -moz-user-select: -moz-none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+@-webkit-keyframes boutonUn {
+  0% {
+    transform: translateX(0px);
+  }
+  35% {
+    transform: translateX(350px);
+  }
+  70% {
+    transform: translateX(-450px) translateX(350px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.quizz-btn-anim2
+{
+  -moz-user-select: -moz-none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+  -webkit-animation: boutonDeux 5s infinite;
+}
+@-webkit-keyframes boutonDeux {
+  0% {
+    transform: translateX(0px);
+  }
+  35% {
+    transform: translateX(-350px);
+  }
+  70% {
+    transform: translateX(250px) translateX(350px-);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.quizz-btn-anim3
+{
+  -moz-user-select: -moz-none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+  -webkit-animation: boutonTrois  3s infinite;
+}
+@-webkit-keyframes boutonTrois {
+  0% {
+    transform: translateX(0px);
+  }
+  35% {
+    transform: translateX(-350px);
+  }
+  70% {
+    transform: translateX(450px) translateX(-350px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }

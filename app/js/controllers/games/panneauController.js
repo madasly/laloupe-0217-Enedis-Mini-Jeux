@@ -1,15 +1,15 @@
 angular.module('app')
   .controller('PanneauController', function($scope) {
-
+    var testingMerge = "je test un merge";
     $scope.$parent.props = {
         nomDuJeu: "Le Bon Panneau !",
         theme: "ville",
         consignes: [
-            "Sur tous les coffrets électrique, il y a un panneau qui signifie \"danger électricité\".",
-            "Parmis les panneaux dessinées ci-contre, lequel est-ce ?"
+            "Sur tous les coffrets électriques, il y a un panneau qui signifie \"danger électricité\".",
+            "Parmis les panneaux dessinés ci-contre, lequel est-ce ?"
         ],
-        conseils: [],
-        indice: [],
+        conseils: ["Regarde bien l'icone au milieu de chaque panneau."],
+        indice: ["La bonne réponse n'est pas une icone de flamme."],
         audio: {
             conseils: "sound/games/bonpanneau/P14J23.mp3",
             consignes: "sound/games/bonpanneau/bon.mp3"
@@ -42,5 +42,6 @@ angular.module('app')
         character: "Greg",
         content: "Bravo c'est la bonne réponse !"
       });
+      $scope.$parent.showConfetti = true;
     };
   });
