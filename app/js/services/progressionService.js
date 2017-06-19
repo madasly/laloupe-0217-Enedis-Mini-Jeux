@@ -69,7 +69,7 @@ angular.module('app')
                 if (Auth.isAuthenticated()) {
                     var user = CurrentUser.user();
                     user.progression = progression;
-                    console.log('saving progress... | user: ',user._id);
+                    console.log('saving progress... | user: ', user._id);
                     UserService.update(user._id, user);
                 }
             },

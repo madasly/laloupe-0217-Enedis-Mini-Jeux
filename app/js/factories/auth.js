@@ -1,7 +1,11 @@
 angular.module('app')
-    .factory('Auth', function($http, LocalService, AccessLevels) {
+    .factory('Auth', function($http, LocalService, AccessLevels, CurrentUser) {
         function checkTokenStatus(token) {
             $http.get('/token_status');
+        }
+
+        function isNotEmptyObject(obj) {
+            return JSON.stringify(obj) !== JSON.stringify({});
         }
 
         var token = LocalService.get('auth_token');
@@ -39,6 +43,10 @@ angular.module('app')
                 register.then(function(result) {
                     LocalService.set('auth_token', result.data.token);
                     LocalService.set('user', JSON.stringify(result.data.user));
+                    var user = CurrentUser.user();
+                    if (user.progression !== undefined && isNotEmptyObject(user.progression)) {
+                        LocalService.set('progression', user.progression);
+                    }
                 }).catch(function() {});
                 return register;
             }
