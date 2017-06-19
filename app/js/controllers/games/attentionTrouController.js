@@ -25,7 +25,7 @@ angular.module('app')
             audio: {
                 conseils: "sound/games/attention/P9J13.mp3",
                 consignes:"sound/games/attention/attention.mp3",
-                indices: "sound/games/attention/indice.mp3"
+                indice: "sound/games/attention/indice.mp3"
             }
         };
 
@@ -33,7 +33,7 @@ angular.module('app')
         $scope.badRep = function() {
             $scope.showBulle({
                 show: true,
-                character: "Lea",
+                character: "Greg",
                 content: "Attention!! Il peut y avoir un fil électrique derrière ce mur, la lampe est trop près  !! "
             });
         };
@@ -42,7 +42,7 @@ angular.module('app')
         $scope.badRep2 = function() {
             $scope.showBulle({
                 show: true,
-                character: "Lea",
+                character: "Greg",
                 content: "Attention!! Il peut y avoir un fil électrique derrière ce mur, l'interrupteur est trop près !!"
             });
         };
@@ -51,7 +51,7 @@ angular.module('app')
         $scope.badRep3 = function() {
             $scope.showBulle({
                 show: true,
-                character: "Lea",
+                character: "Greg",
                 content: "Attention!! Il peut y avoir un fil électrique derrière ce mur, la prise de courant est trop près  !! "
             });
         };
@@ -60,7 +60,7 @@ angular.module('app')
         $scope.goodRep = function() {
             $scope.showBulle({
                 show: true,
-                character: "Greg",
+                character: "lea",
                 content: "Bonne réponse !! Il ne risque pas d'avoir de fil électrique à cet endroit"
             });
             $scope.$parent.showConfetti = true;

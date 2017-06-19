@@ -7,10 +7,13 @@ angular.module('app')
           nomDuJeu: "Zoom sur ...",
           theme: "zoom",
           consignes: [
-              "Regarde ces troi vignettes et trouve celle dans laquelle la sécurité électrique est assurée."
+              "Regarde ces trois vignettes et trouve celle dans laquelle la sécurité électrique est assurée."
           ],
+          indice: ["Un radiateur n'est pas une étagère."],
           conseils: ["Un radiateur... sa chauffe beaucoup..."],
           audio: {
+            consignes:"sound/games/zoom/zoom.mp3",
+            indices:"sound/games/zoom/indicezoom.mp3",
 
           }
       };
@@ -19,7 +22,7 @@ angular.module('app')
         console.log('Bonne réponse');
         $scope.showBulle({
           show: true,
-          character: "Greg",
+          character: "Lea",
           content:
           "Félicitation! tu as bien répondu à la question !!"
         });
@@ -31,7 +34,7 @@ angular.module('app')
         console.log("Mauvaise réponse");
         $scope.showBulle({
           show: true,
-          character: "Lea",
+          character: "Greg",
           content: "Un Radiateur n'est pas une étagère !!"
         });
       };

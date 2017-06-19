@@ -9,8 +9,8 @@ angular.module('app')
                 "Laquelle de ces vignettes ne représente aucun risque électrique.",
                 "Sauras tu la trouver ?"
             ],
-            conseils: [],
-            indice: [],
+            conseils: ["Les outils élètriques doivent toujours être ranger correctement."],
+            indice: ["L'eau et l'élèctricité ne font pas bon ménage."],
             audio: {
                 consignes:"sound/games/chance/chance.mp3",
 
@@ -20,7 +20,7 @@ angular.module('app')
         $scope.vrai = function() {
             $scope.showBulle({
                 show: true,
-                character: "Greg",
+                character: "Lea",
                 content: "Bonne réponse. Bravo !!"
             });
             $scope.$parent.showConfetti = true;
@@ -31,7 +31,7 @@ angular.module('app')
         $scope.faux = function() {
             $scope.showBulle({
                 show: true,
-                character: "Lea",
+                character: "Greg",
                 content: "Mauvaise Réponse. À cause de l'eau environnante, il y a un risque de court-circuit. Cela pourrait même provoquer un incendie dans la maison !!"
             });
         };
@@ -39,7 +39,7 @@ angular.module('app')
         $scope.faux2 = function() {
             $scope.showBulle({
                 show: true,
-                character: "Lea",
+                character: "Greg",
                 content: "Mauvaise Réponse, le fil a été réparé avec du ruban adhésif. Cela risque de provoquer un court-circuit !"
             });
         };

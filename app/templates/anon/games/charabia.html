@@ -1,11 +1,10 @@
 <div class="row">
   <div class="col-xs-12">
-    <p class="text-center">Phrase complete :</p>
-    <p> {{ charabiaDecode.slice(0, indexMot).join(" ") }}</p>
+    <p class="text-center charabia-en-tete-complete">Phrase complete :</p>
+    <p class="text-center charabia-phrase-recomposer">{{ charabiaDecode.slice(0, indexMot).join(" ") }}</p>
   </div>
 </div>
 
-<div class="row motQuiBouge" style="border: 1px solid red;">
   <div class="col-xs-12">
     <div class="charabia-divMot animated text-center" ng-class="{fadeInLeftBig:bascule, fadeOutRightBig:!bascule}">
       <div class="{{animationMot}}">
@@ -14,12 +13,11 @@
       </div>
     </div>
   </div>
-</div>
 
 <div class="row charabia-faute">
   <div class="col-xs-12 text-right">
     <div class="phrase">
-      <p class="">Faute : {{compteurFaux}}</p>
+      <p class="charabia-text-faute">Faute : {{compteurFaux}}/5</p>
     </div>
   </div>
 </div>
