@@ -24,6 +24,13 @@ angular.module('app')
         $scope.gameLoadedOnce = false;
         $scope.showConfetti = false;
 
+
+
+
+        // var soundSuccess = play(sound/clap.mp3);
+        // var soundEchec = play(sound/etincelle.mp3);
+
+
         /*
          * Gestion des variables changeables par les enfants
          */
@@ -37,6 +44,14 @@ angular.module('app')
             audio: {},
             onLoad: function() {}
         };
+
+        $scope.commun = {
+            audio: {
+                claps: 'sound/clap.mp3',
+                electric: 'sound/electric.mp3'
+            }
+        };
+
         $scope.onLoad = function() {
           if (!$scope.gameLoadedOnce) {
             $scope.props.onLoad();
