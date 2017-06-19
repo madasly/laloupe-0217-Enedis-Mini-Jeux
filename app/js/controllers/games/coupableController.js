@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('CoupableController', function($scope) {
+  .controller('CoupableController', function($scope, $timeout) {
 
     // variable d'information général du jeu
     $scope.$parent.props = {
@@ -26,6 +26,10 @@ angular.module('app')
         content: "Félicitation! tu as bien répondu à la question !!"
       });
       $scope.$parent.showConfetti = true;
+      $timeout(function() {
+      $scope.$parent.showConfetti = false;
+    }, 10000);
+
     };
 
     // Lorsque l'utilisateur clic sur le poison
