@@ -3,19 +3,20 @@ angular.module('app')
 
     // variable d'information général du jeu
     $scope.$parent.props = {
-        nomDuJeu: "Qui est le coupable ?",
-        theme: "coupable",
-        consignes: [
-            "À ton avis, quel animal a grignoté ce fil électrique ?"
-        ],
-        conseils: [
-            "Si tu as la chance d'avoir un animal chez toi, ne le laisse pas ronger les fils électriques. Car des fils abimés, ce sont des fils qui ne sont plus isolés et qui deviennent extrêmement dangereux"
-        ],
-        indice: ["Le coupable as des dents !!"],
-        audio: {
-            consignes: "sound/games/coupable/guilty.mp3",
-            conseils:"sound/games/coupable/P6J6.mp3"
-        }
+      id: "coupable",
+      nomDuJeu: "Qui est le coupable ?",
+      theme: "coupable",
+      consignes: [
+        "À ton avis, quel animal a grignoté ce fil électrique ?"
+      ],
+      conseils: [
+        "Si tu as la chance d'avoir un animal chez toi, ne le laisse pas ronger les fils électriques. Car des fils abimés, ce sont des fils qui ne sont plus isolés et qui deviennent extrêmement dangereux"
+      ],
+      indice: ["Le coupable as des dents !!"],
+      audio: {
+        consignes: "sound/games/coupable/guilty.mp3",
+        conseils: "sound/games/coupable/P6J6.mp3"
+      }
     };
 
     // Lorsque l'utilisateur clic sur le Lapin
@@ -26,10 +27,10 @@ angular.module('app')
         content: "Félicitation! tu as bien répondu à la question !!"
       });
       $scope.$parent.showConfetti = true;
+      $scope.endGame();
       $timeout(function() {
-      $scope.$parent.showConfetti = false;
-    }, 10000);
-
+        $scope.$parent.showConfetti = false;
+      }, 10000);
     };
 
     // Lorsque l'utilisateur clic sur le poison

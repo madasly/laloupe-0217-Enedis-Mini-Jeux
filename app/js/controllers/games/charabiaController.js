@@ -5,13 +5,14 @@ angular.module('app')
     $scope.bascule = true;
     $scope.animation = ["charabia-animRotate", "charabia-animGaucheDroite", "charabia-animDeplacement"];
     $scope.$parent.props = {
+      id: "charabia",
       nomDuJeu: "C'est quoi ce Charabia",
       theme: "maison",
       consignes: [
         "Pour déchiffrer ce message codé qui t'explique comment débrancher un appareil électrique sans danger, supprime toutes les mauvaises lettres."
       ],
       conseils: ["Soit, rapide, agile !!"],
-      indice: ["Les lettre a suprimer sont souvent des Z."],
+      indice: ["Les lettres à supprimer sont souvent des Z."],
       audio: {
         consignes: "sound/games/charabia/charabia.mp3"
       },
@@ -23,6 +24,7 @@ angular.module('app')
 
     function nextAnimation() {
       $scope.animationMot = $scope.animation[$scope.indexMot % $scope.animation.length];
+
     }
 
     //Function qui compte le nombre de Z dans un mot en function du current mot

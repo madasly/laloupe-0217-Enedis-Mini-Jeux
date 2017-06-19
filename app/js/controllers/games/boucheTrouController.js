@@ -2,6 +2,7 @@ angular.module('app')
   .controller('BoucheTrouController', function($scope, $timeout) {
 
         $scope.$parent.props = {
+            id: "bouche-trou",
             nomDuJeu: "Le Bouche-Trou",
             theme: "default",
             consignes: ["Complète ce texte à trous en utilisant les mots dans la liste."],
@@ -52,6 +53,7 @@ angular.module('app')
             };
             $scope.showBulle(bulle);
             $scope.$parent.showConfetti = true;
+            $scope.endGame();
         }
 
         /*

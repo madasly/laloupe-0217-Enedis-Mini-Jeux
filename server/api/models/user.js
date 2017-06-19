@@ -25,6 +25,9 @@ const userSchema = new mongoose.Schema({
     isAdmin: {
         type: Boolean,
         default: false
+    },
+    progression: {
+        type: Object
     }
 });
 
@@ -92,6 +95,7 @@ export default class User {
             password: 0
         }, (err, user) => {
             if (err || !user) {
+              console.log(err);
                 res.sendStatus(403);
             } else {
                 res.json(user);
@@ -129,7 +133,7 @@ export default class User {
             _id: req.params.id
         }, req.body, (err, user) => {
             if (err || !user) {
-                res.status(500).send(err.message);
+                res.sendStatus(500);
             } else {
                 let tk = jsonwebtoken.sign(user, token, {
                     expiresIn: "24h"
