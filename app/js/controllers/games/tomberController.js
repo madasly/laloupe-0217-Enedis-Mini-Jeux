@@ -1,6 +1,7 @@
 angular.module('app')
   .controller('TomberController', function($scope) {
     $scope.$parent.props = {
+        id: 'tomber',
         nomDuJeu: "Ne tombe pas dans le panneau!",
         theme: "default",
         consignes: [
@@ -31,6 +32,8 @@ angular.module('app')
         content: "Bonne réponse !! Ce pêcheur se met en danger en dessous des lignes élèctriques"
       });
       $scope.$parent.showConfetti = true;
+      $scope.endGame();
+
     };
 
   });

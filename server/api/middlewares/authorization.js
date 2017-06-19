@@ -4,15 +4,18 @@ import token from '../token.js';
 export default {
 
     hasAuthorization: (req, res, next) => {
+
         if (req.headers.authorization) {
             jsonwebtoken.verify(req.headers.authorization, token, (err, decoded) => {
                 if (err) {
+                    console.log('1');
                     return res.sendStatus(403);
                 } else {
                     next();
                 }
             });
         } else {
+            console.log('3');
             return res.sendStatus(403);
         }
     },
@@ -23,6 +26,8 @@ export default {
                 if (decoded._doc && decoded._doc.isAdmin) {
                     next();
                 } else {
+                    console.log('2');
+
                     return res.sendStatus(403);
                 }
             });

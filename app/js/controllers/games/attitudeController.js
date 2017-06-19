@@ -2,6 +2,7 @@ angular.module('app')
     .controller('AttitudeController', function($scope) {
 
       $scope.$parent.props = {
+          id: "attitude",
           nomDuJeu: "La Bonne Attitude",
           theme: "attitude",
           consignes: [
@@ -28,6 +29,7 @@ angular.module('app')
           content: "Félicitation, c'est la bonne réponse"
         });
         $scope.$parent.showConfetti = true;
+        $scope.endGame();
       };
 
       $scope.faux = function(){

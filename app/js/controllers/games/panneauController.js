@@ -2,20 +2,20 @@ angular.module('app')
   .controller('PanneauController', function($scope) {
     var testingMerge = "je test un merge";
     $scope.$parent.props = {
-        nomDuJeu: "Le Bon Panneau !",
-        theme: "ville",
-        consignes: [
-            "Sur tous les coffrets électriques, il y a un panneau qui signifie \"danger électricité\".",
-            "Parmis les panneaux dessinés ci-contre, lequel est-ce ?"
-        ],
-        conseils: ["Regarde bien l'icone au milieu de chaque panneau."],
-        indice: ["La bonne réponse n'est pas une icone de flamme."],
-        audio: {
-            conseils: "sound/games/bonpanneau/P14J23.mp3",
-            consignes: "sound/games/bonpanneau/bon.mp3"
-        }
+      id: 'panneau',
+      nomDuJeu: "Le Bon Panneau !",
+      theme: "ville",
+      consignes: [
+        "Sur tous les coffrets électriques, il y a un panneau qui signifie \"danger électricité\".",
+        "Parmis les panneaux dessinés ci-contre, lequel est-ce ?"
+      ],
+      conseils: ["Regarde bien l'icone au millieu de chaque panneaux."],
+      indice: ["La bonne réponse n'est pas une l'icone de flamme."],
+      audio: {
+        conseils: "sound/games/bonpanneau/P14J23.mp3",
+        consignes: "sound/games/bonpanneau/bon.mp3"
+      }
     };
-
 
     // Quand l'utilisateur clic sur le panneau de gauche (flocon de neige)
     $scope.faux1 = function() {
@@ -43,5 +43,7 @@ angular.module('app')
         content: "Bravo c'est la bonne réponse !"
       });
       $scope.$parent.showConfetti = true;
+      $scope.endGame();
+
     };
   });

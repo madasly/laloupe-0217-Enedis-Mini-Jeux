@@ -9,6 +9,9 @@ angular.module('app')
             },
             unset: function(key) {
                 return localStorage.removeItem(key);
+            },
+            isSet: function(key) {
+                return JSON.parse(localStorage.getItem(key)) !== null;
             }
         };
     });
