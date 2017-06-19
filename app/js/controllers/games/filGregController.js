@@ -10,7 +10,9 @@ angular.module('app')
       ],
       conseils: [],
       indice: [],
-      audio: {}
+      audio: {
+
+      }
     };
 
       $scope.faux = function(){

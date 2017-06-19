@@ -35,6 +35,7 @@ angular.module('app')
                 character: "Lea",
                 content: "Attention!! Il peut y avoir un fil électrique derrière ce mur, la lampe est trop près  !! "
             });
+            $scope.play($scope.$parent.commun.audio.electric);
         };
 
         // Quand l'utilisateur clic sur le cercle en dessous de l'intérupteur
@@ -44,6 +45,7 @@ angular.module('app')
                 character: "Lea",
                 content: "Attention!! Il peut y avoir un fil électrique derrière ce mur, l'interrupteur est trop près !!"
             });
+            $scope.play($scope.$parent.commun.audio.electric);
         };
 
         // Quand l'utilisateur clic sur le cercle a gauche de la prise
@@ -53,7 +55,7 @@ angular.module('app')
                 character: "Lea",
                 content: "Attention!! Il peut y avoir un fil électrique derrière ce mur, la prise de courant est trop près  !! "
             });
-            $scope.soundEchec();
+            $scope.play($scope.$parent.commun.audio.electric);
 
 
         };
@@ -66,7 +68,6 @@ angular.module('app')
                 content: "Bonne réponse !! Il ne risque pas d'avoir de fil électrique à cet endroit"
             });
             $scope.$parent.showConfetti = true;
-            $scope.soundSuccess();
-            console.log(play(sound/clap.mp3));
+            $scope.play($scope.$parent.commun.audio.claps);
         };
     });

@@ -41,11 +41,16 @@ angular.module('app')
             conseils: [],
             indice: [],
             audio: {},
-
-
-
             onLoad: function() {}
         };
+
+        $scope.commun = {
+            audio: {
+                claps: 'sound/clap.mp3',
+                electric: 'sound/electric.mp3'
+            }
+        };
+
         $scope.onLoad = function() {
           if (!$scope.gameLoadedOnce) {
             $scope.props.onLoad();
