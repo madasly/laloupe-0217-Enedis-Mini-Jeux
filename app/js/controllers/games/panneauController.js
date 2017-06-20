@@ -9,7 +9,7 @@ angular.module('app')
         "Sur tous les coffrets électriques, il y a un panneau qui signifie \"danger électricité\".",
         "Parmis les panneaux dessinés ci-contre, lequel est-ce ?"
       ],
-      conseils: ["Regarde bien l'icone au millieu de chaque panneaux."],
+      conseils: ["Regarde bien l'icone au millieu de chaque panneau."],
       indice: ["La bonne réponse n'est pas une l'icone de flamme."],
       audio: {
         conseils: "sound/games/bonpanneau/P14J23.mp3",
@@ -24,6 +24,7 @@ angular.module('app')
         character: "Lea",
         content: "Ce panneau représente un flocon de neige. il n'y a pas de lien entre un flocon de neige et l'électricité"
       });
+      $scope.play($scope.$parent.commun.audio.electric);
     };
 
     //  Quand l'utilisateur clic sur le panneau de droite (produit inflammable)
@@ -33,6 +34,7 @@ angular.module('app')
         character: "Lea",
         content: "Ce panneau représente une flamme, cela veut dire que c'est un produit inflammable"
       });
+      $scope.play($scope.$parent.commun.audio.electric);
     };
 
     // Quand lutilisateur clic sur le panneau danger élétricque
@@ -43,6 +45,7 @@ angular.module('app')
         content: "Bravo c'est la bonne réponse !"
       });
       $scope.$parent.showConfetti = true;
+      $scope.play($scope.$parent.commun.audio.claps);
       $scope.endGame();
 
     };

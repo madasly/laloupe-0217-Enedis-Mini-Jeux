@@ -66,6 +66,7 @@ angular.module('app')
             content: "Félicitation tu as bien répondu à toutes les questions !!"
           });
           $scope.$parent.showConfetti = true;
+          $scope.play($scope.$parent.commun.audio.claps);            
           $scope.endGame();
         }
       } else {
@@ -75,6 +76,7 @@ angular.module('app')
           character: "Lea",
           content: "Mauvaise réponse !"
         });
+        $scope.play($scope.$parent.commun.audio.electric);
       }
     };
   });

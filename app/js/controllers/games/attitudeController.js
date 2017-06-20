@@ -29,6 +29,7 @@ angular.module('app')
           content: "Félicitation, c'est la bonne réponse"
         });
         $scope.$parent.showConfetti = true;
+        $scope.play($scope.$parent.commun.audio.claps);
         $scope.endGame();
       };
 
@@ -39,6 +40,8 @@ angular.module('app')
           character: "Lea",
           content: "Non ! La bonne attitude pour les multiprises est de ne pas les superposer !"
         });
+        $scope.play($scope.$parent.commun.audio.electric);
+
       };
 
     });

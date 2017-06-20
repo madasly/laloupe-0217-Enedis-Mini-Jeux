@@ -27,6 +27,7 @@ angular.module('app')
         content: "Félicitation! tu as bien répondu à la question !!"
       });
       $scope.$parent.showConfetti = true;
+      $scope.play($scope.$parent.commun.audio.claps);
       $scope.endGame();
       $timeout(function() {
         $scope.$parent.showConfetti = false;
@@ -40,6 +41,7 @@ angular.module('app')
         character: "Greg",
         content: "Ce poisson a t'il vraiment pu sortir de son aquarium pour allez manger le fil électrique ?"
       });
+      $scope.play($scope.$parent.commun.audio.electric);
     };
 
     // Lorsque l'utilisateur clic sur l'oiseau
@@ -49,6 +51,7 @@ angular.module('app')
         character: "Greg",
         content: "Les oiseaux n' ont pas de dents ! "
       });
+      $scope.play($scope.$parent.commun.audio.electric);
     };
 
   });

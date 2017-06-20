@@ -22,8 +22,10 @@ angular.module('app')
             var bonneReponse = $scope.reponse.toLowerCase().trim();
             if (bonneReponse === $scope.solution || bonneReponse === $scope.solution1 || bonneReponse === $scope.solution2 || bonneReponse === $scope.solution3) {
                 console.log('Bravo!');
+                $scope.play($scope.$parent.commun.audio.claps);
             } else {
                 console.log("Essaye Encore !!");
+                $scope.play($scope.$parent.commun.audio.electric);
             }
         };
     });

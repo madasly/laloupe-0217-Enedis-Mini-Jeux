@@ -27,6 +27,7 @@ angular.module('app')
           "Félicitation! tu as bien répondu à la question !!"
         });
         $scope.$parent.showConfetti = true;
+        $scope.play($scope.$parent.commun.audio.claps);
         $scope.endGame();
       };
 
@@ -37,5 +38,6 @@ angular.module('app')
           character: "Greg",
           content: "Un Radiateur n'est pas une étagère !!"
         });
+        $scope.play($scope.$parent.commun.audio.electric);            
       };
     });
