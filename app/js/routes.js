@@ -23,7 +23,7 @@ angular.module('app')
         }
       })
       .state('anon.register', {
-        url: '/',
+        url: '/register',
         views: {
           'content@': {
             templateUrl: 'anon/register.html',
