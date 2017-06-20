@@ -10,10 +10,11 @@ angular.module('app')
                 "Pour entretenir un jardin, les adultes peuvent utiliser des appareils électriques comme une tondeuse ou un taille-haie...",
                 "Dans ces situations, nou allons voir que certaines mesures de sécurité s'imposent."
             ],
-            indice: ["Tu doit reproduire une phrases qui a du sens."],
+            indice: ["Tu dois reproduire une phrases qui a du sens."],
             audio: {
-              consignes: "sound/games/bouchetrou/trou.mp3",
-              conseils: "sound/games/bouchetrou/conseil.mp3"
+              consignes: "sound/games/bouchetrou/bouchetrou.mp3",
+              conseils: "sound/games/bouchetrou/P11J17.mp3",
+
             }
         };
 

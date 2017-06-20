@@ -9,7 +9,7 @@ angular.module('app')
                 "Laquelle de ces vignettes ne représente aucun risque électrique.",
                 "Sauras tu la trouver ?"
             ],
-            conseils: ["Les outils élètriques doivent toujours être ranger correctement."],
+            conseils: ["Les outils électriques doivent toujours être ranger correctement."],
             indice: ["L'eau et l'élèctricité ne font pas bon ménage."],
             audio: {
                 consignes:"sound/games/chance/chance.mp3",
@@ -44,6 +44,6 @@ angular.module('app')
                 character: "Greg",
                 content: "Mauvaise Réponse, le fil a été réparé avec du ruban adhésif. Cela risque de provoquer un court-circuit !"
             });
-            $scope.play($scope.$parent.commun.audio.electric);            
+            $scope.play($scope.$parent.commun.audio.electric);
         };
     });
