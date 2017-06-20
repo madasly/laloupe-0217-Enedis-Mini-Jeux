@@ -1,53 +1,53 @@
 <div class="game" ng-class="{'hidden-behind-modal': descriptionShown || charactersShown}">
-  <h2 class="titre-jeu ubuntu-li text-center">{{props.nomDuJeu}}</h2>
+    <h2 class="titre-jeu ubuntu-li text-center">{{props.nomDuJeu}}</h2>
 
-  <div class="game-container game-jeux-container">
-    <div class="game-view theme-{{ props.theme }}" ui-view="game" ng-show="gameLoadedOnce"></div>
-    <div class="window-container" ng-show="show !== WINDOWS.game">
-      <div window on-close="toggle(WINDOWS.game);loadGame();" ng-show="show === WINDOWS.consignes">
-        <div consignes texte="props.consignes"></div>
-      </div>
-      <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.indice">
-        <div indice texte="props.indice"></div>
-      </div>
-      <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.conseils">
-        <div conseils texte="props.conseils"></div>
-      </div>
-      <div window on-close="toggle(WINDOWS.game)" ng-show="show === WINDOWS.characters" confetti="showConfetti">
-        <div characters lea="lea" greg="greg" bulle="bulle"></div>
-      </div>
+    <div class="game-container game-jeux-container">
+        <div class="game-view theme-{{ props.theme }}" ui-view="game" ng-show="gameLoadedOnce"></div>
+        <div class="window-container" ng-show="show !== WINDOWS.game">
+            <window window on-close="mute(playingAudio);toggle(WINDOWS.game);loadGame();" display="show === WINDOWS.consignes" on-show="play(props.audio.consignes)">
+                <div consignes texte="props.consignes"></div>
+            </window>
+            <window window on-close="mute(playingAudio);toggle(WINDOWS.game);" display="show === WINDOWS.indice" on-show="play(props.audio.conseils)">
+                <div indice texte="props.indice"></div>
+            </window>
+            <window window on-close="mute(playingAudio);toggle(WINDOWS.game);" display="show === WINDOWS.conseils" on-show="play(props.audio.indice)">
+                <div conseils texte="props.conseils"></div>
+            </window>
+            <window window on-close="toggle(WINDOWS.game)" display="show === WINDOWS.characters" confetti="showConfetti">
+                <div characters lea="lea" greg="greg" bulle="bulle"></div>
+            </window>
+        </div>
     </div>
-  </div>
 
-  <div class="button-container container">
-    <div class="row row-bouton">
+    <div class="button-container container">
+        <div class="row row-bouton">
 
-      <div class="col-xs-10 fonction text-center">
+            <div class="col-xs-10 fonction text-center">
 
-        <div ng-show="props.consignes.length > 0" class="hvr-grow col-xs-3 col-md-2 col-lg-2">
-          <a href="" ng-click="toggle(WINDOWS.consignes);play(props.audio.consignes)">
-            <div>
-              <img class="btn-consignes" src="img/agent.svg">
-            </div>consignes
-          </a>
+                <div ng-show="props.consignes.length > 0" class="hvr-grow col-xs-3 col-md-2 col-lg-2">
+                    <a href="" ng-click="toggle(WINDOWS.consignes)">
+                        <div>
+                            <img class="btn-consignes" src="img/agent.svg">
+                        </div>consignes
+                    </a>
+                </div>
+                <div ng-show="props.conseils.length > 0" class="hvr-grow col-xs-3 col-md-2 col-lg-2">
+                    <a href="" ng-click="toggle(WINDOWS.conseils);">
+                        <div>
+                            <img class="btn-conseils" src="img/ampoule.svg">
+                        </div>conseils
+                    </a>
+                </div>
+                <div ng-show="props.indice.length > 0" class="hvr-grow col-xs-3 col-md-2 col-lg-2">
+                    <a href="" ng-click="toggle(WINDOWS.indice);">
+                        <div>
+                            <img class="btn-indice" src="img/loupe.svg">
+                        </div>indices
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-xs-2"><button class="bouton-retour hvr-grow" ng-click="back()">Retour</button></div>
         </div>
-        <div ng-show="props.conseils.length > 0" class="hvr-grow col-xs-3 col-md-2 col-lg-2">
-          <a href="" ng-click="toggle(WINDOWS.conseils);play(props.audio.conseils)">
-            <div>
-              <img class="btn-conseils" src="img/ampoule.svg">
-            </div>conseils
-          </a>
-        </div>
-        <div ng-show="props.indice.length > 0" class="hvr-grow col-xs-3 col-md-2 col-lg-2">
-          <a href="" ng-click="toggle(WINDOWS.indice);play(props.audio.indices)">
-            <div>
-              <img class="btn-indice" src="img/loupe.svg">
-            </div>indices
-          </a>
-        </div>
-      </div>
-
-      <div class="col-xs-2"><button class="bouton-retour hvr-grow" ng-click="back()">Retour</button></div>
     </div>
-  </div>
 </div>

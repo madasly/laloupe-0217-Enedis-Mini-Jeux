@@ -37,21 +37,32 @@ angular.module('app')
             audio: {},
             onLoad: function() {}
         };
+
         $scope.onLoad = function() {
-          if (!$scope.gameLoadedOnce) {
-            $scope.props.onLoad();
-          }
+            if (!$scope.gameLoadedOnce) {
+                $scope.props.onLoad();
+            }
         };
 
         $scope.play = function(file) {
-          if(Sound.getSoundStatus()) {
-            ngAudio.play(file);
-          }
+            if (Sound.getSoundStatus() && file !== '' && file !== undefined) {
+                try {
+                    $scope.playingAudio = ngAudio.play(file);
+                } catch (e) {
+                    console.error('Error with audio :', e.message);
+                }
+            }
+        };
+
+        $scope.mute = function(audio) {
+            if (audio !== undefined) {
+                audio.stop();
+            }
         };
 
         $scope.endGame = function() {
-          var gameName = $scope.props.id;
-          ProgressionService.markAsDone(gameName);
+            var gameName = $scope.props.id;
+            ProgressionService.markAsDone(gameName);
         };
 
         /*
