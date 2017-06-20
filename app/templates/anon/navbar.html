@@ -21,8 +21,8 @@
         <li></li>
         <li ui-sref-active=""><a ui-sref="anon.login" ng-hide="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Connecte toi !</button></a></li>
         <li ui-sref-active=""><a ui-sref="anon.register" ng-hide="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Inscris toi !</button></a></li>
-        <li ui-sref-active=""><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">Liste des jeux</a></li>
-        <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
+        <li ui-sref-active=""><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()"><button class="bouton-navbar" type="button" name="button">Liste des jeux</button></a></li>
+        <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'><button class="bouton-navbar" type="button" name="button">Déconnextion</button></a></li>
       </ul>
     </div>
   </div>
